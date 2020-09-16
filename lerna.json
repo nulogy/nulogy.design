@@ -1,0 +1,22 @@
+{
+  "version": "4.6.6",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "createRelease": "github",
+      "ignoreChanges": [
+        "**/__snapshots__/**",
+        "**/**.spec.js",
+        "**/**.story.js",
+        "*.md",
+        "**/**.md",
+        "./components/.storybook/*"
+      ]
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": ["master"]
+    }
+  }
+}
