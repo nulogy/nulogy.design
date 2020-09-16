@@ -10,7 +10,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "yarn build && gatsby serve",
-    "start": "yarn develop"
+    "start": "yarn develop",
+    "deploy": "yarn build --prefix-paths && gh-pages -d public"
   },
   "main": "index.js",
   "license": "MIT",
@@ -30,6 +31,7 @@
     "babel-eslint": "^10.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.0.0",
+    "gh-pages": "^3.1.0",
     "husky": "2.2.0",
     "lerna": "^3.16.4",
     "prettier": "1.17.0",
