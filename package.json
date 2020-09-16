@@ -11,7 +11,7 @@
     "develop": "gatsby develop",
     "serve": "yarn build && gatsby serve",
     "start": "yarn develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "yarn build && gh-pages -d public"
   },
   "main": "index.js",
   "license": "MIT",
