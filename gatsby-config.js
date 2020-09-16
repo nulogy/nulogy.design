@@ -4,7 +4,6 @@ module.exports = {
     description: "Documentation for the Nulogy Design System",
     author: "Nulogy"
   },
-  pathPrefix: "/nulogy.design",
   plugins: [
     "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-react-helmet",
