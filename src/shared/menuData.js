@@ -1,3 +1,5 @@
+import { STORYBOOK_URL } from "./const";
+
 export const menuData = [
   {
     name: "Visual Style",
@@ -256,7 +258,7 @@ export const menuData = [
       },
       {
         name: "Storybook",
-        href: "https://storybook.nulogy.design"
+        href: STORYBOOK_URL
       },
       {
         name: "Theme",
