@@ -23,7 +23,7 @@ const propsRows = [
     name: "as",
     type: "Element type",
     defaultValue: "nav",
-    description: "The element that wraps the breacrumbs"
+    description: "The element that wraps the breadcrumbs"
   }
 ];
 
