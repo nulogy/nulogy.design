@@ -33,19 +33,19 @@ export default () => (
     <Intro>
       <Title>Data Visualization</Title>
       <IntroText>
-        This article provides a basic guidelines on how to use NDS with charts.
+        This article provides basic guidelines on how to use NDS with charts.
       </IntroText>
     </Intro>
 
     <DocSection>
-      <SectionTitle>Chart periferie colours</SectionTitle>
+      <SectionTitle>Chart peripheral colours</SectionTitle>
       <List mb="x3">
         <ListItem>
-          Use DarkGrey for primary and Grey for periferie chart colours
+          Use DarkGrey for primary and Grey for peripheral chart colours
         </ListItem>
         <ListItem>Use 1px wide stroke</ListItem>
       </List>
-      <img src={perifeireImage} alt="Chart perifier colour use example" />
+      <img src={perifeireImage} alt="Chart peripheral colour use example" />
     </DocSection>
     <DocSection>
       <SectionTitle>1-colour chart</SectionTitle>
