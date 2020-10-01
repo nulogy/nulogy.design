@@ -240,6 +240,10 @@ export const menuData = [
         href: "/guides/localization"
       },
       {
+        name: "Data visualization",
+        href: "/guides/data-visualization"
+      },
+      {
         name: "Testing",
         href: "/guides/testing"
       },
