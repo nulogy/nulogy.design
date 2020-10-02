@@ -104,7 +104,7 @@ export default () => (
       <List>
         <ListItem>
           <Link href="/theme/">NDS theme</Link>
-          <Link href="/theme/">Data Visualization</Link>
+          <Link href="/data-visualization/">Data Visualization</Link>
         </ListItem>
       </List>
     </DocSection>

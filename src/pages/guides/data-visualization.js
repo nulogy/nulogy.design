@@ -1,29 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Highlight from "react-highlight";
-import {
-  Box,
-  Flex,
-  SectionTitle,
-  SubsectionTitle,
-  Title,
-  Link,
-  List,
-  ListItem
-} from "@nulogy/components";
+import { SectionTitle, Title, Link, List, ListItem } from "@nulogy/components";
 import {
   DocText as Text,
   Layout,
   Intro,
   IntroText,
   DocSection,
-  DocSubsection
+  InlineCode
 } from "../../components";
-import perifeireImage from "../../images/data-visualization/periferie.svg";
+import periferieImage from "../../images/data-visualization/periferie.svg";
 import graphImage from "../../images/data-visualization/graph.svg";
 import chart1Image from "../../images/data-visualization/chart-1.svg";
 import chartMultiImage from "../../images/data-visualization/chart-multi.svg";
-import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 export default () => (
   <Layout>
@@ -41,20 +30,23 @@ export default () => (
       <SectionTitle>Chart peripheral colours</SectionTitle>
       <List mb="x3">
         <ListItem>
-          Use DarkGrey for primary and Grey for peripheral chart colours
+          Use <InlineCode>DarkGrey</InlineCode> for primary and{" "}
+          <InlineCode>Grey</InlineCode> for peripheral chart colours
         </ListItem>
         <ListItem>Use 1px wide stroke</ListItem>
       </List>
-      <img src={perifeireImage} alt="Chart peripheral colour use example" />
+      <img src={periferieImage} alt="Chart peripheral colour use example" />
     </DocSection>
     <DocSection>
       <SectionTitle>1-colour chart</SectionTitle>
       <List mb="x3">
-        <ListItem>Use 3px wide stroke for graph lines</ListItem>
+        <ListItem>Use a 3px wide stroke for graph lines</ListItem>
       </List>
       <img src={graphImage} alt="1-colour chart example" />
       <List mb="x3">
-        <ListItem>Use DarkBlue for visual elements</ListItem>
+        <ListItem>
+          Use <InlineCode>DarkBlue</InlineCode> for visual elements
+        </ListItem>
       </List>
       <img src={chart1Image} alt="G1-colour graph example" />
     </DocSection>
@@ -75,23 +67,23 @@ export default () => (
     <DocSection>
       <SectionTitle>Accessibility</SectionTitle>
       <Text mb="x3">
-        Categorical colours are selected to provide people with colour
-        deficiency and people using printed material with an optimal experience.
-        Not all the colours in the palette meet WCAG AA contrast ratio with the
-        white background and it is recommended to provide additional mechanisms
-        to assist users with poor vision to better comprehend the content.
+        Categorical colours are selected to provide everyone with as optimal
+        experience as possible, including those with colour defencies and those
+        viewing printed materials. Note that not all the colours in the palette
+        meet WCAG AA contrast ratio on a white background so it is recommended
+        to provide additional mechanisms beyond colour for comprehensions.
       </Text>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Related articles</SectionTitle>
+      <SectionTitle>Related links</SectionTitle>
       <List>
         <ListItem>
           <Link href="/style/colour">Colours</Link>
         </ListItem>
         <ListItem>
           <Link href="https://spectrum.adobe.com/page/data-visualization-fundamentals/">
-            Spectrum - Data vizualisation fundamentals
+            Spectrum - Data vizualization fundamentals
           </Link>
         </ListItem>
       </List>
