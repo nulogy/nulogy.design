@@ -53,7 +53,27 @@ export default () => (
     <DocSection>
       <SectionTitle>Multi-colour chart</SectionTitle>
       <List mb="x3">
-        <ListItem>Use categorical colours in the assigned order</ListItem>
+        <ListItem>Use categorical colours in the assigned order:</ListItem>
+        <List pb="x1" listStyle="none" pl="0">
+          <ListItem>
+            <InlineCode>Categorical1</InlineCode> (Aqua)
+          </ListItem>
+          <ListItem>
+            <InlineCode>Categorical2</InlineCode> (Purple)
+          </ListItem>
+          <ListItem>
+            <InlineCode>Categorical3</InlineCode> (Pink)
+          </ListItem>
+          <ListItem>
+            <InlineCode>Categorical4</InlineCode> (Turquoise)
+          </ListItem>
+          <ListItem>
+            <InlineCode>Categorical5</InlineCode> (Orange)
+          </ListItem>
+          <ListItem>
+            <InlineCode>Categorical6</InlineCode> (Avocado)
+          </ListItem>
+        </List>
         <ListItem>Use 3px wide stroke</ListItem>
         <ListItem>Allow 3px between the regions</ListItem>
         <ListItem>Do not cross graph lines</ListItem>

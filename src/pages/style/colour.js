@@ -90,12 +90,12 @@ export default () => (
     <DocSection mb="x3">
       <SectionTitle>Categorical Colours</SectionTitle>
       <Flex flexDirection={{ extraSmall: "column", small: "row" }}>
-        <Palette name="Aqua" colour={tokens.color_base_aqua} />
-        <Palette name="Purple" colour={tokens.color_base_purple} />
-        <Palette name="Pink" colour={tokens.color_base_pink} />
-        <Palette name="Turquoise" colour={tokens.color_base_turquoise} />
-        <Palette name="Orange" colour={tokens.color_base_orange} />
-        <Palette name="Avocado" colour={tokens.color_base_avocado} />
+        <Palette name="Aqua" colour={tokens.color_base_categorical_1} />
+        <Palette name="Purple" colour={tokens.color_base_categorical_2} />
+        <Palette name="Pink" colour={tokens.color_base_categorical_3} />
+        <Palette name="Turquoise" colour={tokens.color_base_categorical_4} />
+        <Palette name="Orange" colour={tokens.color_base_categorical_5} />
+        <Palette name="Avocado" colour={tokens.color_base_categorical_6} />
       </Flex>
     </DocSection>
 
