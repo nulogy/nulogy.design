@@ -87,11 +87,24 @@ export default () => (
       </Flex>
     </DocSection>
 
+    <DocSection mb="x3">
+      <SectionTitle>Categorical Colours</SectionTitle>
+      <Flex flexDirection={{ extraSmall: "column", small: "row" }}>
+        <Palette name="Aqua" colour={tokens.color_base_categorical_1} />
+        <Palette name="Purple" colour={tokens.color_base_categorical_2} />
+        <Palette name="Pink" colour={tokens.color_base_categorical_3} />
+        <Palette name="Turquoise" colour={tokens.color_base_categorical_4} />
+        <Palette name="Orange" colour={tokens.color_base_categorical_5} />
+        <Palette name="Avocado" colour={tokens.color_base_categorical_6} />
+      </Flex>
+    </DocSection>
+
     <DocSection>
       <SectionTitle>Related links</SectionTitle>
       <List>
         <ListItem>
           <Link href="/theme/">NDS theme</Link>
+          <Link href="/data-visualization/">Data Visualization</Link>
         </ListItem>
       </List>
     </DocSection>
