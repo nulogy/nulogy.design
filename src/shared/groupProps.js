@@ -44,6 +44,12 @@ const groupProps = [
       "Makes the field require selection before the form will submit."
   },
   {
+    name: "disabled",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Marks the entire group as disabled and unable to be toggled."
+  },
+  {
     name: "requirementText",
     type: "String",
     defaultValue: "null",
