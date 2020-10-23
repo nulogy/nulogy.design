@@ -3,7 +3,7 @@ import { theme } from "@nulogy/components";
 
 const HighlightStyles = createGlobalStyle`
 
-.hljs, code {
+.hljs {
   display: block;
   overflow-x: auto;
   font-family: ${theme.fonts.mono};
