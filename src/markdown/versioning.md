@@ -1,0 +1,47 @@
+---
+path: "/guides/versioning"
+title: "Versioning"
+intro: "How the version numbers are incremented in an NDS package."
+---
+
+## Semantic Versioning
+
+All NDS packages follow [Semantic Versioning](https://semver.org/) (SemVer), which allows for three types of changes:
+
+- `PATCH` changes for backwards compatible bug fixes,
+- `MINOR` changes for new functionality added in a backwards compatible manner, and
+- `MAJOR` changes for incompatible API changes
+
+These changes are represented in the version number like `MAJOR.MINOR.PATCH`. For version `3.2.4`, that would mean there has been 4 fixes and 2 new features since the last breaking change.
+
+## Major Changes
+
+Major version updates are for breaking changes, and may require updates to applications already consuming the package. For example:
+
+- Removing a prop
+- Renaming a prop
+- Changing the way an existing prop works
+- Changing the name of a component
+- Removing a component
+- Visual updates that could affect the layout of a page, like box-sizing, width, height
+- Changes to fonts that could cause wrapping changes, e.g font-size, font-weight, or letter-spacing
+
+## Minor Changes
+
+Minor changes are additive changes with backwards compatiblity. For example:
+
+- Adding a new component or feature
+- Adding new, optional props to an existing component
+- Deprecating something and adding a replacement
+- Visual updates to aesthetic features like colour and shadows
+- Visual updates to layered components like tooltips that won't affect the layout of a page
+
+## Patch Changes
+
+Patch changes are for fixing defects and optimizing existing code. For example:
+
+- Fixing a defect
+- Adding or updating tests
+- Updating or refactoring existing code in a way that doesn't alter the API
+
+_Thank you to [Morningstar](https://designsystem.morningstar.com/getting-started/versioning-and-breaking-changes) for the inspiration for this page._

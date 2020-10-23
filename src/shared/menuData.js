@@ -220,11 +220,15 @@ export const menuData = [
     name: "Guides",
     links: [
       {
-        name: "For Designers",
+        name: "Data visualization",
+        href: "/guides/data-visualization"
+      },
+      {
+        name: "Designers Getting Started",
         href: "/guides/designers"
       },
       {
-        name: "For Developers",
+        name: "Developers Getting Started",
         href: "/guides/developers"
       },
       {
@@ -240,16 +244,16 @@ export const menuData = [
         href: "/guides/localization"
       },
       {
-        name: "Data visualization",
-        href: "/guides/data-visualization"
-      },
-      {
         name: "Testing",
         href: "/guides/testing"
       },
       {
         name: "Using NDS in Ops Core",
         href: "/guides/ops-core"
+      },
+      {
+        name: "Versioning",
+        href: "/guides/versioning"
       }
     ]
   },
