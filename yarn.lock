@@ -2359,12 +2359,12 @@
     fastq "^1.6.0"
 
 "@nulogy/components@latest":
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-4.9.3.tgz#05e29e4263974841d7838ce57c2446d468a5c7cf"
-  integrity sha512-j7D1Iqc4S8u4E6RthsgcPS35qATapqswWvr8q7wnnhGdMomrFNG84RX66QFpFT+Qjve+/0gm5WkkVp3mRRZHNg==
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-4.11.0.tgz#a3596d1a0aadf3be832e6747fc8c4215b2dbc022"
+  integrity sha512-Uu3rlce51tmvmgp7Ip1d+n9i7aS/uLi3Fd7abUCxbqgOTLFxlSPUaR4Au2IiC7Ykuk4tUZ62cMYTKbJQdAsmGQ==
   dependencies:
     "@babel/runtime" "^7.9.6"
-    "@nulogy/icons" "^4.1.3"
+    "@nulogy/icons" "^4.10.5"
     "@nulogy/tokens" "^4.9.1"
     "@styled-system/prop-types" "^5.1.4"
     "@styled-system/theme-get" "^5.1.2"
@@ -2383,7 +2383,15 @@
     smoothscroll-polyfill "^0.4.4"
     styled-system "^5.1.4"
 
-"@nulogy/icons@^4.1.3", "@nulogy/icons@latest":
+"@nulogy/icons@^4.10.5":
+  version "4.10.5"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.10.5.tgz#17729a9d76cb619db767e1554d95616f317ef0bb"
+  integrity sha512-UnUHubuAaxE8ZgCeYPFHWCbxWjHfZlvl994OexMV0NwJotoYR3Uh39biK7HbSrtmoluDZFKlSWl5QOHJAuvahQ==
+  dependencies:
+    fs "^0.0.1-security"
+    svgi "^1.1.0"
+
+"@nulogy/icons@latest":
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.1.3.tgz#67c3780d11fa99ca6c7f41152f18b803cef016a1"
   integrity sha512-eD5u2aGETC661ScBbJt5sROKLWbkeY/ZX+3U6lFaN8J4pkkkBCeiaXtzWcmZEiqF2BSQmNFqsh3tCBYfJ8W30Q==

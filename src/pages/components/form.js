@@ -25,7 +25,7 @@ import {
   PropsTable,
   InlineCode
 } from "../../components";
-import { STORYBOOK_PAGE_URL } from "../../shared/const";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const options = [
   { value: "accepted", label: "Open" },
@@ -169,7 +169,9 @@ export default () => (
       </Text>
       <Text>
         Examples of errors can be found in the storybook{" "}
-        <Link href={`${STORYBOOK_PAGE_URL}demopage--demo-page`}>Demo Page</Link>
+        <Link href={`${STORYBOOK_COMPONENT_URL}form--demo-form`}>
+          Demo Page
+        </Link>
         .
       </Text>
       <SubsectionTitle mb="x3" mt="x3">
