@@ -169,8 +169,7 @@ export default () => (
       </Text>
       <Text>
         Examples of errors can be found in the storybook{" "}
-        <Link href={`${STORYBOOK_PAGE_URL}demopage--demo-page`}>Demo Page</Link>
-        .
+        <Link href={`${STORYBOOK_PAGE_URL}form--demo-form`}>Demo Page</Link>.
       </Text>
       <SubsectionTitle mb="x3" mt="x3">
         Error message content guidelines

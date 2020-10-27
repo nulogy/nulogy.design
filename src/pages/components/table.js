@@ -254,6 +254,18 @@ const propsRows = [
     default: "Deselect all",
     description:
       "When hasSelectableRows is true, replaces the aria-label for the checked select all checkbox"
+  },
+  {
+    name: "onRowMouseEnter",
+    type: "({row: rowData, e: Event}) => void",
+    default: "none",
+    description: "Event handler that is called whenever a mouse enters a row"
+  },
+  {
+    name: "onRowMouseEnter",
+    type: "({row: rowData, e: Event}) => void",
+    default: "none",
+    description: "Event handler that is called whenever a mouse leaves a row"
   }
 ];
 
