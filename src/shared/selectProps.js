@@ -77,6 +77,13 @@ const selectProps = [
       "Pass in an object with the keys of the component you would like to replace"
   },
   {
+    name: "noOptionsMessage",
+    type: "({ inputValue: string }) => string | null ",
+    defaultValue: "No options",
+    description:
+      "A function that returns the string you you like to show up when no options are available"
+  },
+  {
     name: "closeMenuOnSelect",
     type: "Boolean",
     defaultValue: "true",
