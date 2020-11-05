@@ -262,7 +262,7 @@ const propsRows = [
     description: "Event handler that is called whenever a mouse enters a row"
   },
   {
-    name: "onRowMouseEnter",
+    name: "onRowMouseLeave",
     type: "({row: rowData, e: Event}) => void",
     default: "none",
     description: "Event handler that is called whenever a mouse leaves a row"
