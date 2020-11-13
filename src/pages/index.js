@@ -74,12 +74,13 @@ const IndexPage = () => (
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/ops-core">Using NDS in Ops Core</Link>
+          <Link href="/guides/layout">Building layouts with Flexbox</Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/style-props">
-            Using Style Props with @nulogy/components
-          </Link>
+          <Link href="/guides/versioning">How NDS packages are versioned</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/packages">How NDS packages are released</Link>
         </ListItem>
         <ListItem>
           <Link href="/guides/localization">
@@ -90,13 +91,12 @@ const IndexPage = () => (
           <Link href="/guides/testing">Testing @nulogy/components</Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/versioning">How NDS packages are versioned</Link>
+          <Link href="/guides/ops-core">Using NDS in Ops Core</Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/packages">How NDS packages are released</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/layout">Building layouts with Flexbox</Link>
+          <Link href="/guides/style-props">
+            Using Style Props with @nulogy/components
+          </Link>
         </ListItem>
       </List>
     </Box>
