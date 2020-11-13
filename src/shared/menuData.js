@@ -211,55 +211,22 @@ export const menuData = [
     name: "Patterns",
     links: [
       {
-        name: "Loading Content",
+        name: "Loading content",
         href: "/patterns/loading"
-      }
-    ]
-  },
-  {
-    name: "Guides",
-    links: [
+      },
       {
         name: "Data visualization",
         href: "/guides/data-visualization"
-      },
-      {
-        name: "Designers Getting Started",
-        href: "/guides/designers"
-      },
-      {
-        name: "Developers Getting Started",
-        href: "/guides/developers"
-      },
-      {
-        name: "Layout",
-        href: "/guides/layout"
-      },
-      {
-        name: "Style props",
-        href: "/guides/style-props"
-      },
-      {
-        name: "Localization",
-        href: "/guides/localization"
-      },
-      {
-        name: "Testing",
-        href: "/guides/testing"
-      },
-      {
-        name: "Using NDS in Ops Core",
-        href: "/guides/ops-core"
-      },
-      {
-        name: "Versioning",
-        href: "/guides/versioning"
       }
     ]
   },
   {
     name: "Resources",
     links: [
+      {
+        name: "Guides",
+        href: "/#guides"
+      },
       {
         name: "Github",
         href: "https://github.com/nulogy/design-system"
