@@ -15,7 +15,7 @@ const MarkdownStyles = styled(Box)({
     marginBottom: 0,
     paddingBottom: theme.space.x2,
     fontSize: theme.fontSizes.heading1,
-    lineHeight: 1.5,
+    lineHeight: theme.lineHeights.base,
     fontWeight: theme.fontWeights.light
   },
 
@@ -41,11 +41,6 @@ const MarkdownStyles = styled(Box)({
     fontSize: theme.fontSizes.heading4,
     lineHeight: theme.lineHeights.heading4,
     fontWeight: theme.fontWeights.medium
-  },
-
-  "p, ul": {
-    // fontSize: "18px",
-    // lineHeight: 1.5
   },
 
   "a, a:visited": {
