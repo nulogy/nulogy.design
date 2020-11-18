@@ -6,7 +6,10 @@ import {
   Flex,
   Text,
   Title,
-  SectionTitle
+  SectionTitle,
+  List,
+  ListItem,
+  Link
 } from "@nulogy/components";
 import { Intro, IntroText, Layout } from "../components";
 
@@ -49,11 +52,54 @@ const IndexPage = () => (
           Built using React, components are tested interface design patterns
           designed to ensure a consistent experience for our users.
         </Text>
-        <PrimaryButton asLink href="components/box">
+        <PrimaryButton asLink href="components/alert">
           Use our components
         </PrimaryButton>
       </Box>
     </Flex>
+
+    <Box mb="x8">
+      <SectionTitle mb="x3" id="guides">
+        Guides
+      </SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/guides/designers">
+            Getting Started with NDS for Designers
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/developers">
+            Getting Started with NDS for Developers
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/layout">Building layouts with Flexbox</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/versioning">How NDS packages are versioned</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/packages">How NDS packages are released</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/localization">
+            Localization with @nulogy/components
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/testing">Testing @nulogy/components</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/ops-core">Using NDS in Ops Core</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/style-props">
+            Using Style Props with @nulogy/components
+          </Link>
+        </ListItem>
+      </List>
+    </Box>
   </Layout>
 );
 

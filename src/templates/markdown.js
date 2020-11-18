@@ -12,9 +12,10 @@ const MarkdownStyles = styled(Box)({
   h1: {
     fontWeight: theme.fontWeights.light,
     marginTop: 0,
-    marginBottom: theme.space.x6,
+    marginBottom: 0,
+    paddingBottom: theme.space.x2,
     fontSize: theme.fontSizes.heading1,
-    lineHeight: theme.lineHeights.heading1,
+    lineHeight: theme.lineHeights.base,
     fontWeight: theme.fontWeights.light
   },
 
@@ -50,10 +51,20 @@ const MarkdownStyles = styled(Box)({
     color: theme.colors.darkBlue
   },
 
+  pre: {
+    background: theme.colors.whiteGrey,
+    padding: theme.space.x2,
+    borderRadius: theme.radii.medium
+  },
+
   code: {
     fontSize: theme.fontSizes.small,
     color: theme.colors.darkGrey,
     lineHeight: theme.lineHeights.smallTextBase
+  },
+
+  "p code": {
+    background: theme.colors.whiteGrey
   }
 });
 
@@ -68,11 +79,9 @@ export default function Template({
         <Helmet>
           <title>{frontmatter.title} Nulogy Design System </title>
         </Helmet>
-        <Intro>
-          <Title>{frontmatter.title}</Title>
-          <IntroText>{frontmatter.intro}</IntroText>
-        </Intro>
-        <Box maxWidth={800} mb="x4">
+        <Title>{frontmatter.title}</Title>
+        {frontmatter.intro && <IntroText>{frontmatter.intro}</IntroText>}
+        <Box maxWidth={800} mb="x8">
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }} // eslint-disable-line
