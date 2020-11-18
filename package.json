@@ -24,7 +24,7 @@
     "design system"
   ],
   "engines": {
-    "node": "^12.16.3",
+    "node": "^v12.16.3",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     }
   },
   "dependencies": {
-    "@nulogy/components": "latest",
+    "@nulogy/components": "^4.13.3",
     "@nulogy/icons": "latest",
     "@nulogy/tokens": "latest",
     "babel-plugin-styled-components": "^1.10.0",
