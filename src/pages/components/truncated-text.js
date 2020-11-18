@@ -48,6 +48,11 @@ const propsRows = [
     description: "The number of characters to display"
   },
   {
+    name: "fullWidth",
+    type: "boolean",
+    description: "Can be used instead of max characters to "
+  },
+  {
     name: "showTooltip",
     type: "boolean",
     defaultValue: "true",
