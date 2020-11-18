@@ -24,7 +24,7 @@
     "design system"
   ],
   "engines": {
-    "node": "^12.19.0",
+    "node": "^14.15.0",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
