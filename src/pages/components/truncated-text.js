@@ -50,7 +50,7 @@ const propsRows = [
   {
     name: "fullWidth",
     type: "boolean",
-    description: "Can be used instead of max characters to "
+    description: "When set to true, will truncate based on available space instead of a maximum number of characters"
   },
   {
     name: "showTooltip",
