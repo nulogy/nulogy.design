@@ -50,6 +50,7 @@ const propsRows = [
   {
     name: "fullWidth",
     type: "boolean",
+    defaultValue: "false",
     description: "When set to true, will truncate based on available space instead of a maximum number of characters"
   },
   {
