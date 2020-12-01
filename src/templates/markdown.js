@@ -80,7 +80,11 @@ export default function Template({
           <title>{frontmatter.title} Nulogy Design System </title>
         </Helmet>
         <Title>{frontmatter.title}</Title>
-        {frontmatter.intro && <IntroText>{frontmatter.intro}</IntroText>}
+        {frontmatter.intro && (
+          <IntroText mt="x4" mb="x4">
+            {frontmatter.intro}
+          </IntroText>
+        )}
         <Box maxWidth={800} mb="x8">
           <div
             className="blog-post-content"
