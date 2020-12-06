@@ -21,8 +21,8 @@ import {
 } from "../../components";
 import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Layout</title>
     </Helmet>

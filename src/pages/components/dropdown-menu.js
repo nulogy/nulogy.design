@@ -111,8 +111,8 @@ const customColors = {
   bgHoverColor: "black"
 };
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Dropdown Menu</title>
     </Helmet>

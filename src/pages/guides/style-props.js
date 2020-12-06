@@ -66,8 +66,8 @@ const rows = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Style props</title>
     </Helmet>

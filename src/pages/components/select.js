@@ -99,8 +99,8 @@ const CustomOption = ({ children, ...props }) => {
   return <SelectOption {...props}>{newChildren}</SelectOption>;
 };
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Select</title>
     </Helmet>

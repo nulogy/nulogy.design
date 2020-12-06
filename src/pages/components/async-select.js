@@ -54,8 +54,8 @@ const propsRows = [
   ...selectProps
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Async Select</title>
     </Helmet>

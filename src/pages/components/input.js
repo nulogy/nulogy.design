@@ -79,8 +79,8 @@ const propsRows = [
   ...prefixSuffixProps
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Input</title>
     </Helmet>

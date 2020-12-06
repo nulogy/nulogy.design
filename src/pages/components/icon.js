@@ -72,8 +72,8 @@ const IconDisplay = props => (
   </Flex>
 );
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Icons</title>
     </Helmet>

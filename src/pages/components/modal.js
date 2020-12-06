@@ -171,8 +171,8 @@ class ModalExample extends React.Component {
   }
 }
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Modal</title>
     </Helmet>

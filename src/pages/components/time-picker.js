@@ -48,8 +48,8 @@ const propsRows = [
   ...selectProps.filter(prop => prop.name !== "options")
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Time Picker</title>
     </Helmet>

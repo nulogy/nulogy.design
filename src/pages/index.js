@@ -13,8 +13,8 @@ import {
 } from "@nulogy/components";
 import { Intro, IntroText, Layout } from "../components";
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <meta
         name="description"

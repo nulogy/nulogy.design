@@ -10,8 +10,8 @@ import {
 } from "../../components";
 import ndsInOpsCore from "../../images/nds-in-ops-core.png";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Using NDS in Operational Solution Core</title>
     </Helmet>

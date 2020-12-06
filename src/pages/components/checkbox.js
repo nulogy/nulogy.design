@@ -45,8 +45,8 @@ const checkboxProps = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Checkbox</title>
     </Helmet>

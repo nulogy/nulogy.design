@@ -140,8 +140,8 @@ const menuItemKeyRows = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Navbar</title>
     </Helmet>
