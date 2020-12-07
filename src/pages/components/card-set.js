@@ -13,8 +13,8 @@ import {
 import { Layout, Intro, IntroText, DocSection } from "../../components";
 import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Cart Set</title>
     </Helmet>

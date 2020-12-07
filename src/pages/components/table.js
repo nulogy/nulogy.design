@@ -440,8 +440,8 @@ const footerRowData = [
   }
 ];
 
-export default () => (
-  <Layout propsTable={<PropsTable propsRows={propsRows} />}>
+export default ({ location }) => (
+  <Layout location={location} propsTable={<PropsTable propsRows={propsRows} />}>
     <Helmet>
       <title>Table</title>
     </Helmet>

@@ -37,8 +37,8 @@ Palette.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Colour</title>
     </Helmet>

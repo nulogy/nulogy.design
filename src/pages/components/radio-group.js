@@ -22,8 +22,8 @@ import {
 import groupProps from "../../shared/groupProps";
 import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Radio Group</title>
     </Helmet>

@@ -91,8 +91,8 @@ const CloseButton = styled(Link)(({ isOpen }) => ({
 }));
 
 class Navigation extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       menuOpen: false
@@ -100,6 +100,16 @@ class Navigation extends React.Component {
 
     this.openMenu = this.openMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
+
+    this.selectedLink = React.createRef();
+  }
+
+  componentDidMount() {
+    if (this.selectedLink.current) {
+      this.selectedLink.current.scrollIntoView({
+        block: "center"
+      });
+    }
   }
 
   openMenu() {
@@ -112,6 +122,11 @@ class Navigation extends React.Component {
 
   render() {
     const { menuOpen } = this.state;
+    const { location } = this.props;
+
+    const trimSlashes = path => path.replace(/^\/|\/$/g, "");
+    const currentPath = trimSlashes(location?.pathname || "");
+
     return (
       <>
         <OpenButton onClick={this.openMenu} />
@@ -137,17 +152,21 @@ class Navigation extends React.Component {
                   {menuItem.name}
                 </SubsectionTitle>
                 <List pl="0">
-                  {menuItem.links.map(menuLink => (
-                    <NavItem key={menuLink.href}>
-                      <NavLink
-                        color="white"
-                        href={menuLink.href}
-                        underline={false}
-                      >
-                        {menuLink.name}
-                      </NavLink>
-                    </NavItem>
-                  ))}
+                  {menuItem.links.map(menuLink => {
+                    const selected = trimSlashes(menuLink.href) === currentPath;
+                    return (
+                      <NavItem key={menuLink.href}>
+                        <NavLink
+                          color={selected ? "yellow" : "white"}
+                          ref={selected ? this.selectedLink : null}
+                          href={menuLink.href}
+                          underline={false}
+                        >
+                          {menuLink.name}
+                        </NavLink>
+                      </NavItem>
+                    );
+                  })}
                 </List>
               </Box>
             ))}

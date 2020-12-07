@@ -27,8 +27,8 @@ import colourStyle from "../../images/designers-guide/colour-style.gif";
 import commiting from "../../images/designers-guide/commiting.gif";
 import merging from "../../images/designers-guide/merging.gif";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Designers' Guide</title>
     </Helmet>

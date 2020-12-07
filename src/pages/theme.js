@@ -27,8 +27,8 @@ const CustomComponent = styled.div({
   padding: theme.space.x3
 });
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Theme</title>
     </Helmet>

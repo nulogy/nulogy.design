@@ -51,7 +51,8 @@ const propsRows = [
     name: "fullWidth",
     type: "boolean",
     defaultValue: "false",
-    description: "When set to true, will truncate based on available space instead of a maximum number of characters"
+    description:
+      "When set to true, will truncate based on available space instead of a maximum number of characters"
   },
   {
     name: "showTooltip",
@@ -66,8 +67,8 @@ const propsRows = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Truncated Text</title>
     </Helmet>

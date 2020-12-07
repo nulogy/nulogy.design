@@ -84,8 +84,8 @@ const propsRows = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Date Picker</title>
     </Helmet>

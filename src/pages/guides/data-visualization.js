@@ -14,8 +14,8 @@ import graphImage from "../../images/data-visualization/graph.svg";
 import chart1Image from "../../images/data-visualization/chart-1.svg";
 import chartMultiImage from "../../images/data-visualization/chart-multi.svg";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Data Visualization</title>
     </Helmet>

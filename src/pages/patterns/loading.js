@@ -22,8 +22,8 @@ import loadingImage from "../../images/patterns/loading/loading.svg";
 import skeletonScreenImage from "../../images/patterns/loading/skeleton-screen.png";
 import loadingInlineImage from "../../images/patterns/loading/loading-inline.svg";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Loading Content</title>
     </Helmet>

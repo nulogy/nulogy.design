@@ -32,8 +32,8 @@ const radioProps = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Radio</title>
     </Helmet>

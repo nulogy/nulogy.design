@@ -43,8 +43,8 @@ const propsRows = [
   ...inputProps
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Textarea</title>
     </Helmet>

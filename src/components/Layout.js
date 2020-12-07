@@ -6,7 +6,7 @@ import { Navigation } from "./Nav";
 
 import HighlightStyles from "./HighlightStyles";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <NDSProvider locale="en_US">
     <Box>
       <Helmet titleTemplate="%s | Nulogy Design System">
@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
         />
       </Helmet>
       <HighlightStyles />
-      <Navigation />
+      <Navigation location={location} />
       <Box ml={{ extraSmall: 0, medium: "220px" }}>
         <Box
           pt={{ extraSmall: 0, medium: "x8" }}

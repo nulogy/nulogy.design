@@ -56,8 +56,8 @@ SpacingExamples.propTypes = {
   values: PropTypes.objectOf(PropTypes.object).isRequired
 };
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Spacing</title>
     </Helmet>

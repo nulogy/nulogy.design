@@ -131,8 +131,8 @@ const secondaryMenu = [
   }
 ];
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Branded NavBar</title>
     </Helmet>

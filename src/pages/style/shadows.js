@@ -12,8 +12,8 @@ import {
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
 
-export default () => (
-  <Layout>
+export default ({ location }) => (
+  <Layout location={location}>
     <Helmet>
       <title>Shadows</title>
     </Helmet>
