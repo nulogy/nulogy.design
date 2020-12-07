@@ -29,7 +29,7 @@ const NavContainer = styled(Box)(({ isOpen }) => ({
   left: 0,
   padding: `0 ${theme.space.x2}`,
   overflow: "scroll",
-  zIndex: theme.zIndex.overlay,
+  zIndex: theme.zIndex.overlay + 1,
   height: "100%",
   width: isOpen ? "100%" : "220px",
   paddingTop: theme.space.x3,

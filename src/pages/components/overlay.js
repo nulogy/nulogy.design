@@ -43,7 +43,7 @@ export default ({ location }) => (
     <Intro>
       <Title>Overlay</Title>
       <IntroText>
-        Overalay separates foreground with the background content.
+        Overlay separates foreground from the background content.
       </IntroText>
     </Intro>
 
@@ -117,9 +117,8 @@ export default ({ location }) => (
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <Text mb="x3">
-        In addition to this props listed below the Overlay component accepts{" "}
-        <Link href="/components/flex">Flex's</Link> props since it is it's
-        extension.
+        As an extension of <Link href="/components/flex">Flex</Link>, Overlay
+        accepts all of Flex's props in addition to the props listed below.
       </Text>
       <PropsTable propsRows={propsRows} />
     </DocSection>
