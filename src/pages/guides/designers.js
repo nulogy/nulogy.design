@@ -15,17 +15,17 @@ import {
   Intro,
   IntroText,
   DocSection,
+  InlineCode,
+  Image,
   DocSubsection
 } from "../../components";
-import newProject from "../../images/designers-guide/creating-project.gif";
-import linkingNDS from "../../images/designers-guide/linking-NDS.gif";
-import branching from "../../images/designers-guide/branching.gif";
-import settings from "../../images/designers-guide/settings.gif";
-import textStyle from "../../images/designers-guide/text-style.gif";
-import symbol from "../../images/designers-guide/symbol.gif";
-import colourStyle from "../../images/designers-guide/colour-style.gif";
-import commiting from "../../images/designers-guide/commiting.gif";
-import merging from "../../images/designers-guide/merging.gif";
+import figmaComponents from "../../images/designers-guide/figma-components.gif";
+import figmaStyles from "../../images/designers-guide/figma-styles.gif";
+import figmaText from "../../images/designers-guide/figma-text.gif";
+import figmaGrid from "../../images/designers-guide/figma-grid.gif";
+import figmaFrame from "../../images/designers-guide/figma-frame.gif";
+import figmaVersion from "../../images/designers-guide/figma-version.gif";
+import figmaSaveVersion from "../../images/designers-guide/figma-save-version.gif";
 
 export default ({ location }) => (
   <Layout location={location}>
@@ -44,22 +44,19 @@ export default ({ location }) => (
       <Text>Designers at Nulogy use:</Text>
       <List>
         <ListItem>
-          <Link href="https://www.sketch.com/">Sketch</Link> as our design tool
-          for creating high-fidelity mockups
-        </ListItem>
-        <ListItem>
-          <Link href="https://www.abstract.com/">Abstract</Link> for
-          collaboration and version control of Sketch assets
+          <Link href="https://www.figma.com/">Figma</Link> as our design tool
+          for creating high-fidelity mockups, prototyping, version control, and
+          team collaboration.
         </ListItem>
         <ListItem>
           <Link href="https://www.ibm.com/plex/">IBM Plex</Link> as a Nulogy's
           sole typeface
         </ListItem>
         <ListItem>
-          <Link href="https://share.goabstract.com/2b13ee68-fe6e-4b6e-a5da-8965050f4908">
+          <Link href="https://www.figma.com/file/jRQxfwCL27gfqfrdCxOIQG/NDS">
             NDS UI kit
           </Link>{" "}
-          as a library of styles, symbols, and templates
+          as a library of Figma styles and components
         </ListItem>
         <ListItem>
           <Link href="https://storybook.nulogy.design">Storybook</Link> as a
@@ -88,92 +85,94 @@ export default ({ location }) => (
       </List>
     </DocSection>
     <DocSection>
-      <SectionTitle>Designing with NDS</SectionTitle>
+      <SectionTitle>Designing with NDS in Figma</SectionTitle>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Starting a project</SubsectionTitle>
+        <SubsectionTitle>NDS components</SubsectionTitle>
         <Text mb="x3">
-          Creating a project in Abstract creates Sketch file and makes an
-          initial commit to the master branch. By default, all projects are
-          visible to all members of Nulogy organization. More about projects can
-          be found{" "}
-          <Link href="https://www.abstract.com/help/projects/">here</Link>.
+          In Figma, the NDS components are available under the{" "}
+          <InlineCode>Assets</InlineCode> panel in Left Sidebar. The components
+          are easily drag-and-dropped into the working frame and further
+          customized through <InlineCode>Layer</InlineCode> and{" "}
+          <InlineCode>Design</InlineCode> panels.{" "}
         </Text>
-        <img
-          src={newProject}
-          alt="Creating a new project in Abstract animation"
+        <Image
+          src={figmaComponents}
+          alt="Animation showing how to access NDS components in Figma"
         />
-      </DocSubsection>
-      <DocSubsection mb="x6">
-        <SubsectionTitle>Linking NDS UI kit</SubsectionTitle>
-        <Text mb="x3">
-          To get access to NDS component symbols, and colour and layer styles
-          you need to link the NDS-ui-kit.sketch library from the NDS project to
-          your project. More about libraries can be found{" "}
-          <Link href="https://www.abstract.com/help/libraries/">here</Link>.
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Using NDS components in Figma
         </Text>
-        <img src={linkingNDS} alt="Linking NDS UI kit in Abstract animation" />
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Branching</SubsectionTitle>
+        <SubsectionTitle>NDS styles</SubsectionTitle>
         <Text mb="x3">
-          Edits to Sketch files are done in the new branch that is created in
-          Abstract. More about branching can be found{" "}
-          <Link href="https://www.abstract.com/help/branches/">here</Link>.
+          By using available text, colours, shadows, and grid styles in the{" "}
+          <InlineCode>Layer</InlineCode> panel, designers ensure that their
+          designs stay in line with NDS' visual style.
         </Text>
-        <img src={branching} alt="Branching in Abstract animation" />
+        <Image
+          src={figmaStyles}
+          alt="Animation showing how to use NDS colour, and shadow styles in Figma"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Using NDS colour, and shadow styles in Figma
+        </Text>
+        <Image
+          src={figmaText}
+          alt="Animation showing how to use NDS text styles in Figma"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Using NDS text styles in Figma
+        </Text>
+        <Image
+          src={figmaGrid}
+          alt="Animation showing how to use NDS grid and adjust nudge amount in Figma"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Using NDS grid styles and adjusting nudge amount in Figma
+        </Text>
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Adjusting Sketch settings</SubsectionTitle>
+        <SubsectionTitle>
+          Default screen sizes and Frame component
+        </SubsectionTitle>
         <Text mb="x3">
-          It’s helpful to have Nudging settings and Grid settings adjusted to
-          NDS’s <Link href="/style/spacing/">spacing scale</Link>.
+          NDS Frame component is created to help designers set the working
+          canvas. It comes in different sizes that match breakpoints in NDS.
+          Once imported the Frame component should be detached (Detach Instance)
+          so that other elements can be nested inside.
         </Text>
-        <img src={settings} alt="Adjusting Sketch settings animation" />
+        <Image
+          src={figmaFrame}
+          alt="Animation showing how to use Frame component"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Using NDS Frame component and setting the working canvas
+        </Text>
       </DocSubsection>
       <DocSubsection mb="x6">
-        <SubsectionTitle>Working with NDS</SubsectionTitle>
-        <Box mb="x3">
-          <Text mb="x2" color="darkGrey">
-            Text styles
-          </Text>
-          <img src={textStyle} alt="NDS text style animation" />
-        </Box>
-        <Box mb="x3">
-          <Text mb="x2" color="darkGrey">
-            Symbols
-          </Text>
-          <img src={symbol} alt="NDS symbol animation" />
-        </Box>
-        <Box mb="x3">
-          <Text mb="x2" color="darkGrey">
-            Layer styles
-          </Text>
-          <img src={colourStyle} alt="NDS layer style animation" />
-        </Box>
-        <Box mb="x3">
-          <Text mb="x2" color="darkGrey">
-            Templates
-          </Text>
-          <Text>Coming soon ...</Text>
-        </Box>
-      </DocSubsection>
-      <DocSubsection mb="x6">
-        <SubsectionTitle>Committing changes</SubsectionTitle>
+        <SubsectionTitle>Using version history</SubsectionTitle>
         <Text mb="x3">
-          To keep design updates traceable changes should be committed after
-          each meaningful change. More about committing can be found{" "}
-          <Link href="https://www.abstract.com/help/commits/">here</Link>.
+          To leave a record of changes made throughout the design process and to
+          be able to revert to desired revision designs should be regularelly
+          saved to version history. Version history is available in{" "}
+          <InlineCode>File</InlineCode> menu under{" "}
+          <InlineCode>Show Version History</InlineCode>.
         </Text>
-        <img src={commiting} alt="Commiting in Abstract animation" />
-      </DocSubsection>
-      <DocSubsection mb="x6">
-        <SubsectionTitle>Merging</SubsectionTitle>
-        <Text mb="x3">
-          When the design is approved (Process TBD) it should be merged into the
-          parent branch or master. More about merging can be found{" "}
-          <Link href="https://www.abstract.com/help/merge-master/">here</Link>.
+        <Image
+          src={figmaSaveVersion}
+          alt="Animation showing how to save to version history"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Saving version history
         </Text>
-        <img src={merging} alt="Merging in Abstract animation" />
+        <Image
+          src={figmaVersion}
+          alt="Animation showing how to view version history"
+        />
+        <Text textAlign="center" fontSize="small" color="darkGrey">
+          Viewing version history
+        </Text>
       </DocSubsection>
     </DocSection>
     <DocSection>
@@ -182,10 +181,7 @@ export default ({ location }) => (
         <Link href="/guides/developers">Developer's guide</Link>
       </ListItem>
       <ListItem>
-        <Link href="https://www.sketch.com/docs/">Sketch documentation</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="/https://www.abstract.com/help/">Abstract help center</Link>
+        <Link href="https://help.figma.com/hc/en-us">Figma help center</Link>
       </ListItem>
     </DocSection>
   </Layout>
