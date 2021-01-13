@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
@@ -34,7 +34,7 @@ const primaryMenu = [{ name: "Menu Link", href: "/" }];
 const frameRows = [
   {
     name: "navBar",
-    type: "",
+    type: "ReactNode",
     defaultValue: "",
     description:
       "The navigation for your application. Displays at the top of every page."
@@ -44,15 +44,9 @@ const frameRows = [
 const pageRows = [
   {
     name: "breadcrumbs",
-    type: "",
+    type: "ReactNode",
     defaultValue: "",
     description: "Breadcrumbs that display above the page title."
-  },
-  {
-    name: "sidebar",
-    type: "",
-    defaultValue: "",
-    description: "An optional sidebar that can be triggered to open and close."
   },
   {
     name: "title",
@@ -65,13 +59,13 @@ const pageRows = [
 const sidebarRows = [
   {
     name: "isOpen",
-    type: "",
+    type: "function",
     defaultValue: "",
     description: "An event handler for opening the Sidebar."
   },
   {
     name: "onClose",
-    type: "",
+    type: "function",
     defaultValue: "",
     description: "An event handler for closing the Sidebar."
   },
@@ -97,7 +91,11 @@ export default ({ location }) => (
     </Intro>
 
     <DocSection>
-      <Frame navBar={<BrandedNavBar menuData={{ primaryMenu }} />}>
+      <Frame
+        minHeight="initial"
+        border="1px solid blue"
+        navBar={<BrandedNavBar menuData={{ primaryMenu }} />}
+      >
         <Page
           breadcrumbs={
             <Breadcrumbs>
@@ -118,15 +116,13 @@ export default ({ location }) => (
     <Page
       breadcrumbs={
         <Breadcrumbs>
-          <Link href="/">Home</Link>
+          <Link href="/">Home</Link> 
           <Link href="/">Materials</Link>
         </Breadcrumbs>
       }
       title="Materials Overview"
     >
-      <>
-        // main content
-      </>
+      // main content
     </Page>
   </Frame>
 );
@@ -174,9 +170,7 @@ export default ({ location }) => (
       }
       title="Materials Overview"
     >
-      <>
-        // main content
-      </>
+      // main content
     </Page>
 );
 `}
@@ -190,8 +184,7 @@ export default ({ location }) => (
       The Sidebar is designed for displaying additional information or
       editing/creating new items. The component provides animation, a close
       button, and consistent paddings and title positioining. Sidebars are
-      always optional, and can just be passed in as a prop to the Page component
-      when needed.
+      always optional, and can just be used in the Page you want. when needed.
       <Highlight className="js">
         {`import {Sidebar, Page, Breadcrumbs} from "@nulogy/components"
 
@@ -220,13 +213,13 @@ export const WithSideBar = () => {
           </Breadcrumbs>
         }
         title="Materials Overview"
-        sideBar={<ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />}
       >
         <>
           <Box minWidth="300px">
             <PrimaryButton onClick={toggleSideBar}>Toggle SideBar</PrimaryButton>
           </Box>
         </>
+      <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />        
       </Page>
   );
 };`}
