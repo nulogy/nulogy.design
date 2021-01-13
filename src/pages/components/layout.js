@@ -15,7 +15,7 @@ import {
   Link,
   List,
   ListItem,
-  Frame,
+  ApplicationFrame,
   Page
 } from "@nulogy/components";
 import {
@@ -31,7 +31,7 @@ import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const primaryMenu = [{ name: "Menu Link", href: "/" }];
 
-const frameRows = [
+const ApplicationFrameRows = [
   {
     name: "navBar",
     type: "ReactNode",
@@ -86,12 +86,12 @@ export default ({ location }) => (
       <Title>Layout</Title>
       <IntroText>
         There are three components we use to build up Nulogy's standard layout:
-        A Frame, a Page, and an optional Sidebar.
+        A ApplicationFrame, a Page, and an optional Sidebar.
       </IntroText>
     </Intro>
 
     <DocSection>
-      <Frame
+      <ApplicationFrame
         minHeight="initial"
         border="1px solid blue"
         navBar={<BrandedNavBar menuData={{ primaryMenu }} />}
@@ -109,10 +109,10 @@ export default ({ location }) => (
             <Text fontFamily="mono">// main content</Text>
           </>
         </Page>
-      </Frame>
+      </ApplicationFrame>
       <Highlight className="js">
         {`export const _LayoutExample = () => (
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -124,31 +124,32 @@ export default ({ location }) => (
     >
       // main content
     </Page>
-  </Frame>
+  </ApplicationFrame>
 );
 `}
       </Highlight>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Frame</SectionTitle>
+      <SectionTitle>ApplicationFrame</SectionTitle>
       <Text>
-        The Frame is the main layout container for an NDS application. It
-        creates a full-width and full-height page container, and positions the
-        NavBar at the top. This is usually only used once per application.
+        The ApplicationFrame is the main layout container for an NDS
+        application. It creates a full-width and full-height page container, and
+        positions the NavBar at the top. This is usually only used once per
+        application.
       </Text>
 
       <Highlight className="js">
-        {`import {Frame, BrandedNavBar} from "@nulogy/components";
+        {`import {ApplicationFrame, BrandedNavBar} from "@nulogy/components";
 
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
    // page content
-  </Frame>
+  </ApplicationFrame>
 );
 `}
       </Highlight>
 
-      <PropsTable propsRows={frameRows} />
+      <PropsTable propsRows={ApplicationFrameRows} />
     </DocSection>
 
     <DocSection>
