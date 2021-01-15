@@ -2335,10 +2335,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@nulogy/components@5.0.4-7-test":
-  version "5.0.4-7-test"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.0.4-7-test.tgz#759b71b23ceefd5fb2f6c9d2bdc45a36207d3e5c"
-  integrity sha512-SVJ9HdMFjYk6mXdg2UZ/Ria8XXNqVxv6LKWfbOEeEbQ0FySw7gT9NE2LgO1HdLnR9dyWmfSy55m+Mxbbxgsdtg==
+"@nulogy/components@test":
+  version "5.0.4-13-test"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.0.4-13-test.tgz#2a2cc9581d62e5ba8a8faa99e1be48ea8c4c4df9"
+  integrity sha512-hwfDkJCOCHwSr3iRIeHwOukwB1k0jET9lYGF4AocChD/vERUOSUJwqW3/nCh5Q9q0f/Ia/lLZclGccstGwMX5Q==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@nulogy/tokens" "^4.14.0"

@@ -53,6 +53,12 @@ const pageRows = [
     type: "string",
     defaultValue: "",
     description: "The title of the page."
+  },
+  {
+    name: "headerContent",
+    type: "ReactNode",
+    defaultValue: "",
+    description: "Optional, additional content to display next to the title"
   }
 ];
 
