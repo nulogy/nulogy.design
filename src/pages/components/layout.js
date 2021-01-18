@@ -11,6 +11,7 @@ import {
   BrandedNavBar,
   SectionTitle,
   SubsectionTitle,
+  StatusIndicator,
   Title,
   Link,
   List,
@@ -24,8 +25,7 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable,
-  InlineCode
+  PropsTable
 } from "../../components";
 import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
@@ -89,10 +89,19 @@ export default ({ location }) => (
       <title>Layout</title>
     </Helmet>
     <Intro>
-      <Title>Layout</Title>
+      <Title>
+        Layout <StatusIndicator type="informative">BETA</StatusIndicator>
+      </Title>
+      <Alert mb="x3">
+        These components are currently in beta and are being rolled out in pilot
+        locations across Nulogy. They are not currently included in our{" "}
+        <Link href="/guides/versioning">versioning system</Link> due to the high
+        chance of API changes. Please reach out to Design Ops on Slack if you'd
+        like to implement these components.
+      </Alert>
       <IntroText>
         There are three components we use to build up Nulogy's standard layout:
-        A ApplicationFrame, a Page, and an optional Sidebar.
+        An ApplicationFrame, a Page, and an optional Sidebar.
       </IntroText>
     </Intro>
 
