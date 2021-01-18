@@ -246,7 +246,9 @@ export const WithSideBar = () => {
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href={`${STORYBOOK_COMPONENT_URL}`}>View in Storybook</Link>
+        <Link href={`${STORYBOOK_COMPONENT_URL}layout--application-frame`}>
+          View in Storybook
+        </Link>
       </ListItem>
     </DocSection>
   </Layout>
