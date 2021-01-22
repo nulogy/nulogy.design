@@ -64,6 +64,45 @@ const pageRows = [
 
 const sidebarRows = [
   {
+    name: "offset",
+    type: "string",
+    defaultValue: "0px",
+    description:
+      "The amount of pixels to offset the Sidebar from on the right of the screen. Mostly used for in the case of multiple Sidebars."
+  },
+  {
+    name: "closeButtonTestId",
+    type: "string",
+    defaultValue: "",
+    description: "To use the close button in a test."
+  },
+  {
+    name: "duration",
+    type: "number",
+    defaultValue: "0.25",
+    description:
+      "The length of the animation for sliding in and out the Sidebar."
+  },
+  {
+    name: "footer",
+    type: "ReactNode",
+    defaultValue: "",
+    description: "An optional sticky footer."
+  },
+  {
+    name: "title",
+    type: "string",
+    defaultValue: "",
+    description: "A heading to display at the top of the Sidebar."
+  },
+  {
+    name: "triggerRef",
+    type: "RefObject",
+    defaultValue: "",
+    description:
+      "The button that was used to open the Sidebar. Setting this can will allow focus to return to that element when the Sidebar is closed. If it's not set, the focus will be set to the first element on the page."
+  },
+  {
     name: "isOpen",
     type: "function",
     defaultValue: "",
@@ -74,12 +113,6 @@ const sidebarRows = [
     type: "function",
     defaultValue: "",
     description: "An event handler for closing the Sidebar."
-  },
-  {
-    name: "title",
-    type: "string",
-    defaultValue: "",
-    description: "A heading to display at the top of the Sidebar."
   }
 ];
 
@@ -197,10 +230,13 @@ export default ({ location }) => (
 
     <DocSection>
       <SectionTitle>Sidebar</SectionTitle>
-      The Sidebar is designed for displaying additional information or
-      editing/creating new items. The component provides animation, a close
-      button, and consistent paddings and title positioining. Sidebars are
-      always optional, and can just be used in the Page you want. when needed.
+      <Text>
+        The Sidebar is designed for displaying additional information or
+        editing/creating new items. The component provides animation, a close
+        button, and consistent paddings and title positioining. Sidebars are
+        always optional, and can just be used in the Page you want. when needed.
+      </Text>
+      <Text>See props for accessibility features.</Text>
       <Highlight className="js">
         {`import {Sidebar, Page, Breadcrumbs} from "@nulogy/components"
 
