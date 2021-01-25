@@ -114,6 +114,10 @@ export const menuData = [
         href: "/components/input"
       },
       {
+        name: "Layout",
+        href: "/components/layout"
+      },
+      {
         name: "Link",
         href: "/components/link"
       },
