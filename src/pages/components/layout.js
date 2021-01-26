@@ -73,8 +73,14 @@ const sidebarRows = [
   {
     name: "closeButtonTestId",
     type: "string",
-    defaultValue: "",
+    defaultValue: "sidebar-close-button",
     description: "To use the close button in a test."
+  },
+  {
+    name: "closeButtonAriaLabel",
+    type: "string",
+    defaultValue: "close",
+    description: "Aria label for the close button."
   },
   {
     name: "duration",
@@ -113,6 +119,12 @@ const sidebarRows = [
     type: "function",
     defaultValue: "",
     description: "An event handler for closing the Sidebar."
+  },
+  {
+    name: "closeOnOutsideClick",
+    type: "boolean",
+    defaultValue: "false",
+    description: "If true, calls onClose when the user clicks anyweher but the sidebar."
   }
 ];
 
@@ -183,7 +195,7 @@ export default ({ location }) => (
       <Text>
         The ApplicationFrame is the main layout container for an NDS
         application. It creates a full-width and full-height page container, and
-        positions the NavBar at the top. This is usually only used once per
+        positions the NavBar fixed at the top. This is usually only used once per
         application.
       </Text>
 
@@ -234,7 +246,7 @@ export default ({ location }) => (
         The Sidebar is designed for displaying additional information or
         editing/creating new items. The component provides animation, a close
         button, and consistent paddings and title positioining. Sidebars are
-        always optional, and can just be used in the Page you want. when needed.
+        always optional, and can just be used on any Page you like.
       </Text>
       <Text>See props for accessibility features.</Text>
       <Highlight className="js">
