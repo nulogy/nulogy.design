@@ -62,7 +62,7 @@ const pageRows = [
   }
 ];
 
-const sidebarRows = [
+const SidebarRows = [
   {
     name: "offset",
     type: "string",
@@ -73,7 +73,7 @@ const sidebarRows = [
   {
     name: "closeButtonTestId",
     type: "string",
-    defaultValue: "sidebar-close-button",
+    defaultValue: "Sidebar-close-button",
     description: "To use the close button in a test."
   },
   {
@@ -124,7 +124,8 @@ const sidebarRows = [
     name: "closeOnOutsideClick",
     type: "boolean",
     defaultValue: "false",
-    description: "If true, calls onClose when the user clicks anyweher but the sidebar."
+    description:
+      "If true, calls onClose when the user clicks anyweher but the Sidebar."
   }
 ];
 
@@ -153,7 +154,7 @@ export default ({ location }) => (
     <DocSection>
       <ApplicationFrame
         minHeight="initial"
-        border="1px solid blue"
+        boxShadow="medium"
         navBar={<BrandedNavBar menuData={{ primaryMenu }} />}
       >
         <Page
@@ -195,8 +196,8 @@ export default ({ location }) => (
       <Text>
         The ApplicationFrame is the main layout container for an NDS
         application. It creates a full-width and full-height page container, and
-        positions the NavBar fixed at the top. This is usually only used once per
-        application.
+        positions the NavBar fixed at the top. This is usually only used once
+        per application.
       </Text>
 
       <Highlight className="js">
@@ -252,19 +253,19 @@ export default ({ location }) => (
       <Highlight className="js">
         {`import {Sidebar, Page, Breadcrumbs} from "@nulogy/components"
 
-const ExampleSideBar = ({ isOpen, onClose }) => (
-  <SideBar isOpen={isOpen} title="Filters" onClose={onClose}>
+const ExampleSidebar = ({ isOpen, onClose }) => (
+  <Sidebar isOpen={isOpen} title="Filters" onClose={onClose}>
     <Select options={[]} labelText="Delivery:" />
-  </SideBar>
+  </Sidebar>
 );
 
-export const WithSideBar = () => {
+export const WithSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSideBar = () => {
+  const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  const closeSideBar = () => {
+  const closeSidebar = () => {
     setIsOpen(false);
   };
 
@@ -280,15 +281,15 @@ export const WithSideBar = () => {
       >
         <>
           <Box minWidth="300px">
-            <PrimaryButton onClick={toggleSideBar}>Toggle SideBar</PrimaryButton>
+            <PrimaryButton onClick={toggleSidebar}>Toggle Sidebar</PrimaryButton>
           </Box>
         </>
-      <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />        
+      <ExampleSidebar isOpen={isOpen} onClose={closeSidebar} />        
       </Page>
   );
 };`}
       </Highlight>
-      <PropsTable propsRows={sidebarRows} />
+      <PropsTable propsRows={SidebarRows} />
     </DocSection>
 
     <DocSection>
