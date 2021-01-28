@@ -2335,13 +2335,13 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@nulogy/components@test":
-  version "5.0.4-13-test"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.0.4-13-test.tgz#2a2cc9581d62e5ba8a8faa99e1be48ea8c4c4df9"
-  integrity sha512-hwfDkJCOCHwSr3iRIeHwOukwB1k0jET9lYGF4AocChD/vERUOSUJwqW3/nCh5Q9q0f/Ia/lLZclGccstGwMX5Q==
+"@nulogy/components@latest":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.3.1.tgz#9c1cf95165ea3cd668d7804955caf5cd4a6ff4d2"
+  integrity sha512-lpb4TV90jSfCvgiLW18rLfJnUmaFZEi0GzaEB3vlMEaiOYx7qEi/TyhGHgKzwu/QfBMDBTxuMsnwhxV/aKs5XA==
   dependencies:
     "@babel/runtime" "^7.9.6"
-    "@nulogy/tokens" "^4.14.0"
+    "@nulogy/tokens" "^4.14.1"
     "@styled-system/prop-types" "^5.1.4"
     "@styled-system/theme-get" "^5.1.2"
     core-js "3"
@@ -2368,10 +2368,10 @@
     fs "^0.0.1-security"
     svgi "^1.1.0"
 
-"@nulogy/tokens@^4.14.0":
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-4.14.0.tgz#9c4c38e9c53576dfd049fa72617ec78498db876a"
-  integrity sha512-FBXrjmtHhJBizTjBvWCUwsr9P11nQB9pv3LeEuKvPkoU9/MovIQUf4LeCu3TFAR6YxRL8glPDChPntV2cJXC7Q==
+"@nulogy/tokens@^4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-4.14.1.tgz#55194510d7069358005bec95e3adf94a1e027a88"
+  integrity sha512-VQZKkQ77Am7Hca904LUlYhOmEnKVMq5qvzTmpI0jazQWplYcx8vDceMIWcksEzgnKQAfSvESK/U7tcUMa3Jwkg==
 
 "@nulogy/tokens@latest":
   version "4.12.0"

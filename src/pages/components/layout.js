@@ -123,9 +123,23 @@ const SidebarRows = [
   {
     name: "closeOnOutsideClick",
     type: "boolean",
-    defaultValue: "false",
+    defaultValue: "true",
     description:
-      "If true, calls onClose when the user clicks anyweher but the Sidebar."
+      "If true, calls onClose when the user clicks anywhere but the Sidebar."
+  },
+  {
+    name: "overlay",
+    type: "boolean",
+    defaultValue: "true",
+    description:
+      "If true, displays an overlay behind the sidebar when it is open."
+  },
+  {
+    name: "overlay",
+    type: "boolean",
+    defaultValue: "true",
+    description:
+      "If true, displays an overlay behind the sidebar when it is open."
   }
 ];
 
