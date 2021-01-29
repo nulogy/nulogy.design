@@ -1,0 +1,48 @@
+import { BrandedNavBar } from "@nulogy/components";
+import { primaryMenu, secondaryMenu } from "../../data/brandedNavbar";
+
+# BrandedNavBar
+
+A light navigation bar that can optionally support a customer's logo.
+
+<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
+
+```import {NavBar} from "@nulogy/components";
+
+const primaryMenu = [
+  {
+    name: 'Dashboard',
+    items: [
+      { name: 'Customers', href: '/' },
+      { name: 'Invoices', href: '/' },
+    ],
+  },
+  { name: 'Link', href: '/' },
+];
+
+const secondaryMenu = [
+  {
+    name: 'Settings',
+    items: [
+      { name: 'Permissions', href: '/' },
+      { name: 'Manage account', href: '/' },
+    ],
+  },
+];
+
+<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
+```
+
+## Variations
+
+### With a customer logo
+
+Providing a path to a logo via the logo prop will replace the logo on the left with a customer's, and add a Nulogy tag to the right side of the menu.
+
+<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
+
+<BrandedNavBar
+  menuData={{ primaryMenu, secondaryMenu }}
+  subtext="Quality control"
+  logo="../path-to-/sample-logo.png"
+/>

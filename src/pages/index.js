@@ -1,106 +1,68 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import {
-  Box,
-  PrimaryButton,
-  Flex,
-  Text,
-  Title,
-  SectionTitle,
-  List,
-  ListItem,
-  Link
-} from "@nulogy/components";
-import { Intro, IntroText, Layout } from "../components";
+import * as React from "react"
+import {Box, AnimatedBox, Flex, Heading1, Text, StatusIndicator, theme} from "@nulogy/components";
+import styled from "styled-components";
+import {motion} from "framer-motion";
 
-const IndexPage = ({ location }) => (
-  <Layout location={location}>
-    <Helmet>
-      <meta
-        name="description"
-        content="The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices."
-      />
-    </Helmet>
-    <Intro>
-      <Title>Nulogy Design System</Title>
-      <IntroText>
-        The Nulogy Design System is a collection of Visual Guidelines and UI
-        Components that will allow designers and developers to quickly create
-        consistent experiences for our customers using established best
-        practices.
-      </IntroText>
-    </Intro>
+const StripedBorder = () => (
+  <Flex>
+    <Box width={1/7} height="16px" backgroundColor="black" />
+    <Box width={1/7} height="16px" backgroundColor="blackBlue" />
+    <Box width={1/7} height="16px" backgroundColor="darkBlue" />
+    <Box width={1/7} height="16px" backgroundColor="blue" />
+    <Box width={1/7} height="16px" backgroundColor="lightBlue" /> 
+    <Box width={1/7} height="16px" backgroundColor="lightYellow" /> 
+    <Box width={1/7} height="16px" backgroundColor="#ffbb00" /> 
+  </Flex>
+)
 
-    <Flex
-      flexDirection={{ extraSmall: "column", small: "row" }}
-      mb={{ extraSmall: "x6", medium: 0 }}
-    >
-      <Box width={{ extraSmall: 1, small: 1 / 2 }} mb="x6">
-        <SectionTitle mb="x3">Visual Style</SectionTitle>
-        <Text mb="x3">
-          Learn about the style that makes up Nulogy applications; including
-          logo usage, typography, our colour system, iconography and spacing.
-        </Text>
-        <PrimaryButton asLink href="/style/colour">
-          Use our visual style
-        </PrimaryButton>
-      </Box>
+const variants = {
+  hover: {
+    color: theme.colors.darkBlue,
+    x: theme.space.x1,
+    textDecoration: "underline"
+  },
+}
 
-      <Box width={{ extraSmall: 1, small: 1 / 2 }}>
-        <SectionTitle mb="x3">Components</SectionTitle>
-        <Text mb="x3">
-          Built using React, components are tested interface design patterns
-          designed to ensure a consistent experience for our users.
-        </Text>
-        <PrimaryButton asLink href="components/alert">
-          Use our components
-        </PrimaryButton>
-      </Box>
-    </Flex>
+const titleVariants = {
+  initial: {
+    y: 200,
+    opacity: 0
+  },
+  animated: {
+    opacity: 1,
+    y: 0
+  }
+}
 
-    <Box mb="x8">
-      <SectionTitle mb="x3" id="guides">
-        Guides
-      </SectionTitle>
-      <List>
-        <ListItem>
-          <Link href="/guides/designers">
-            Getting Started with NDS for Designers
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/developers">
-            Getting Started with NDS for Developers
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/layout">Building layouts with Flexbox</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/versioning">How NDS packages are versioned</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/packages">How NDS packages are released</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/localization">
-            Localization with @nulogy/components
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/testing">Testing @nulogy/components</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/ops-core">Using NDS in Ops Core</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/style-props">
-            Using Style Props with @nulogy/components
-          </Link>
-        </ListItem>
-      </List>
+const HomeLink = styled(motion.a)({
+  fontSize: "24px",
+  fontFamily: theme.fonts.mono,
+  color: theme.colors.blue,
+  display: "block",
+  marginBottom: theme.space.x1
+})
+
+const HomeLinks = () => (
+  <>
+        <HomeLink href="/design-language" variants={variants} whileHover="hover">Design Language</HomeLink>
+        <HomeLink href="/components" variants={variants} whileHover="hover">Components</HomeLink>
+        <HomeLink href="/">Content <StatusIndicator ml="x2">Coming soon</StatusIndicator></HomeLink>
+        <HomeLink href="/patterns" variants={variants} whileHover="hover">Patterns</HomeLink>
+        <HomeLink href="/resources" variants={variants} whileHover="hover">Resources</HomeLink>
+  </>
+)
+
+const IndexPage = ({location}) => {
+  return (
+    <>
+    <StripedBorder />
+    <Box maxWidth="960px" margin="auto" p="x3">
+      <AnimatedBox variants={titleVariants} initial="initial" animate="animated"><Heading1 mt="x8" mb="x8">Nulogy Design System</Heading1></AnimatedBox>
+      <Text fontSize="32px" mb="x8">Welcome to the Nulogy Design System: a collection of design decisions, components, and practices we use at Nulogy to ensure consistent and efficient UI design and development.</Text>
+      <HomeLinks />
     </Box>
-  </Layout>
-);
+    </>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
