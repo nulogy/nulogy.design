@@ -2336,14 +2336,15 @@
     fastq "^1.6.0"
 
 "@nulogy/components@latest":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.3.1.tgz#9c1cf95165ea3cd668d7804955caf5cd4a6ff4d2"
-  integrity sha512-lpb4TV90jSfCvgiLW18rLfJnUmaFZEi0GzaEB3vlMEaiOYx7qEi/TyhGHgKzwu/QfBMDBTxuMsnwhxV/aKs5XA==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.6.0.tgz#6272c6be94fe351fe41a1e6e0d9f35e8202ee964"
+  integrity sha512-Pz0jC3/lzPWYD1iGMD+QB8KZvR4tfKKr/0nzTrsHvQswJ0K63KzqhfyaWbqCK0LX39C4Gr1b4ZrkEXKk/thzuQ==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@nulogy/tokens" "^4.14.1"
     "@styled-system/prop-types" "^5.1.4"
     "@styled-system/theme-get" "^5.1.2"
+    body-scroll-lock "^3.1.5"
     core-js "3"
     date-fns "2.9.0"
     debounce "^1.2.0"
@@ -2351,19 +2352,21 @@
     i18next "^19.3.1"
     polished "3.4.4"
     react-datepicker "^2.10.1"
+    react-fast-compare "^3.2.0"
     react-i18next "^11.3.3"
     react-input-autosize "^2.2.2"
     react-modal "^3.10.1"
     react-popper "^1.3.6"
+    react-popper-latest "npm:react-popper@2.2.4"
     react-resize-detector "^4.2.0"
     react-windowed-select "2.0.2"
     smoothscroll-polyfill "^0.4.4"
     styled-system "^5.1.4"
 
 "@nulogy/icons@latest":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.12.0.tgz#b67c863cf51dca39dc0c52b2a67e81fed32c3e4b"
-  integrity sha512-vCZEkHN6KCTHXqklqLbPB25T07Y4J4JhbKj4q7j0VFAoCJZdgm59CCEhUadwngjV3gpSlcYkmRITPLbZ7MBNOw==
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.13.0.tgz#97ed06da75d894b8eafbdad81f07b0937b99fb3a"
+  integrity sha512-oxoZrNLA9MLWnn6MQrAZ/567C9/vzvvrjNUPzu13lcS0w5SrKu6Es79YM3MG/vf2Le2+NLI7IOhiiabrYhIXsg==
   dependencies:
     fs "^0.0.1-security"
     svgi "^1.1.0"
@@ -4173,6 +4176,11 @@ body-parser@1.19.0, body-parser@^1.19.0:
     qs "6.7.0"
     raw-body "2.4.0"
     type-is "~1.6.17"
+
+body-scroll-lock@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-3.1.5.tgz#c1392d9217ed2c3e237fee1e910f6cdd80b7aaec"
+  integrity sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==
 
 bonjour@^3.5.0:
   version "3.5.0"
@@ -13733,6 +13741,11 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-fast-compare@^3.0.1, react-fast-compare@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
 react-helmet@^5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
@@ -13803,6 +13816,14 @@ react-onclickoutside@^6.9.0:
   version "6.9.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.9.0.tgz#a54bc317ae8cf6131a5d78acea55a11067f37a1f"
   integrity sha512-8ltIY3bC7oGhj2nPAvWOGi+xGFybPNhJM0V1H8hY/whNcXgmDeaeoCMPPd8VatrpTsUWjb/vGzrmu6SrXVty3A==
+
+"react-popper-latest@npm:react-popper@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-2.2.4.tgz#d2ad3d2474ac9f1abf93df3099d408e5aa6a2e22"
+  integrity sha512-NacOu4zWupdQjVXq02XpTD3yFPSfg5a7fex0wa3uGKVkFK7UN6LvVxgcb+xYr56UCuWiNPMH20tntdVdJRwYew==
+  dependencies:
+    react-fast-compare "^3.0.1"
+    warning "^4.0.2"
 
 react-popper@^1.3.4, react-popper@^1.3.6:
   version "1.3.7"
