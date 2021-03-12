@@ -2335,7 +2335,7 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@nulogy/components@5.10.0":
+"@nulogy/components@latest":
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.10.0.tgz#85485025942f32d9c54542ffa3318957dc334914"
   integrity sha512-nfubptmI6guPX6tzmS60OWRTDTcrphs0d19hxwsRO3R1AikYVo0SZo54rKB5iFb+oCCSBSa4g8DIj74A/SnzgA==
