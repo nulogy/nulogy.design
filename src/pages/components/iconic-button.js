@@ -100,7 +100,7 @@ export default ({ location }) => (
         <SubsectionTitle>With a tooltip</SubsectionTitle>
         <IconicButton tooltip="delete" icon="delete" />
         <Highlight className="js">
-          {'IconicButton tooltip="delete" icon="delete"/>'}
+          {'<IconicButton tooltip="delete" icon="delete"/>'}
         </Highlight>
       </Box>
       <Box mb="x4">
