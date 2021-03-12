@@ -137,6 +137,17 @@ const menuItemKeyRows = [
     type: "function",
     description:
       "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu. NOTE: Do not use `href` and `items` keys if you intend to use the render function."
+  },
+  {
+    name: "to",
+    type: "string",
+    description:
+      "To be used with react router, accepts the route the link should navigate to. Use with as prop equal to Link from react-router"
+  },
+  {
+    name: "as",
+    type: "Component",
+    description: "Accepts an alternative component for the nav item."
   }
 ];
 
