@@ -97,12 +97,10 @@ export default ({ location }) => (
         </Highlight>
       </Box>
       <Box mb="x4">
-        <SubsectionTitle>With a hidden label</SubsectionTitle>
-        <IconicButton labelHidden icon="delete">
-          Delete
-        </IconicButton>
+        <SubsectionTitle>With a tooltip</SubsectionTitle>
+        <IconicButton tooltip="delete" icon="delete" />
         <Highlight className="js">
-          {'<IconicButton labelHidden icon="delete">Delete</IconicButton>'}
+          {'IconicButton tooltip="delete" icon="delete"/>'}
         </Highlight>
       </Box>
       <Box mb="x4">
