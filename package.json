@@ -49,7 +49,7 @@
     }
   },
   "dependencies": {
-    "@nulogy/components": "latest",
+    "@nulogy/components": "5.10.0",
     "@nulogy/icons": "latest",
     "@nulogy/tokens": "latest",
     "babel-plugin-styled-components": "^1.10.0",

@@ -2335,10 +2335,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@nulogy/components@latest":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.6.0.tgz#6272c6be94fe351fe41a1e6e0d9f35e8202ee964"
-  integrity sha512-Pz0jC3/lzPWYD1iGMD+QB8KZvR4tfKKr/0nzTrsHvQswJ0K63KzqhfyaWbqCK0LX39C4Gr1b4ZrkEXKk/thzuQ==
+"@nulogy/components@5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-5.10.0.tgz#85485025942f32d9c54542ffa3318957dc334914"
+  integrity sha512-nfubptmI6guPX6tzmS60OWRTDTcrphs0d19hxwsRO3R1AikYVo0SZo54rKB5iFb+oCCSBSa4g8DIj74A/SnzgA==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@nulogy/tokens" "^4.14.1"
@@ -2346,8 +2346,10 @@
     "@styled-system/theme-get" "^5.1.2"
     body-scroll-lock "^3.1.5"
     core-js "3"
+    create-react-context "^0.3.0"
     date-fns "2.9.0"
     debounce "^1.2.0"
+    deep-equal "^1.1.1"
     framer-motion "^3.1.3"
     i18next "^19.3.1"
     polished "3.4.4"
