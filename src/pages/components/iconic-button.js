@@ -31,11 +31,10 @@ const propsRows = [
       "The icon to display. See the Icons component for all possible options."
   },
   {
-    name: "labelHidden",
-    type: "Boolean",
-    defaultValue: "false",
-    description:
-      "Will display the label under the Iconic Button on hover or button focus."
+    name: "tooltip",
+    type: "string",
+    defaultValue: "undefined",
+    description: "displays a tooltip with the passed in string."
   },
   {
     name: "disabled",
@@ -49,6 +48,13 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the button component."
+  },
+  {
+    name: "labelHidden (deprecated)",
+    type: "Boolean",
+    defaultValue: "false",
+    description:
+      "Use tooltip prop without children instead. LabelHidden will display the label under the Iconic Button on hover or button focus."
   }
 ];
 
