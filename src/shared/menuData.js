@@ -30,6 +30,10 @@ export const menuData = [
         href: "/components/alert"
       },
       {
+        name: "Application Frame",
+        href: "/components/application-frame"
+      },
+      {
         name: "Async Select",
         href: "/components/async-select"
       },
@@ -114,10 +118,6 @@ export const menuData = [
         href: "/components/input"
       },
       {
-        name: "Layout",
-        href: "/components/layout"
-      },
-      {
         name: "Link",
         href: "/components/link"
       },
@@ -142,6 +142,10 @@ export const menuData = [
         href: "/components/overlay"
       },
       {
+        name: "Page",
+        href: "/components/page"
+      },
+      {
         name: "Pagination",
         href: "/components/pagination"
       },
@@ -156,6 +160,10 @@ export const menuData = [
       {
         name: "Select",
         href: "/components/select"
+      },
+      {
+        name: "Sidebar",
+        href: "/components/sidebar"
       },
       {
         name: "StatusIndicator",

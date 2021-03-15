@@ -74,7 +74,7 @@ const IndexPage = ({ location }) => (
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/layout">Building layouts with Flexbox</Link>
+          <Link href="/guides/layout">Building layouts</Link>
         </ListItem>
         <ListItem>
           <Link href="/guides/versioning">How NDS packages are versioned</Link>

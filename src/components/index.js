@@ -8,3 +8,4 @@ export { default as DocText } from "./DocText";
 export { default as InlineCode } from "./InlineCode";
 export { default as Intro } from "./Intro";
 export { default as IntroText } from "./IntroText";
+export { default as BetaMessage } from "./BetaMessage";
