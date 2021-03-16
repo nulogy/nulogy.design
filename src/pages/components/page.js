@@ -2,11 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Alert,
   Breadcrumbs,
   BrandedNavBar,
   SectionTitle,
-  StatusIndicator,
   Title,
   Link,
   ListItem,
@@ -19,8 +17,7 @@ import {
   Intro,
   IntroText,
   DocSection,
-  PropsTable,
-  BetaMessage
+  PropsTable
 } from "../../components";
 import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
@@ -53,10 +50,7 @@ export default ({ location }) => (
       <title>Page</title>
     </Helmet>
     <Intro>
-      <Title>
-        Page <StatusIndicator type="informative">BETA</StatusIndicator>
-      </Title>
-      <BetaMessage />
+      <Title>Page</Title>
       <IntroText>
         There are three components we use to build up Nulogy's standard layout:
         An ApplicationFrame, a Page, and an optional Sidebar.
