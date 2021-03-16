@@ -89,13 +89,6 @@ const SidebarRows = [
     defaultValue: "true",
     description:
       "If true, displays an overlay behind the sidebar when it is open."
-  },
-  {
-    name: "overlay",
-    type: "boolean",
-    defaultValue: "true",
-    description:
-      "If true, displays an overlay behind the sidebar when it is open."
   }
 ];
 
