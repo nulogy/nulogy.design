@@ -92,7 +92,7 @@ export default ({ location }) => (
       <Highlight className="js">
         {`import {Alert} from "@nulogy/components";
 
-<Alert type="danger" title="Important information" isCloseaeble>
+<Alert type="danger" title="Important information" isCloseable>
   Details about important information
 </Alert>
 `}
