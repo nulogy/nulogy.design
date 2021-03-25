@@ -75,6 +75,12 @@ const propsRows = [
     defaultValue: "",
     description: "Default value of input"
   },
+  {
+    name: "inputWidth",
+    type: "String",
+    defaultValue: "184px",
+    description: "css width of the input field"
+  },
   ...inputProps,
   ...prefixSuffixProps
 ];
