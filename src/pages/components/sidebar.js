@@ -27,6 +27,12 @@ const SidebarRows = [
       "The amount of pixels to offset the Sidebar from on the right of the screen. Mostly used for in the case of multiple Sidebars."
   },
   {
+    name: "hideCloseButton",
+    type: "boolean",
+    defaultValue: "false",
+    description: "When true, hides the close button"
+  },
+  {
     name: "closeButtonTestId",
     type: "string",
     defaultValue: "Sidebar-close-button",
