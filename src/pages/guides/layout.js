@@ -65,6 +65,18 @@ export default ({ location }) => (
     </Flex>
 
     <DocSection>
+      <SectionTitle>Creating Pages</SectionTitle>
+      <Text>
+        To create a typical Nulogy page layout use{" "}
+        <Link href="/components/application-frame">Application Frame</Link>,{" "}
+        <Link href="/components/page">Page</Link> and , optionally,{" "}
+        <Link href="/components/sidebar">Sidebar</Link> components together. To
+        further customize the internal layout within pages continue reading the
+        sections below.
+      </Text>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Building blocks</SectionTitle>
       <Text>
         <Link href="/components/box">Box</Link> and{" "}
