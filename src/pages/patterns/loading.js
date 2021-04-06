@@ -313,10 +313,10 @@ export default ({ location }) => (
       <Flex justifyContent="space-around" alignItems="center">
         <Button>Apply status</Button>
         <Flex alignItems="center" mt="x4" mb="x4">
-          <Text m="0" mr="half" color="darlGrey">
+          <Text m="0" mr="x1" color="darlGrey">
             Applying status
           </Text>
-          <img src={loadingInlineImage} alt="" />
+          <Icon icon="loading" />
         </Flex>
         <Flex alignItems="center">
           <Icon icon="check" color="green" mr="x1" />
