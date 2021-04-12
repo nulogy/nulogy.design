@@ -64,14 +64,13 @@ const IndexPage = ({ location }) => (
       </SectionTitle>
       <List>
         <ListItem>
-          <Link href="/guides/designers">
-            Getting Started with NDS for Designers
-          </Link>
+          <Link href="/guides/developer-workflow">Developer workflow</Link>
         </ListItem>
         <ListItem>
-          <Link href="/guides/developers">
-            Getting Started with NDS for Developers
-          </Link>
+          <Link href="/guides/designers">Designers guide to NDS</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/guides/developers">NDS usage instructions</Link>
         </ListItem>
         <ListItem>
           <Link href="/guides/layout">Building layouts</Link>
