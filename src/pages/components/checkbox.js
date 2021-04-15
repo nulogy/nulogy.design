@@ -10,6 +10,7 @@ import {
   ListItem,
   List
 } from "@nulogy/components";
+import { View, PropTypes } from "react-view";
 import Highlight from "react-highlight";
 import {
   Layout,
@@ -56,6 +57,34 @@ export default ({ location }) => (
         Checkboxes allow users to select any number of options from a list.
       </IntroText>
     </Intro>
+    <View
+      componentName="Checkbox"
+      props={{
+        labelText: {
+          value: "labelText",
+          type: PropTypes.String,
+          description: "Label"
+        },
+        onChange: {
+          value: '() => alert("changed")',
+          type: PropTypes.Function,
+          description: "Function called when changed."
+        },
+        checked: {
+          value: false,
+          type: PropTypes.Boolean,
+          description: "Whether its checked"
+        }
+      }}
+      scope={{
+        Checkbox
+      }}
+      imports={{
+        "@nulogy/components": {
+          named: ["Checkbox"]
+        }
+      }}
+    />
     <DocSection>
       <Checkbox id="checkbox" labelText="I am a checkbox" />
       <Highlight className="js">

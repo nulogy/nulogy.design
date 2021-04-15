@@ -3,6 +3,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
+import { View, PropTypes } from "react-view";
 import {
   Alert,
   Button,
@@ -84,6 +85,40 @@ export default ({ location }) => (
         information and requires minimal interaction.
       </IntroText>
     </Intro>
+
+    <View
+      componentName="Alert"
+      props={{
+        children: {
+          value: "Hello",
+          type: PropTypes.ReactNode,
+          description: "Visible message."
+        },
+        title: {
+          value: "Title",
+          type: PropTypes.String,
+          description: "Visible message."
+        },
+        onClose: {
+          value: '() => alert("close")',
+          type: PropTypes.Function,
+          description: "Function called when the alert is closed."
+        },
+        isCloseable: {
+          value: false,
+          type: PropTypes.Boolean,
+          description: "Whether an alert can be closed"
+        }
+      }}
+      scope={{
+        Alert
+      }}
+      imports={{
+        "@nulogy/components": {
+          named: ["Alert"]
+        }
+      }}
+    />
 
     <DocSection>
       <Alert type="danger" title="Important information" isCloseable>
