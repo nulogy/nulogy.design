@@ -1,80 +1,34 @@
 {
-  "name": "@nulogy/nulogy.design",
+  "name": "nulogy.design",
   "version": "1.0.0",
-  "description": "http://nulogy.design",
   "private": true,
-  "scripts": {
-    "precommit": "pretty-quick --staged",
-    "eslint": "eslint --config ./.eslintrc './**/*.js'",
-    "eslint:fix": "yarn run eslint --fix",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "yarn build && gatsby serve",
-    "start": "yarn develop",
-    "deploy": "yarn build && gh-pages -d public"
-  },
-  "main": "index.js",
-  "license": "MIT",
-  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
-  "homepage": "http://nulogy.design",
-  "repository": "https://github.com/nulogy/nulogy.design",
+  "description": "nulogy.design",
+  "author": "Matt Dunn",
   "keywords": [
-    "nulogy",
-    "NDS",
-    "design system"
+    "gatsby"
   ],
-  "engines": {
-    "node": "^14.15.0",
-    "yarn": "^1.17.3"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "eslint": "^6.0.0",
-    "gh-pages": "^3.1.0",
-    "husky": "2.2.0",
-    "lerna": "^3.16.4",
-    "prettier": "1.17.0",
-    "pretty-quick": "2.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "wait-for-expect": "^3.0.2"
-  },
-  "resolutions": {
-    "**/svgi/js-yaml": "^3.13.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run precommit"
-    }
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "@nulogy/components": "^5.10.0",
-    "@nulogy/icons": "latest",
-    "@nulogy/tokens": "latest",
-    "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.24.8",
-    "gatsby-image": "^2.2.29",
-    "gatsby-link": "^2.4.13",
-    "gatsby-plugin-gtag": "^1.0.12",
-    "gatsby-plugin-manifest": "^2.2.23",
-    "gatsby-plugin-netlify": "2.1.22",
-    "gatsby-plugin-offline": "^3.0.16",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sharp": "^2.2.32",
-    "gatsby-plugin-styled-components": "^3.1.11",
-    "gatsby-react-router-scroll": "^3.0.12",
-    "gatsby-remark-copy-linked-files": "^2.1.28",
-    "gatsby-remark-images": "^3.1.28",
-    "gatsby-source-filesystem": "^2.3.21",
-    "gatsby-transformer-remark": "^2.6.30",
-    "gatsby-transformer-sharp": "^2.2.23",
-    "prop-types": "^15.6.2",
-    "react-helmet": "^5.2.0",
-    "react-highlight": "^0.12.0",
-    "react-view": "^2.3.7",
-    "styled-components": "^=5.0.0",
-    "styled-system": "3.2.1"
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@nulogy/components": "test",
+    "babel-plugin-styled-components": "^1.12.0",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-google-analytics": "^2.9.0",
+    "gatsby-plugin-mdx": "^1.8.0",
+    "gatsby-plugin-prettier-eslint": "^1.0.4",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-styled-components": "^3.8.0",
+    "gatsby-source-filesystem": "^2.9.1",
+    "prism-react-renderer": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.1"
   }
 }

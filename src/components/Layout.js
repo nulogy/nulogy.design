@@ -1,45 +1,34 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Box, NDSProvider } from "@nulogy/components";
-import { Helmet } from "react-helmet";
-import { Navigation } from "./Nav";
+import React from 'react'
+import {Box, Flex, ApplicationFrame} from "@nulogy/components";
+import Navigation from './Navigation'
+import Transition from './Transition'
 
-import HighlightStyles from "./HighlightStyles";
+const StripedBorder = () => (
+  <Flex height="16px">
+    <Box width={1/7} backgroundColor="black" />
+    <Box width={1/7} backgroundColor="blackBlue" />
+    <Box width={1/7} backgroundColor="darkBlue" />
+    <Box width={1/7} backgroundColor="blue" />
+    <Box width={1/7} backgroundColor="lightBlue" /> 
+    <Box width={1/7} backgroundColor="lightYellow" /> 
+    <Box width={1/7} backgroundColor="yellow" /> 
+  </Flex>
+)
 
 const Layout = ({ children, location }) => (
-  <NDSProvider locale="en_US">
-    <Box>
-      <Helmet titleTemplate="%s | Nulogy Design System">
-        <html lang="en" />
-        <meta charSet="utf-8" />
-        <title>Welcome</title>
-        <link
-          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
-          rel="stylesheet"
-        />
-      </Helmet>
-      <HighlightStyles />
-      <Navigation location={location} />
-      <Box ml={{ extraSmall: 0, medium: "220px" }}>
-        <Box
-          pt={{ extraSmall: 0, medium: "x8" }}
-          px="x3"
-          maxWidth="740px"
-          m="0 auto"
-        >
-          {children}
+    <ApplicationFrame>
+    <StripedBorder />
+      <Flex maxWidth="1300px" m="0 auto">
+        <Box px="x3" py="x8" width="300px" height="100vh" overflow="scroll" position="fixed">
+          <Navigation />
         </Box>
-      </Box>
-    </Box>
-  </NDSProvider>
-);
+        <Transition location={location}>
+            <Box padding="x6" marginLeft="300px">
+                {children}
+            </Box>
+        </Transition>
+      </Flex>
+    </ApplicationFrame>
+)
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
-
-export default Layout;
+export default Layout

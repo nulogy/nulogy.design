@@ -1,60 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: "Nulogy Design System",
-    description: "Documentation for the Nulogy Design System",
-    author: "Nulogy"
+    title: "nulogy.design",
   },
   plugins: [
-    "gatsby-plugin-remove-serviceworker",
-    "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images/`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/markdown/`,
-        name: "markdown-pages"
-      }
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 990
-            }
-          }
-        ]
-      }
-    },
     "gatsby-plugin-styled-components",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        name: "Nulogy.design",
-        short_name: "NDS",
-        start_url: "/",
-        background_color: "#fff",
-        theme_color: "#663399",
-        display: "minimal-ui",
-        icon: `${__dirname}/src/images/favicon.svg` // This path is relative to the root of the site.
+        trackingId: "xxx",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/MarkdownRenderer.js"),
+        }
       }
     },
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        trackingId: "UA-5984624-20"
-      }
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
     },
-    "gatsby-plugin-netlify" // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
-  ]
+  ],
 };

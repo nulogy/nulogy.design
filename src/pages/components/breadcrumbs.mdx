@@ -1,0 +1,41 @@
+import { Breadcrumbs, Link } from "@nulogy/components"
+import PropTable from "../../components/PropTable"
+
+# Breadcrumbs
+
+> A breadcrumbs component that wraps around links or text to help orient the user within the application.
+
+<Breadcrumbs>
+  <Link href="/">Home</Link>
+  <Link href="/Tenants">Tenants</Link>
+</Breadcrumbs>
+
+```
+import { Breadcrumbs, Link } from "@nulogy/components";
+
+<Breadcrumbs>
+  <Link href="/">Home</Link>
+  <Link href="/Tenants">Tenants</Link>
+</Breadcrumbs>
+```
+
+## Props
+
+<PropTable
+  propsRows={[
+    {
+      name: "as",
+      type: "Element type",
+      defaultValue: "nav",
+      description: "The element that wraps the breadcrumbs",
+    },
+  ]}
+/>
+
+## Resources
+
+- [View in storybook](https://master--5f60c6c285eaad0022dce67f.chromatic.com/?path=/story/components-breadcrumbs--breadcrumbs)
+
+## Related components
+
+- [Link](/components/link)

@@ -1,11 +1,10 @@
-import React from "react";
-import { Layout } from "../components";
+import * as React from "react"
+import {Text} from "@nulogy/components"
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>Page not found</h1>
-    <p>The page you're looking for is not here.</p>
-  </Layout>
-);
+const NotFoundPage = () => {
+  return (
+    <Text><span role="img" aria-label="Pensive emoji">😔</span> we couldn’t find what you were looking for.</Text>
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

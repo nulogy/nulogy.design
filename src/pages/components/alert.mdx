@@ -1,0 +1,88 @@
+---
+title: Alert
+import: import { Alert } from "@nulogy/components";
+storybookUrl: "/"
+figmaUrl: "/"
+---
+
+import { Alert } from "@nulogy/components";
+
+# Alert
+
+An alert is a concise, event-driven message that communicates information and requires minimal interaction.
+
+<Alert type="danger" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+
+```js
+import { Alert } from "@nulogy/components";
+```
+
+```js
+<Alert type="danger" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+```
+
+## Use when
+
+- a user completes a task successfully
+- to call attention to an error that requires attention
+- to inform users about upcoming service maintenance
+- to warn users about a potential issue
+- a form has returned with errors
+
+## Variations
+
+### Informative
+
+Informative alerts provide a user with general messages and non-critical information.
+
+<Alert type="informative" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+
+```js
+<Alert type="informative" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+```
+
+### Danger
+
+Danger alerts inform users about errors that require attention.
+
+<Alert type="danger" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+
+```js
+<Alert type="danger" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+```
+
+### Success
+
+Success alerts inform users that an action has been completed successfully.
+
+Informative alerts provide a user with general messages and non-critical information.
+
+<Alert type="success" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+
+```js
+<Alert type="success" title="Important information" isCloseaeble>
+  Details about important information
+</Alert>
+```
+
+### Content guidelines
+
+To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+
+### Related Components
+
+- [Toast](/)
