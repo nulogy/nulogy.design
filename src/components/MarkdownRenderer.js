@@ -16,7 +16,6 @@ function MarkdownRenderer({ props, children, location }) {
       ul: (props) => <List mb="x4" {...props} />,
       li: (props) => <ListItem fontSize="18px"  {...props} />,
       pre: (props) => <CodeBlock {...props} />,
-      PropTable      
     }}>
       {children}
       test
