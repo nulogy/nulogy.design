@@ -17,16 +17,17 @@ const StripedBorder = () => (
 
 const Layout = ({ children, location }) => (
     <ApplicationFrame>
-    <StripedBorder />
-      <Flex maxWidth="1300px" m="0 auto">
-        <Box px="x3" py="x8" width="300px" height="100vh" overflow="scroll" position="fixed">
+      <Flex>
+        <Box position="fixed" height="100%" overflow="hidden auto" width="320px" as="aside" px="x8" py="x8" bg="darkBlue">
           <Navigation />
         </Box>
+        <Box width="calc(100% - 320px)" marginLeft="320px">
         <Transition location={location}>
-            <Box padding="x6" marginLeft="300px">
-                {children}
+            <Box as="main" paddingTop="x6" paddingX="x8">
+              <Box>{children}</Box>
             </Box>
         </Transition>
+        </Box>
       </Flex>
     </ApplicationFrame>
 )

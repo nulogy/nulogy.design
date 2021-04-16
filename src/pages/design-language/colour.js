@@ -28,7 +28,7 @@ const IndexPage = ({location}) => {
   return (
     <Page title="" location={location}>
       <Box maxWidth="1024px">
-          <Box p="x4" mb="x2" backgroundColor="whiteGrey">
+          <Box mb="x2">
             <Heading1><span role="img" aria-label="Palette emoji">🎨</span> Colour</Heading1>
             <Text fontSize="24px" mb="x2">Colours are used to set a visual tone, communicate meaning, and create a cohesive experience between Nulogy products and the physical environment. We are committed to complying with WCAG AA contrast ratios.</Text>
             <Text fontSize="24px" mb="x6"><Link href={links.figma} fontSize="24px">View colours in Figma</Link> | <Link href={links.figma} fontSize="24px">View theme file</Link></Text>
