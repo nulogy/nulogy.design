@@ -32,5 +32,8 @@
     "react-dom": "^16.13.1",
     "react-view": "^2.3.7",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0"
   }
 }
