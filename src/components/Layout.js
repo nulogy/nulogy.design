@@ -2,6 +2,7 @@ import React from 'react'
 import {Box, Flex, ApplicationFrame} from "@nulogy/components";
 import Navigation from './Navigation'
 import Transition from './Transition'
+import Helmet from "react-helmet";
 
 const StripedBorder = () => (
   <Flex height="16px">
@@ -17,6 +18,19 @@ const StripedBorder = () => (
 
 const Layout = ({ children, location }) => (
     <ApplicationFrame>
+      <Helmet titleTemplate="%s | Nulogy Design System">
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>Welcome</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Flex>
         <Box position="fixed" height="100%" overflow="hidden auto" width="320px" as="aside" px="x8" py="x8" bg="darkBlue">
           <Navigation />

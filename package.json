@@ -30,6 +30,7 @@
     "raw-loader": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-view": "^2.3.7",
     "styled-components": "^5.2.1"
   },
