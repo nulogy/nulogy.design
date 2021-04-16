@@ -1,9 +1,10 @@
 import React, {useState, useEffect } from 'react'
-import {useView, Compiler, Editor, Error, ActionButtons } from 'react-view';
+import {useView, Editor, Error, ActionButtons } from 'react-view';
+import Compiler from './Compiler';
 
 const getInitialCode = async (componentName, example) => {
 
-  const codeExample = await import(`!!raw-loader!../examples/${componentName.toLowerCase()}/${example}.txt`);
+  const codeExample = await import(`!!raw-loader!../../examples/${componentName.toLowerCase()}/${example}.txt`);
   if (!codeExample.default || typeof codeExample.default !== 'string') return "";
   return codeExample.default
 };
@@ -24,7 +25,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
 
   return code && (
     <>
-      <Compiler {...params.compilerProps} />
+      <Compiler {...params.compilerProps}/>
       <Editor {...params.editorProps} />
       <Error {...params.errorProps} />
       <ActionButtons {...params.actions} />
