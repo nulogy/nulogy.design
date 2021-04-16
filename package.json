@@ -27,8 +27,10 @@
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-filesystem": "^2.9.1",
     "prism-react-renderer": "^1.1.1",
+    "raw-loader": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-view": "^2.3.7",
     "styled-components": "^5.2.1"
   }
 }

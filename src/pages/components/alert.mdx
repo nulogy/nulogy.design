@@ -6,24 +6,20 @@ figmaUrl: "/"
 ---
 
 import { Alert } from "@nulogy/components";
+import Playground from "../../components/Playground";
+import Example from "../../components/Example";
+import { alertConfig } from "../../playgrounds/alert";
 
 # Alert
 
 An alert is a concise, event-driven message that communicates information and requires minimal interaction.
 
-<Alert type="danger" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
+<Playground {...alertConfig} />
 
-```js
-import { Alert } from "@nulogy/components";
-```
 
-```js
-<Alert type="danger" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-```
+
+<Example componentName="alert" scope={{ Alert }} example="DangerAlert" />
+
 
 ## Use when
 
