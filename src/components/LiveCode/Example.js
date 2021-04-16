@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
-import {useView, Editor, Error, ActionButtons } from 'react-view';
+import {useView, Error, ActionButtons } from 'react-view';
 import Compiler from './Compiler';
+import Editor from './Editor';
 
 const getInitialCode = async (componentName, example) => {
 
