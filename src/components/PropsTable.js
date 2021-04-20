@@ -57,25 +57,15 @@ const columns = [
   }
 ];
 
-const PropsTable = ({ propsRows }) => {
+const PropsTable = ({ propsConfig }) => {
 
-  // const props = Object.keys(propsRows).reduce((acc, prop) => [
-  //   ...acc,
-  //   { [prop]: propsRows[prop]}
-  // ],[]);
-  // console.log(props);
-  return <Table rows={propsRows} columns={columns} keyField="name" rowHovers={false} />
-};
-
-PropsTable.propTypes = {
-  propsRows: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      type: PropTypes.string,
-      defaultValue: PropTypes.string,
-      description: PropTypes.string
-    })
-  ).isRequired
+  const propsArr = Object.keys(propsConfig).reduce((acc, prop) => [
+    ...acc,
+    { name: prop,
+      ...propsConfig[prop]
+    }
+  ],[]);
+  return <Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} />
 };
 
 export default PropsTable;
