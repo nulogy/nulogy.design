@@ -18,8 +18,6 @@ export default ({ componentName, scope,  props}) => {
   return (
     <>
       <Compiler {...params.compilerProps} />
-      <Error msg={params.errorProps.msg} isPopup />
-      <Knobs {...params.knobProps} />
       <Editor {...params.editorProps} />
       <Error {...params.errorProps} />
       <ActionButtons {...params.actions} />
