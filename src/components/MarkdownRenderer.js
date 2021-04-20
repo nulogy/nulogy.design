@@ -1,7 +1,11 @@
 import React from "react";
 import {MDXProvider} from "@mdx-js/react";
 import {Text, Link, List, ListItem, Heading1, Heading2, Heading3} from "@nulogy/components";
-import CodeBlock from "./CodeBlock"
+import CodeBlock from "./CodeBlock";
+import Playground from "./LiveCode/Playground";
+import Example from "./LiveCode/Example";
+import PropsTable from "./PropsTable";
+
 
 function MarkdownRenderer({ children }) {
   return (
@@ -16,6 +20,9 @@ function MarkdownRenderer({ children }) {
       li: (props) => <ListItem  {...props} />,
       a: (props) => <Link {...props} />,
       pre: (props) => <CodeBlock {...props} />,
+      Playground,
+      Example,
+      PropsTable
     }}>
       {children}
     </MDXProvider>

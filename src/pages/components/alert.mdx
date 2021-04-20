@@ -16,64 +16,74 @@ An alert is a concise, event-driven message that communicates information and re
 
 <Playground {...alertConfig} />
 
-
-
-<Example componentName="alert" scope={{ Alert }} example="DangerAlert" />
-
-
-## Use when
-
-- a user completes a task successfully
-- to call attention to an error that requires attention
-- to inform users about upcoming service maintenance
-- to warn users about a potential issue
-- a form has returned with errors
-
 ## Variations
 
 ### Informative
 
 Informative alerts provide a user with general messages and non-critical information.
 
-<Alert type="informative" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-
-```js
-<Alert type="informative" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-```
+<Example componentName="alert" scope={{ Alert }} example="InformativeAlert" />
 
 ### Danger
 
 Danger alerts inform users about errors that require attention.
 
-<Alert type="danger" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-
-```js
-<Alert type="danger" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-```
+<Example componentName="alert" scope={{ Alert }} example="DangerAlert" />
 
 ### Success
 
 Success alerts inform users that an action has been completed successfully.
 
-Informative alerts provide a user with general messages and non-critical information.
+<Example componentName="alert" scope={{ Alert }} example="SuccessAlert" />
 
-<Alert type="success" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
+### Props
 
-```js
-<Alert type="success" title="Important information" isCloseaeble>
-  Details about important information
-</Alert>
-```
+<PropsTable propsRows={[
+  {
+    name: "title",
+    type: "string",
+    defaultValue: "",
+    description: "An optional title to display in bold above the main text."
+  },
+  {
+    name: "type",
+    type: "string",
+    defaultValue: "informative",
+    description:
+      "The type of alert. Accepts informative, danger, warning and success."
+  },
+  {
+    name: "className",
+    type: "String",
+    defaultValue: "undefined",
+    description: "className passed to the alert component."
+  },
+  {
+    name: "isCloseable",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Provides a close icon in the top right corner."
+  },
+  {
+    name: "onClose",
+    type: "function",
+    defaultValue: "() => {}",
+    description: "Callback function invoked when the Alert is closed."
+  },
+  {
+    name: "closeAriaLabel",
+    type: "String",
+    defaultValue: "close",
+    description: "aria label for close button"
+  },
+  {
+    name: "controlled",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "If true, will allow the Alert's opened and closed state to be controlled through props rather than within the component's internal state"
+  }
+]} />
 
 ### Content guidelines
 

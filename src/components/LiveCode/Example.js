@@ -5,7 +5,7 @@ import Editor from './Editor';
 
 const getInitialCode = async (componentName, example) => {
 
-  const codeExample = await import(`!!raw-loader!../../examples/${componentName.toLowerCase()}/${example}.txt`);
+  const codeExample = await import(`!!raw-loader!../../examples/${componentName.toLowerCase()}/${example}.jsx`);
   if (!codeExample.default || typeof codeExample.default !== 'string') return "";
   return codeExample.default
 };

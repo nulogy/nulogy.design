@@ -1,9 +1,10 @@
 import React from "React";
 import { Box, Icon, Input, Tooltip, Flex, Link, Toggle } from "@nulogy/components";
-import { PropTypes } from "react-view";
+import {PropTypes } from "react-view";
+import Editor from "./Editor";
 
 
-const PropLabel = ({ name, description }) => <Flex alignItems="center" mt="x2">
+const Label = ({ name, description }) => <Flex alignItems="center" mt="x2">
  {name}
  <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half"/></Tooltip>
 </Flex>
@@ -26,22 +27,20 @@ const Knob = ({ name, description, set, type, value}) => {
     case PropTypes.String:
     case PropTypes.Date:
     case PropTypes.Number:
-    case PropTypes.ReactNode:
-    case PropTypes.Function:
       return (
         <Spacing>
-          <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<PropLabel name={name} description={description}/>} />
+          <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description}/>} />
         </Spacing>
       );
     case PropTypes.Boolean:
       return (
         <Spacing>
           <Toggle
-            checked={Boolean(value)}
+            toggled={Boolean(value)}
             onChange={() => {
               set(!value);
             }}
-            labelText={<PropLabel name={name} description={description}/>}
+            labelText={<Label name={name} description={description}/>}
           />
         </Spacing>
       );
@@ -56,6 +55,13 @@ const Knob = ({ name, description, set, type, value}) => {
     case PropTypes.Object:
       return (
         <Spacing>
+          <Label name={name} description={description} />
+          <Editor
+            onChange={code => {
+              set(code);
+            }}
+            code={value ? String(value) : ''}
+          />
         </Spacing>
       );
     case PropTypes.Custom:
