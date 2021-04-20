@@ -1,10 +1,11 @@
 import React from 'react'
 import { Editor as ReactViewEditor } from 'react-view';
 import { Box } from "@nulogy/components";
-import dracula from 'prism-react-renderer/themes/dracula';
+import vsDark from 'prism-react-renderer/themes/vsDark';
+import duotoneLight from 'prism-react-renderer/themes/duotoneLight';
 
-const Editor = (props) => <Box fontFamily="mono">
-  <ReactViewEditor {...props} theme={dracula} className="adding-this-class-removes-the-default-styling"/>
+const Editor = ({light, ...props}) => <Box fontFamily="mono">
+  <ReactViewEditor {...props} theme={light ? duotoneLight : vsDark} className="adding-this-class-removes-the-default-styling"/>
 </Box>;
 
 export default Editor;
