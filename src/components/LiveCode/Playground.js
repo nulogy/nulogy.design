@@ -18,6 +18,7 @@ export default ({ componentName, scope,  props}) => {
   return (
     <>
       <Compiler {...params.compilerProps} />
+      <Knobs {...params.knobProps} />
       <Editor {...params.editorProps} />
       <Error {...params.errorProps} />
       <ActionButtons {...params.actions} />

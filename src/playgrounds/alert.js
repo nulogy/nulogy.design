@@ -30,7 +30,7 @@ export const alertConfig = {
       description: "Callback function invoked when the Alert is closed."
     },
     isCloseable: {
-      value: false,
+      value: true,
       defaultValue: "false",
       type: PropTypes.Boolean,
       description: "Provides a close icon in the top right corner."

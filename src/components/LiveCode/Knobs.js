@@ -11,7 +11,7 @@ const Label = ({ name, description }) => <Flex alignItems="center">
 
 const Spacing = ({children}) => <Box width="calc(50% - 8px)" mt="x2">{children}</Box>;
 
-const Knob = ({ name, description, set, type, value, options}) => { 
+const Knob = ({ name, description, set, type, value, options, error}) => { 
   switch (type) {
     case PropTypes.Ref:
       return (
@@ -29,7 +29,7 @@ const Knob = ({ name, description, set, type, value, options}) => {
     case PropTypes.Number:
       return (
         <Spacing>
-          <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description}/>} />
+          <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
         </Spacing>
       );
     case PropTypes.Boolean:
@@ -38,9 +38,10 @@ const Knob = ({ name, description, set, type, value, options}) => {
           <Toggle
             toggled={Boolean(value)}
             onChange={() => {
-              set(!value);
+              set(!value, name);
             }}
             labelText={<Label name={name} description={description}/>}
+            error={error}
           />
         </Spacing>
       );
@@ -57,9 +58,10 @@ const Knob = ({ name, description, set, type, value, options}) => {
           {numberOfOptions < 4 ? (
             <RadioGroup
               name={`radio-${name}`}
-              onChange={e => set(e.target.value)}
+              onChange={e => set(e.target.value, name)}
               labelText={name}
-              value={String(value)}
+              value={value}
+              error={error}
             >
               {options.map(option => (
                 <Radio
@@ -70,7 +72,7 @@ const Knob = ({ name, description, set, type, value, options}) => {
               ))}
             </RadioGroup>
           ) : (
-            <select value={value} onChange={(e) => set(e.target.value)}>
+            <select value={value} onChange={(e) => set(e.target.value, name)}>
               {options.map(option => (
                 <option
                   key={option}
@@ -93,7 +95,7 @@ const Knob = ({ name, description, set, type, value, options}) => {
           <Box border="1px solid" borderColor="grey" borderRadius="medium" overflow="hidden">
             <Editor
               onChange={code => {
-                set(code);
+                set(code, name);
               }}
               light
               code={value ? String(value) : ''}
@@ -109,11 +111,10 @@ const Knob = ({ name, description, set, type, value, options}) => {
 };
 
 const Knobs = ({state, set, error}) => {
-  console.log("state", state);
   const allKnobs = Object.keys(state);
 return (
   <Flex flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
-    {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} />)}
+    {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
   </Flex>);
 }
 
