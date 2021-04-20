@@ -1,7 +1,8 @@
 import React from 'react'
-import { useView, Error, ActionButtons, Knobs } from 'react-view';
+import { useView, Error, ActionButtons } from 'react-view';
 import Compiler from './Compiler';
 import Editor from './Editor';
+import Knobs from './Knobs';
 
 export default ({ componentName, scope,  props}) => {
   const params = useView({
