@@ -12,6 +12,7 @@ const getInitialCode = async (componentName, example) => {
 
 const Example = ({ componentName, scope, example, ...props}) => {
   const [ code, setCode ] = useState(null);
+  const [ showCode, setShowCode ] = useState(false);
 
   useEffect(() => {
     getInitialCode(componentName, example).then((str) => setCode(str));
@@ -27,9 +28,14 @@ const Example = ({ componentName, scope, example, ...props}) => {
   return code && (
     <>
       <Compiler {...params.compilerProps}/>
-      <Editor {...params.editorProps} />
-      <Error {...params.errorProps} />
-      <ActionButtons {...params.actions} />
+      { showCode &&
+        <>
+          <Editor {...params.editorProps} />
+          <Error {...params.errorProps} />
+          <ActionButtons {...params.actions} />
+        </>
+      }
+      { showCode ? <button onClick={() => setShowCode(false)}>Hide Code</button> : <button onClick={() => setShowCode(true)}>Show Code</button>}
     </>
   );
 }
