@@ -1,7 +1,15 @@
 import React, {useState, useEffect } from 'react'
 import {useView, Error, ActionButtons } from 'react-view';
+import styled from 'styled-components';
 import Compiler from './Compiler';
 import Editor from './Editor';
+
+const CodeButton = styled.button(({ theme }) => ({
+  background: "none",
+  border: "none",
+  fontWeight: "bold",
+  color: theme.colors.darkBlue
+}))
 
 const getInitialCode = async (componentName, example) => {
 
@@ -35,7 +43,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
           <ActionButtons {...params.actions} />
         </>
       }
-      { showCode ? <button onClick={() => setShowCode(false)}>Hide Code</button> : <button onClick={() => setShowCode(true)}>Show Code</button>}
+      <CodeButton onClick={() => setShowCode(!showCode)}>{ showCode ? "</> Hide Code" :  "</> Show Code"}</CodeButton>
     </>
   );
 }
