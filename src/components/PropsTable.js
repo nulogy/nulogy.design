@@ -65,7 +65,7 @@ const PropsTable = ({ propsConfig }) => {
       ...propsConfig[prop]
     }
   ],[]);
-  return <Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} />
+  return <Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2"/>
 };
 
 export default PropsTable;
