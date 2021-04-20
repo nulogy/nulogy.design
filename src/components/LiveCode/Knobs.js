@@ -1,17 +1,17 @@
 import React from "React";
-import { Box, Icon, Input, Tooltip, Flex, Link, Toggle } from "@nulogy/components";
+import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup } from "@nulogy/components";
 import {PropTypes } from "react-view";
 import Editor from "./Editor";
 
 
-const Label = ({ name, description }) => <Flex alignItems="center" mt="x2">
+const Label = ({ name, description }) => <Flex alignItems="center">
  {name}
  <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half"/></Tooltip>
 </Flex>
 
-const Spacing = ({children}) => <Box width="calc(50% - 8px)">{children}</Box>;
+const Spacing = ({children}) => <Box width="calc(50% - 8px)" mt="x2">{children}</Box>;
 
-const Knob = ({ name, description, set, type, value}) => { 
+const Knob = ({ name, description, set, type, value, options}) => { 
   switch (type) {
     case PropTypes.Ref:
       return (
@@ -45,8 +45,42 @@ const Knob = ({ name, description, set, type, value}) => {
         </Spacing>
       );
     case PropTypes.Enum:
+      const optionsKeys = Object.keys(options);
+      const numberOfOptions = optionsKeys.length;
+      const selectOptions = optionsKeys.map(key => ({
+        id: key,
+        option: options[key],
+      }));
+      const valueKey = value && String(value).split('.')[1];
       return (
         <Spacing>
+          {numberOfOptions < 4 ? (
+            <RadioGroup
+              name={`radio-${name}`}
+              onChange={e => set(e.target.value)}
+              labelText={name}
+              value={String(value)}
+            >
+              {options.map(option => (
+                <Radio
+                  key={option}
+                  value={option}
+                  labelText={option}
+                />
+              ))}
+            </RadioGroup>
+          ) : (
+            <select value={value} onChange={(e) => set(e.target.value)}>
+              {options.map(option => (
+                <option
+                  key={option}
+                  value={option}
+                >
+                  {option}
+                </option>
+              ))}
+            </select>
+          )}
         </Spacing>
       );
     case PropTypes.ReactNode:
@@ -55,13 +89,16 @@ const Knob = ({ name, description, set, type, value}) => {
     case PropTypes.Object:
       return (
         <Spacing>
-          <Label name={name} description={description} />
-          <Editor
-            onChange={code => {
-              set(code);
-            }}
-            code={value ? String(value) : ''}
-          />
+          <Text fontWeight="bold" mb="half" fontSize="small" mt="0"><Label name={name} description={description} /></Text>
+          <Box border="1px solid" borderColor="grey" borderRadius="medium" overflow="hidden">
+            <Editor
+              onChange={code => {
+                set(code);
+              }}
+              light
+              code={value ? String(value) : ''}
+            />
+          </Box>
         </Spacing>
       );
     case PropTypes.Custom:
@@ -75,7 +112,7 @@ const Knobs = ({state, set, error}) => {
   console.log("state", state);
   const allKnobs = Object.keys(state);
 return (
-  <Flex flexWrap="wrap" py="x2" justifyContent="space-between">
+  <Flex flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
     {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} />)}
   </Flex>);
 }

@@ -11,6 +11,7 @@ export const alertConfig = {
       value: "informative",
       default: "informative",
       type: PropTypes.Enum,
+      options: ["informative", "success", "danger"],
       description: "The type of alert. Accepts informative, danger, warning and success."
     },
     children: {
@@ -30,7 +31,7 @@ export const alertConfig = {
     },
     isCloseable: {
       value: false,
-      defaultValue: false,
+      defaultValue: "false",
       type: PropTypes.Boolean,
       description: "Provides a close icon in the top right corner."
     },
