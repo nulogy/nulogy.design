@@ -3,6 +3,8 @@ import {useView, Error, ActionButtons } from 'react-view';
 import styled from 'styled-components';
 import Compiler from './Compiler';
 import Editor from './Editor';
+import {Box} from "@nulogy/components";
+import {CODE_WIDTH} from "../CONSTANTS";
 
 const CodeButton = styled.button(({ theme }) => ({
   background: "none",
@@ -34,7 +36,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
   });
 
   return code && (
-    <>
+    <Box maxWidth={CODE_WIDTH} m="0 auto">
       <Compiler {...params.compilerProps}/>
       { showCode &&
         <>
@@ -44,7 +46,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
         </>
       }
       <CodeButton onClick={() => setShowCode(!showCode)}>{ showCode ? "</> Hide Code" :  "</> Show Code"}</CodeButton>
-    </>
+    </Box>
   );
 }
 

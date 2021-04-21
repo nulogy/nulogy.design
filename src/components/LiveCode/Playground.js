@@ -3,6 +3,8 @@ import { useView, Error, ActionButtons } from 'react-view';
 import Compiler from './Compiler';
 import Editor from './Editor';
 import Knobs from './Knobs';
+import {Box} from "@nulogy/components";
+import {CODE_WIDTH} from "../CONSTANTS";
 
 export default ({ componentName, scope,  props}) => {
   const params = useView({
@@ -17,11 +19,13 @@ export default ({ componentName, scope,  props}) => {
   });
   return (
     <>
-      <Compiler {...params.compilerProps} />
-      <Knobs {...params.knobProps} />
-      <Editor {...params.editorProps} />
-      <Error {...params.errorProps} />
-      <ActionButtons {...params.actions} />
+      <Box maxWidth={CODE_WIDTH} m="0 auto">
+        <Compiler {...params.compilerProps} />
+        <Knobs {...params.knobProps} />
+        <Editor {...params.editorProps} />
+        <Error {...params.errorProps} />
+        <ActionButtons {...params.actions} />
+      </Box>
     </>
   )
 }

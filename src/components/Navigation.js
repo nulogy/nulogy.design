@@ -13,7 +13,7 @@ const variants = {
 }
 
 const NavigationLink = styled(motion.a)({
-  fontSize: "18px",
+  fontSize: "20px",
   color: theme.colors.white,
   display: "inline-block",
   paddingX: theme.space.half,

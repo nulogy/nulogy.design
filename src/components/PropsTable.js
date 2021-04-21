@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Table, Text } from "@nulogy/components";
+import { Box, Table, Text } from "@nulogy/components";
+import {CODE_WIDTH} from "./CONSTANTS";
 
 const InlineCode = styled.span(({theme}) => ({
   display: "inline",
@@ -65,7 +66,7 @@ const PropsTable = ({ propsConfig }) => {
       ...propsConfig[prop]
     }
   ],[]);
-  return <Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2"/>
+  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2"/></Box>
 };
 
 export default PropsTable;

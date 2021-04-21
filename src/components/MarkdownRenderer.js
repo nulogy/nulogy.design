@@ -5,21 +5,20 @@ import CodeBlock from "./CodeBlock";
 import Playground from "./LiveCode/Playground";
 import Example from "./LiveCode/Example";
 import PropsTable from "./PropsTable";
-
+import {COPY_WIDTH} from "./CONSTANTS";
 
 function MarkdownRenderer({ children }) {
   return (
     <MDXProvider components={{
-      h1: (props) => <Heading1 margin="0 auto" {...props} />,
-      h1: Heading1,
-      h2: (props) => <Heading2 mt="x6" {...props} />,
-      h3: (props) => <Heading3  mt="x4" {...props} />,
-      p: (props) => <Text mb="x4" {...props} />,
-      blockquote: (props) => <Text fontSize="24px" mb="x4" {...props} />,
-      ul: (props) => <List mb="x4" {...props} />,
-      li: (props) => <ListItem  {...props} />,
-      a: (props) => <Link {...props} />,
-      pre: (props) => <CodeBlock {...props} />,
+      h1: (props) => <Heading1 maxWidth={COPY_WIDTH} m="0 auto" {...props} />,
+      h2: (props) => <Heading2 maxWidth={COPY_WIDTH} mt="x6" mx="auto" {...props} />,
+      h3: (props) => <Heading3 maxWidth={COPY_WIDTH}  mt="x4" mx="auto" {...props} />,
+      p: (props) => <Text fontSize="20px" maxWidth={COPY_WIDTH} mb="x4" mx="auto" {...props} />,
+      blockquote: (props) => <Text maxWidth={COPY_WIDTH} fontSize="24px" mb="x4" mx="auto" {...props} />,
+      ul: (props) => <List fontSize="20px" maxWidth={COPY_WIDTH} mb="x4" mx="auto" {...props} />,
+      li: (props) => <ListItem  maxWidth={COPY_WIDTH} {...props} />,
+      a: (props) => <Link fontSize="20px" maxWidth={COPY_WIDTH} {...props} />,
+      pre: (props) => <CodeBlock  maxWidth={COPY_WIDTH} {...props} />,
       Playground,
       Example,
       PropsTable
