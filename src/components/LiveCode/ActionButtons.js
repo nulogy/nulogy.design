@@ -24,7 +24,7 @@ const Button = styled.button(({theme}) => ({
   }
 }));
 
-const ActionButtons = ({formatCode, copyCode, reset, code, componentName }) => {
+const ActionButtons = ({formatCode, copyCode, reset, code, openInSandbox, componentName }) => {
   const handleOpenExample = async () => {
     const url = await setupSandbox(`NDS ${componentName} Example`, code);
     if (url) {
@@ -35,12 +35,12 @@ const ActionButtons = ({formatCode, copyCode, reset, code, componentName }) => {
     <Button onClick={formatCode}>Format</Button>
     <Button onClick={copyCode}>Copy</Button>
     <Button onClick={reset}>Reset</Button>
-    <Button onClick={handleOpenExample}>
+    { openInSandbox && <Button onClick={handleOpenExample}>
       <Flex as="span" alignItems="center">
         <Icon icon="openInNew" size="14px" mr="x1" />
         Open in Code Sandbox
       </Flex>
-    </Button>
+    </Button>}
   </Flex>
 };
 

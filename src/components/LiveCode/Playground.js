@@ -25,7 +25,7 @@ export default ({ componentName, scope,  props}) => {
         <Knobs {...params.knobProps} />
         <Editor {...params.editorProps} />
         <Error {...params.errorProps} />
-        <ActionButtons {...params.actions} code={params.editorProps.code} componentName={componentName}/>
+        <ActionButtons {...params.actions} openInSandbox code={params.editorProps.code} componentName={componentName}/>
       </Box>
     </>
   )
