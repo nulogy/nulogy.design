@@ -1,8 +1,37 @@
 import React from "React";
+import styled from 'styled-components';
 import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup } from "@nulogy/components";
 import {PropTypes } from "react-view";
 import Editor from "./Editor";
 
+
+const Select = styled.select(({ theme }) => ({
+  width: "100%",
+  height: "40px",
+  border: `1px solid ${theme.colors.grey}`,
+  borderRadius: theme.radii.medium,
+  fontFamily: theme.fonts.base,
+  fontSize: theme.fontSizes.medium,
+  padding: theme.sizes.x1,
+  appearance: "none",
+  "&:focus": {
+    outline: "none",
+    boxShadow: theme.shadows.focus,
+    borderColor: theme.colors.blue,
+  }
+}));
+
+
+const InputBorder = styled(Box)(({ theme }) => ({
+  border: `1px solid ${theme.colors.grey}`,
+  borderRadius: theme.radii.medium,
+  overflow: "hidden",
+  "&:focus-within": {
+    outline: "none",
+    boxShadow: theme.shadows.focus,
+    borderColor: theme.colors.blue,
+  }
+}));
 
 const Label = ({ name, description }) => <Flex alignItems="center">
  {name}
@@ -52,10 +81,9 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
         id: key,
         option: options[key],
       }));
-      const valueKey = value && String(value).split('.')[1];
       return (
         <Spacing>
-          {numberOfOptions < 4 ? (
+          {numberOfOptions <= 3 ? (
             <RadioGroup
               name={`radio-${name}`}
               onChange={e => set(e.target.value, name)}
@@ -72,17 +100,25 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
               ))}
             </RadioGroup>
           ) : (
-            <select value={value} onChange={(e) => set(e.target.value, name)}>
-              {options.map(option => (
-                <option
-                  key={option}
-                  value={option}
-                >
-                  {option}
-                </option>
-              ))}
-            </select>
-          )}
+            <>
+              <Text fontWeight="bold" mb="half" fontSize="small" mt="0"><Label name={name} description={description} /></Text>
+              <Box position="relative">
+                <Box position="absolute" right="5px" bottom="50%" transform="translateY(50%)" lineHeight="0" pointerEvents="none">
+                  <Icon icon="downArrow" size="x3" color="grey" />
+                </Box>
+                <Select value={value} onChange={(e) => set(e.target.value, name)}>
+                  {options.map(option => (
+                    <option
+                      key={option}
+                      value={option}
+                    >
+                      {option}
+                    </option>
+                  ))}
+                </Select>
+              </Box>
+            </>
+            )}
         </Spacing>
       );
     case PropTypes.ReactNode:
@@ -92,7 +128,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
       return (
         <Spacing>
           <Text fontWeight="bold" mb="half" fontSize="small" mt="0"><Label name={name} description={description} /></Text>
-          <Box border="1px solid" borderColor="grey" borderRadius="medium" overflow="hidden">
+          <InputBorder>
             <Editor
               onChange={code => {
                 set(code, name);
@@ -100,7 +136,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
               light
               code={value ? String(value) : ''}
             />
-          </Box>
+          </InputBorder>
         </Spacing>
       );
     case PropTypes.Custom:
