@@ -25,8 +25,10 @@ const Example = ({ componentName, scope, example, ...props}) => {
   const [ showCode, setShowCode ] = useState(false);
 
   useEffect(() => {
-    getInitialCode(componentName, example).then((str) => setCode(str));
-  }, []);
+    if (!code) {
+      getInitialCode(componentName, example).then((str) => setCode(str));
+    }
+  }, [componentName, example]);
 
 
   const params = useView({
