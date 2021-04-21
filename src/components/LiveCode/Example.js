@@ -1,10 +1,11 @@
 import React, {useState, useEffect } from 'react'
-import {useView, Error, ActionButtons } from 'react-view';
+import {useView, Error } from 'react-view';
 import styled from 'styled-components';
 import Compiler from './Compiler';
 import Editor from './Editor';
 import {Box} from "@nulogy/components";
 import {CODE_WIDTH} from "../CONSTANTS";
+import ActionButtons from './ActionButtons';
 
 const CodeButton = styled.button(({ theme }) => ({
   background: "none",
@@ -28,7 +29,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
     if (!code) {
       getInitialCode(componentName, example).then((str) => setCode(str));
     }
-  }, [componentName, example]);
+  }, []);
 
 
   const params = useView({
