@@ -45,7 +45,7 @@ const Example = ({ componentName, scope, example, ...props}) => {
         <>
           <Editor {...params.editorProps} />
           <Error {...params.errorProps} />
-          <ActionButtons {...params.actions} />
+          <ActionButtons {...params.actions} code={params.editorProps.code} componentName={componentName} />
         </>
       }
       <CodeButton onClick={() => setShowCode(!showCode)}>{ showCode ? "</> Hide Code" :  "</> Show Code"}</CodeButton>

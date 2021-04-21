@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Flex } from "@nulogy/components";
+import { Flex, Icon } from "@nulogy/components";
+import { setupSandbox } from '../../utils/codesandbox';
 
 
 const Button = styled.button(({theme}) => ({
@@ -23,11 +24,23 @@ const Button = styled.button(({theme}) => ({
   }
 }));
 
-const ActionButtons = ({formatCode, copyCode, reset}) => {
+const ActionButtons = ({formatCode, copyCode, reset, code, componentName }) => {
+  const handleOpenExample = async () => {
+    const url = await setupSandbox(`NDS ${componentName} Example`, code);
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
   return <Flex>
     <Button onClick={formatCode}>Format</Button>
     <Button onClick={copyCode}>Copy</Button>
     <Button onClick={reset}>Reset</Button>
+    <Button onClick={handleOpenExample}>
+      <Flex as="span" alignItems="center">
+        <Icon icon="openInNew" size="14px" mr="x1" />
+        Open in Code Sandbox
+      </Flex>
+    </Button>
   </Flex>
 };
 

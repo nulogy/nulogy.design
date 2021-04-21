@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.6.22",
     "@nulogy/components": "latest",
     "babel-plugin-styled-components": "^1.12.0",
+    "codesandboxer": "^1.0.3",
     "gatsby": "^2.26.1",
     "gatsby-plugin-google-analytics": "^2.9.0",
     "gatsby-plugin-mdx": "^1.8.0",
