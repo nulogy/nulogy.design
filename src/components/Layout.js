@@ -33,7 +33,7 @@ const Layout = ({ children, location }) => (
       </Helmet>
       <Flex>
         <Box position="fixed" height="100%" overflow="hidden auto" width="320px" as="aside" px="x8" py="x8" bg="darkBlue">
-          <Navigation />
+          <Navigation location={location} />
         </Box>
         <Box width="calc(100% - 320px)" marginLeft="320px">
         <Transition location={location}>

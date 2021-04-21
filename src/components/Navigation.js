@@ -6,26 +6,29 @@ import {motion} from "framer-motion";
 
 const variants = {
   hover: {
-    color: theme.colors.white,
     paddingLeft: theme.space.x1,
     textDecoration: "underline",
   },
 }
 
-const NavigationLink = styled(motion.a)({
+const NavigationLink = styled(motion.a)(({ selected }) => ({
   fontSize: "20px",
-  color: theme.colors.white,
+  color: selected ? theme.colors.yellow : theme.colors.white,
   display: "inline-block",
   paddingX: theme.space.half,
   textDecoration: "none",
-  marginBottom: theme.space.x2
-})
+  marginBottom: theme.space.x2,
+}))
 
 const NavigationHeading = ({children}) => (
   <Text fontSize="14px" color="whiteGrey" textTransform="uppercase" fontWeight="bold" marginY="x3" mb="x2">{children}</Text>
 )
 
-const Navigation = () => (
+const Navigation = () => {
+  const trimSlashes = path => path.replace(/^\/|\/$/g, "");
+  const currentPath = trimSlashes(location?.pathname || "");
+
+  return (
   <>
     <Box mb="x8" mt="-24px">
       <a style={{textDecoration: "none"}} href="/" textDecoration="none"><Branding size="large" logoColor="white" withLine mt="x4" mb="x8" subtext="Design System" /></a>
@@ -36,8 +39,9 @@ const Navigation = () => (
       <List pl="0">
         <>
           {menuItem.links.map(menuLink => {
+            const selected = trimSlashes(menuLink.href) === currentPath;
             return (
-              <Text key={menuLink.href}><NavigationLink variants={variants} whileHover="hover" href={menuLink.href}>{menuLink.name}</NavigationLink></Text>
+              <Text key={menuLink.href}><NavigationLink variants={variants} whileHover="hover" selected={selected} href={menuLink.href}>{menuLink.name}</NavigationLink></Text>
             );
           })}
         </>
@@ -46,6 +50,6 @@ const Navigation = () => (
     ))}
     <NavigationHeading>CONTENT <StatusIndicator ml="half">Coming soon</StatusIndicator></NavigationHeading>
   </>
-)
+)}
 
 export default Navigation;
