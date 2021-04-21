@@ -38,7 +38,7 @@ const Layout = ({ children, location }) => (
         <Box width="calc(100% - 320px)" marginLeft="320px">
         <Transition location={location}>
             <Box as="main" paddingTop="x6" paddingX="x8">
-              <Box>{children}</Box>
+              <Box mb="x6">{children}</Box>
             </Box>
         </Transition>
         </Box>
