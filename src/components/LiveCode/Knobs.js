@@ -9,7 +9,7 @@ const Label = ({ name, description }) => <Flex alignItems="center">
  <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half"/></Tooltip>
 </Flex>
 
-const Spacing = ({children}) => <Box width="calc(50% - 8px)" mt="x2">{children}</Box>;
+const Spacing = ({children}) => <Box width={{small: "100%", medium: "calc(50% - 8px)"}} mt="x2">{children}</Box>;
 
 const Knob = ({ name, description, set, type, value, options, error}) => { 
   switch (type) {
