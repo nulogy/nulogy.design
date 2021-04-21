@@ -55,12 +55,17 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
       );
     case PropTypes.String:
     case PropTypes.Date:
-    case PropTypes.Number:
       return (
         <Spacing>
           <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
         </Spacing>
       );
+    case PropTypes.Number:
+      return (
+        <Spacing>
+          <Input type="number" value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
+        </Spacing>
+      );            
     case PropTypes.Boolean:
       return (
         <Spacing>
