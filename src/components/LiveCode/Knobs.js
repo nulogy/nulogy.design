@@ -1,8 +1,42 @@
 import React from "React";
 import styled from 'styled-components';
-import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup } from "@nulogy/components";
+import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup, Select as NDSSelect, SelectOption } from "@nulogy/components";
 import {PropTypes } from "react-view";
 import Editor from "./Editor";
+
+const ColorSelect = ({ labelText, options, value, onChange }) => {
+  const Indicator = styled.span(({option, theme}) => ({
+    borderRadius: "25%",
+    background: theme.colors[option],
+    lineHeight: "0",
+    display: "inline-block",
+    width: "10px",
+    height: "10px",
+    marginRight: "5px",
+  }));
+  const CustomOption = ({ children, ...props }) => {
+    const newChildren = (
+      <>
+        <Indicator option={children} />
+        {children}
+      </>
+    );
+    return <SelectOption {...props}>{newChildren}</SelectOption>;
+  };
+  return (
+    <NDSSelect
+      value={value}
+      labelText={labelText}
+      placeholder="Pick a colour..."
+      options={options}
+      onChange={onChange}
+      components={{
+        Option: CustomOption,
+      }}
+      labelText={labelText}
+    />
+  );
+};
 
 
 const Select = styled.select(({ theme }) => ({
@@ -86,6 +120,20 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
         id: key,
         option: options[key],
       }));
+      if (name === "color" || name === "bg") {
+        const ndsSelectOptions = options.map((option) => ({
+          value: option,
+          label: option,
+        }));
+        const ndsHandleChange = (val) => {
+          set(val, name)
+        };
+        return (
+          <Spacing>
+            <ColorSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={name} />
+          </Spacing>
+        );
+      }
       return (
         <Spacing>
           {numberOfOptions <= 3 ? (
@@ -143,7 +191,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
             />
           </InputBorder>
         </Spacing>
-      );
+      );      
     case PropTypes.Custom:
       return null;
     default:
