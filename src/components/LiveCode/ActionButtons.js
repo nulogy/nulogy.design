@@ -16,7 +16,8 @@ const Button = styled.button(({theme}) => ({
   background: "transparent",
   outline: "none",
   "&:hover": {
-    backgrund: theme.colors.lightBlue,
+    background: theme.colors.lightBlue,
+    cursor: "pointer",
   },
   "&:focus": {
     borderColor: theme.colors.blue,
