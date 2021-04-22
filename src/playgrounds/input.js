@@ -14,7 +14,7 @@ export const inputConfig = {
     },
     labelText: {
       value: "Label",
-      type: PropTypes.String,
+      type: PropTypes.ReactNode,
       description: "Informs users what the corresponding input field is for."
     },
     disabled: {
