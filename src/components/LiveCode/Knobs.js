@@ -116,10 +116,6 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
     case PropTypes.Enum:
       const optionsKeys = Object.keys(options);
       const numberOfOptions = optionsKeys.length;
-      const selectOptions = optionsKeys.map(key => ({
-        id: key,
-        option: options[key],
-      }));
       if (name === "color" || name === "bg") {
         const ndsSelectOptions = options.map((option) => ({
           value: option,
@@ -130,7 +126,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
         };
         return (
           <Spacing>
-            <ColorSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={name} />
+            <ColorSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={<Label name={name} description={description} error={error} />} />
           </Spacing>
         );
       }
@@ -140,7 +136,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
             <RadioGroup
               name={`radio-${name}`}
               onChange={e => set(e.target.value, name)}
-              labelText={name}
+              labelText={<Label name={name} description={description} error={error} />}
               value={value}
               error={error}
             >
