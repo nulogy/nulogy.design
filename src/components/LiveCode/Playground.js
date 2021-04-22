@@ -3,7 +3,7 @@ import { useView, Error } from 'react-view';
 import Compiler from './Compiler';
 import Editor from './Editor';
 import Knobs from './Knobs';
-import {Box} from "@nulogy/components";
+import { Box, Divider } from "@nulogy/components";
 import {CODE_WIDTH} from "../CONSTANTS";
 import ActionButtons from './ActionButtons';
 
@@ -22,6 +22,7 @@ export default ({ componentName, scope,  props}) => {
     <>
       <Box maxWidth={CODE_WIDTH} m="0 auto">
         <Compiler {...params.compilerProps} />
+        <Divider />
         <Knobs {...params.knobProps} />
         <Editor {...params.editorProps} />
         <Error {...params.errorProps} />

@@ -1,69 +1,29 @@
 import { Input } from "@nulogy/components";
+import { inputConfig } from "../../playgrounds/input";
 
 # Input
 
 > An input field that users type into.
 
-<Input
-  labelText="Label"
-  helpText="Additional help text"
-  requirementText="(Optional)"
-  placeholder="Example of expected input"
-/>
-
-```
-import { Input } from "@nulogy/components";
-
-<Input
-  labelText="Label"
-  helpText="Additional help text"
-  requirementText="(Optional)"
-  placeholder="Example of expected input"
-/>
-```
-
-## Use when
-
-- Users need to enter information that is best communicated in text form.
-- You need to collect information that varies from one user to another and can’t be represented as a set of pre-determined choices.
+<Playground {...inputConfig} />
 
 ## Variations
 
 ### Disabled
 
-<Input id="disabled-input" placeholder="I'm an input" disabled />
-
-```jsx
-<Input id="disabled-input" placeholder="I'm an input" disabled />
-```
+<Example componentName="input" scope={{ Input }} example="DisabledInput" />
 
 ### Error
 
-<Input labelText="Label" id="error-input" errorMessage="Error message" />
-
-```jsx
-<Input labelText="Label" id="error-input" errorMessage="Error message" />
-```
+<Example componentName="input" scope={{ Input }} example="ErrorInput" />
 
 ### With prefix and suffix
 
-<Input
-  id="all-labels"
-  labelText="Label"
-  placeholder="I'm an input"
-  prefix="I'm prefix label"
-  suffix="I'm sufix label"
-/>
+<Example componentName="input" scope={{ Input }} example="PrefixSuffixInput" />
 
-```jsx
-<Input
-  id="all-labels"
-  labelText="Label"
-  placeholder="I'm an input"
-  prefix="I'm prefix label"
-  suffix="I'm sufix label"
-/>
-```
+## Props
+
+<PropsTable propsConfig={inputConfig.props} />
 
 ## Content Guidelines
 
