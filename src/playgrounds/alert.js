@@ -1,5 +1,5 @@
 import { Alert } from "@nulogy/components";
-import {PropTypes} from 'react-view';
+import { PropTypes } from 'react-view';
 
 export const alertConfig = {
   componentName: "Alert",
@@ -31,19 +31,18 @@ export const alertConfig = {
     },
     isCloseable: {
       value: true,
-      defaultValue: "false",
+      default: "false",
       type: PropTypes.Boolean,
       description: "Provides a close icon in the top right corner."
     },
     closeAriaLabel: {
       value: "close",
-      defaultValue: "close",
       type: PropTypes.String,
       description: "Aria label for close button"
     },
     controlled: {
       value: "false",
-      defaultValue: "false",
+      default: "false",
       type: PropTypes.Boolean,
       description: "If true, will allow the Alert's opened and closed state to be controlled through props rather than within the component's internal state"
     }

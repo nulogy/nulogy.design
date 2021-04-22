@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box, Table, Text } from "@nulogy/components";
-import {CODE_WIDTH} from "./CONSTANTS";
+import { CODE_WIDTH } from "./CONSTANTS";
 
-const InlineCode = styled.span(({theme}) => ({
+const InlineCode = styled.span(({ theme }) => ({
   display: "inline",
   fontFamily: theme.fonts.mono,
   background: theme.colors.lightBlue,
@@ -46,7 +46,7 @@ const columns = [
   },
   {
     label: "Default",
-    dataKey: "defaultValue",
+    dataKey: "default",
     width: "15%",
     cellRenderer: smallTextRenderer
   },
@@ -62,11 +62,12 @@ const PropsTable = ({ propsConfig }) => {
 
   const propsArr = Object.keys(propsConfig).reduce((acc, prop) => [
     ...acc,
-    { name: prop,
-      ...propsConfig[prop]
+    {
+      name: prop,
+      ...propsConfig[prop],
     }
-  ],[]);
-  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2"/></Box>
+  ], []);
+  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2" /></Box>
 };
 
 export default PropsTable;
