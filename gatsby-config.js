@@ -19,6 +19,18 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Nulogy.design",
+        short_name: "NDS",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: `${__dirname}/src/images/favicon.svg` // This path is relative to the root of the site.
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
