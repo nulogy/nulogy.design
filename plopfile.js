@@ -1,5 +1,5 @@
 module.exports = function (plop) {
-  plop.setHelper("toCamelCase", (str) => str.charAt(0).toUpperCase() + str.slice(1));
+  plop.setHelper("toCamelCase", (str) => str.charAt(0).toLowerCase() + str.slice(1));
   plop.setHelper("toSnakeCase", (str) => str.split(/(?=[A-Z])/).join('-').toLowerCase());
   plop.setHelper("toReadableCase", (str) => str.split(/(?=[A-Z])/).join(' '));
   // controller generator
@@ -22,7 +22,7 @@ module.exports = function (plop) {
     },
     {
       type: 'add',
-      path: 'src/examples/{{toSnakeCase name}}/Example{{name}}.js',
+      path: 'src/examples/{{toSnakeCase name}}/Example{{name}}.jsx',
       templateFile: 'src/templates/component-example.hbs'
     },
     {
