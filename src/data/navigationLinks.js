@@ -73,6 +73,10 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
+{
+        name: "Text",
+        href: "/components/text"
+      },
     ]
   },
   {
