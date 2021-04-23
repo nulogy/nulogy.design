@@ -12,7 +12,8 @@
     "start": "rm -rf .cache/caches/gatsby-plugin-mdx && gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "plop": "plop"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -37,6 +38,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "plop": "^2.7.4"
   }
 }

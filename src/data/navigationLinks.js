@@ -21,9 +21,9 @@ export const navigationLinks = [
       {
         name: "Using Style Props",
         href: ""
-      }      
+      }
     ]
-  },    
+  },
   {
     name: "Design Language",
     links: [
@@ -219,7 +219,8 @@ export const navigationLinks = [
       {
         name: "Truncated Text",
         href: "/components/truncated-text"
-      }
+      },
+      /* Add routes here */
     ]
   },
   {

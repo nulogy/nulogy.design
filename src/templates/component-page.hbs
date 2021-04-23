@@ -1,0 +1,23 @@
+import {{name}} from "@nulogy/components";
+import { {{toCamelCase name}}Config } from "../../playgrounds/{{toSnakeCase name}}";
+
+# {{name}}
+
+An {{toCamelCase name}} is a component.
+
+<Playground {...{{toCamelCase name}}Config} />
+
+## Variations
+
+### A variant
+
+<Example componentName="{{toCamelCase name}}" scope=\{{ {{ name }} }} example="Example{{name}}" />
+
+
+## Content guidelines
+
+To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+
+## Related Components
+
+- [Box](/box)
