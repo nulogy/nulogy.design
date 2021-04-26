@@ -74,6 +74,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Branding",
+        href: "/components/branding"
+      },
+{
         name: "Text",
         href: "/components/text"
       },
