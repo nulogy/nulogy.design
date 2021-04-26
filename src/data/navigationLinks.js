@@ -74,6 +74,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Application Frame",
+        href: "/components/application-frame"
+      },
+{
         name: "Text",
         href: "/components/text"
       },
