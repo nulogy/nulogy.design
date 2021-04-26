@@ -15,6 +15,11 @@ export const config = {
     Page
   },
   props: {
+    navBar: {
+      value: <BrandedNavBar menuData={{ primaryMenu: [{ name: "Menu Link", href: "/" }] }} />,
+      type: PropTypes.ReactNode,
+      description: "Places the navbar at the top of the frame."
+    },
     children: {
       value: "Main content",
       type: PropTypes.String,

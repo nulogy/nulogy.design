@@ -5,14 +5,13 @@ import { config } from "../../playgrounds/application-frame";
 
 There are three components we use to build up Nulogy's standard layout: An ApplicationFrame, a Page, and an optional Sidebar.
 
-<Playground {...config} />
+<Example componentName="applicationFrame" scope={{ ApplicationFrame, BrandedNavBar, Text, Link, Breadcrumbs, Link, Page  }} example="ApplicationFrame" />
 
-## Variations
+## Props
 
-### A variant
+<PropsTable propsConfig={config.props} />
 
-<Example componentName="applicationFrame" scope={{ ApplicationFrame, BrandedNavBar, Text, Link, Breadcrumbs, Link, Page  }} example="ExampleApplicationFrame" />
-
+The Application Frame  component has access to all style props. See the `style` prop documentation for a full list of available props.
 
 ## Content guidelines
 

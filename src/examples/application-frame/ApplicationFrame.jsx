@@ -1,7 +1,7 @@
 <ApplicationFrame
-    minHeight="initial"
+    minHeight="400px"
     boxShadow="medium"
-    navBar={<BrandedNavBar menuData={{ primaryMenu }} />}
+    navBar={<BrandedNavBar menuData={{ primaryMenu: [{ name: "Menu Link", href: "/" }] }} />}
 >
     <Page
         breadcrumbs={
@@ -13,7 +13,7 @@
         title="Materials Overview"
     >
         <>
-            <Text fontFamily="mono">// main content</Text>
+            <Text fontFamily="mono">main content</Text>
         </>
     </Page>
 </ApplicationFrame>
