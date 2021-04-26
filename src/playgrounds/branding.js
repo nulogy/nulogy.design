@@ -42,8 +42,8 @@ export const config = {
       description: "Subtext that is placed under the logo to specify the specific software product a user is interacting with.",
     },  
     withLine: {
-      value: "false",
-      default: "false",
+      value: false,
+      default: false,
       type: PropTypes.Boolean, 
       description: "Whether to display a horizontal line next to the subtext or not",
     },                    
