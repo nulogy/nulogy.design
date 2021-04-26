@@ -31,7 +31,7 @@ export const alertConfig = {
     },
     isCloseable: {
       value: true,
-      default: "false",
+      default: false,
       type: PropTypes.Boolean,
       description: "Provides a close icon in the top right corner."
     },
@@ -41,8 +41,8 @@ export const alertConfig = {
       description: "Aria label for close button"
     },
     controlled: {
-      value: "false",
-      default: "false",
+      value: false,
+      default: false,
       type: PropTypes.Boolean,
       description: "If true, will allow the Alert's opened and closed state to be controlled through props rather than within the component's internal state"
     }
