@@ -29,8 +29,8 @@ export const config = {
       description: "Whether to display the wordmark or lettermark version of our logos",
     },           
     alignment: {
-      value: "right",
-      default: "right",
+      value: "left",
+      default: "left",
       type: PropTypes.Enum, 
       options: ["left", "right", "center"],
       description: "Whether to align the logo to the left, the right, or in the center",
