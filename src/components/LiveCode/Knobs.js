@@ -1,11 +1,11 @@
-import React from "React";
+import React from "react";
 import styled from 'styled-components';
 import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup, Select as NDSSelect, SelectOption } from "@nulogy/components";
-import {PropTypes } from "react-view";
+import { PropTypes } from "react-view";
 import Editor from "./Editor";
 
 const ColorSelect = ({ labelText, options, value, onChange }) => {
-  const Indicator = styled.span(({option, theme}) => ({
+  const Indicator = styled.span(({ option, theme }) => ({
     borderRadius: "25%",
     background: theme.colors[option],
     lineHeight: "0",
@@ -68,13 +68,13 @@ const InputBorder = styled(Box)(({ theme }) => ({
 }));
 
 const Label = ({ name, description }) => <Flex alignItems="center">
- {name}
- <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half"/></Tooltip>
+  {name}
+  <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half" /></Tooltip>
 </Flex>
 
-const Spacing = ({children}) => <Box width={{small: "100%", medium: "calc(50% - 8px)"}} mt="x2">{children}</Box>;
+const Spacing = ({ children }) => <Box width={{ small: "100%", medium: "calc(50% - 8px)" }} mt="x2">{children}</Box>;
 
-const Knob = ({ name, description, set, type, value, options, error}) => { 
+const Knob = ({ name, description, set, type, value, options, error }) => {
   switch (type) {
     case PropTypes.Ref:
       return (
@@ -99,7 +99,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
         <Spacing>
           <Input type="number" value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
         </Spacing>
-      );            
+      );
     case PropTypes.Boolean:
       return (
         <Spacing>
@@ -108,7 +108,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
             onChange={() => {
               set(!value, name);
             }}
-            labelText={<Label name={name} description={description}/>}
+            labelText={<Label name={name} description={description} />}
             error={error}
           />
         </Spacing>
@@ -167,7 +167,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
                 </Select>
               </Box>
             </>
-            )}
+          )}
         </Spacing>
       );
     case PropTypes.ReactNode:
@@ -187,7 +187,7 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
             />
           </InputBorder>
         </Spacing>
-      );      
+      );
     case PropTypes.Custom:
       return null;
     default:
@@ -195,12 +195,12 @@ const Knob = ({ name, description, set, type, value, options, error}) => {
   }
 };
 
-const Knobs = ({state, set, error}) => {
+const Knobs = ({ state, set, error }) => {
   const allKnobs = Object.keys(state);
-return (
-  <Flex flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
-    {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
-  </Flex>);
+  return (
+    <Flex flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
+      {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
+    </Flex>);
 }
 
 export default Knobs;
