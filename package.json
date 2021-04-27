@@ -9,6 +9,9 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "precommit": "pretty-quick --staged",
+    "eslint": "eslint --config ./.eslintrc './**/*.js'",
+    "eslint:fix": "yarn run eslint --fix",
     "start": "rm -rf .cache/caches/gatsby-plugin-mdx && gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -36,6 +39,11 @@
     "react-helmet": "^6.1.0",
     "react-view": "^2.3.7",
     "styled-components": "^5.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run precommit"
+    }
   },
   "devDependencies": {
     "husky": "^6.0.0",
