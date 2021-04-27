@@ -17,33 +17,48 @@ const StripedBorder = () => (
 )
 
 const Layout = ({ children, location }) => (
-  <ApplicationFrame>
-    <Helmet titleTemplate="%s | Nulogy Design System">
-      <html lang="en" />
-      <meta charSet="utf-8" />
-      <title>Welcome</title>
-      <link
-        href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
-        rel="stylesheet"
-      />
-    </Helmet>
-    <Flex>
-      <Box position="fixed" height="100%" overflow="hidden auto" width="320px" as="aside" px="x8" py="x8" bg="darkBlue">
-        <Navigation location={location} />
-      </Box>
-      <Box width="calc(100% - 320px)" marginLeft="320px">
+    <ApplicationFrame>
+      <Helmet titleTemplate="%s | Nulogy Design System">
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <title>Welcome</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
+          rel="stylesheet"
+        />
+      </Helmet>
+      <Box display={{medium: "flex"}}>
+        <Box 
+          width={{medium: "calc(100% - 320px)"}} 
+          marginLeft={{medium: "320px"}}
+        >
         <Transition location={location}>
-          <Box as="main" paddingTop="x6" paddingX="x8">
-            <Box mb="x6">{children}</Box>
-          </Box>
+            <Box as="main" 
+              paddingTop="x6" 
+              paddingX={{extraSmall: "x6", medium: "x8"}}
+            >
+              <Box mb="x6">{children}</Box>
+            </Box>
         </Transition>
+        </Box>
+        <Box 
+          as="aside" 
+          position={{medium: "fixed"}}
+          height={{medium: "100%"}}
+          overflow={{medium: "hidden auto"}}
+          width={{medium: "320px"}} 
+          px="x8"
+          py="x8"
+          bg="darkBlue"
+        >
+          <Navigation location={location} />
+        </Box>        
       </Box>
-    </Flex>
-  </ApplicationFrame>
+    </ApplicationFrame>
 )
 
 export default Layout

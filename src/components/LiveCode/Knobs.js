@@ -197,10 +197,10 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
 
 const Knobs = ({ state, set, error }) => {
   const allKnobs = Object.keys(state);
-  return (
-    <Flex flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
-      {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
-    </Flex>);
+return (
+  <Box display={{medium: "flex"}} flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
+    {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
+  </Box>);
 }
 
 export default Knobs;
