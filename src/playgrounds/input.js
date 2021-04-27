@@ -1,5 +1,5 @@
 import { Input } from "@nulogy/components";
-import {PropTypes} from 'react-view';
+import { PropTypes } from 'react-view';
 
 export const inputConfig = {
   componentName: "Input",
@@ -19,13 +19,13 @@ export const inputConfig = {
     },
     disabled: {
       value: false,
-      defaultValue: "false",
+      default: "false",
       type: PropTypes.Boolean,
       description: "Marks the field as disabled and disallows user input",
     },
     required: {
       value: false,
-      defaultValue: "false",
+      default: "false",
       type: PropTypes.Boolean,
       description: "Makes the field require selection before the form will submit."
     },

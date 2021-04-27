@@ -50,7 +50,7 @@ export const config = {
     },
     disableFlipping: {
       type: PropTypes.Boolean,
-      value: "",
+      value: false,
       default: "false",
       description: "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input",
     },

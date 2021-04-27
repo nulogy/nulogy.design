@@ -42,19 +42,19 @@ export const config = {
     },
     required: {
       type: PropTypes.Boolean,
-      value: "",
+      value: false,
       default: "false",
       description: "Makes the field require selection before the form will submit.",
     },
     disabled: {
       type: PropTypes.Boolean,
-      value: "",
+      value: false,
       default: "false",
       description: "Marks the entire group as disabled and unable to be toggled.",
     },
     requirementText: {
       type: PropTypes.String,
-      value: "",
+      value: false,
       default: "null",
       description: "(Optional) or (Required).",
     },
