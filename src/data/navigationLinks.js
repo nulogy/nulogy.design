@@ -61,7 +61,7 @@ export const navigationLinks = [
         href: "/components/breadcrumbs"
       },
       {
-        name: "Date Range",
+        name: "DateRange",
         href: "/components/date-range"
       },
       {
@@ -73,16 +73,20 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
+        name: "CheckboxGroup",
+        href: "/components/checkbox-group"
+      },
+      {
         name: "Checkbox",
         href: "/components/checkbox"
       },
-{
+      {
         name: "Link",
         href: "/components/link"
       },
       {
-        name: "Application Frame",
+        name: "ApplicationFrame",
         href: "/components/application-frame"
       },
       {
