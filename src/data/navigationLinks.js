@@ -74,6 +74,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Checkbox",
+        href: "/components/checkbox"
+      },
+{
         name: "Link",
         href: "/components/link"
       },
