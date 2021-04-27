@@ -147,7 +147,7 @@ const Layout = ({ children, location }) => {
           width={{ extraSmall: "100%", medium: "320px" }}
           px="x8"
           py="x8"
-          opacity={isOpen ? "1" : "0"}
+          opacity={{ extraSmall: isOpen ? "1" : "0", medium: "1" }}
           transition="opacity 0.2s linear"
           bg="darkBlue"
         >
