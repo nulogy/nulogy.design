@@ -43,7 +43,6 @@ const Navigation = ({ location, isOpen }) => {
 
   useEffect(() => {
     if (selectedRef && selectedRef.current) {
-      console.log("mount");
       selectedRef.current.scrollIntoView({
         block: "center",
       });
