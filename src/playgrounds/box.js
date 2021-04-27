@@ -1,10 +1,6 @@
 import { Box } from "@nulogy/components";
 import { PropTypes } from 'react-view';
-
-const COLOURS = ["black", "blackBlue", "darkBlue", "blue", "lightBlue", "darkGrey", "grey", "whiteGrey", "white", "yellow", "green", "lightGreen", "red", "lightRed"]
-const SIZES = ["x1", "x2", "x3", "x4", "x6", "x8"]
-const SHADOWS = ["small", "medium", "large", "focus", "error"]
-const RADII = ["small", "medium", "circle"]
+import {COLOURS, SIZES, SHADOWS, RADII} from "../utils/themeValues";
 
 export const config = {
   componentName: "Box",
