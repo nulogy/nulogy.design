@@ -147,6 +147,8 @@ const Layout = ({ children, location }) => {
           width={{ extraSmall: "100%", medium: "320px" }}
           px="x8"
           py="x8"
+          opacity={isOpen ? "1" : "0"}
+          transition="opacity 0.2s linear"
           bg="darkBlue"
         >
           <Navigation location={location} />
