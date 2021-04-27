@@ -30,7 +30,7 @@ module.exports = function (plop) {
       path: "src/data/navigationLinks.js",
       pattern: `/* Add routes here */`,
       template: `{
-        name: "{{toReadableCase name}}",
+        name: "{{name}}",
         href: "/components/{{toSnakeCase name}}"
       },`
     },
