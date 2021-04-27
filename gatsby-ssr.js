@@ -1,8 +1,8 @@
-const React = require("react")
-const Layout = require("./src/components/layout")
-const { NDSProvider } = require("@nulogy/components");
+import React from "react";
+import Layout from "./src/components/Layout";
+import { NDSProvider } from "@nulogy/components";
 
-exports.wrapRootElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
     return (
         <NDSProvider>
             {element}
@@ -10,7 +10,7 @@ exports.wrapRootElement = ({ element }) => {
     )
 }
 
-exports.wrapPageElement = ({ element, props }) => {
+export const wrapPageElement = ({ element, props }) => {
     let path = props.location.pathname;
 
     return (path === '/' ? <div>{element}</div> : <Layout {...props}>{element}</Layout>)
