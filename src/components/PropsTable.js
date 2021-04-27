@@ -67,7 +67,7 @@ const PropsTable = ({ propsConfig }) => {
       ...propsConfig[prop],
     }
   ], []);
-  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2" /></Box>
+  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto" overflowX="auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2" /></Box>
 };
 
 export default PropsTable;
