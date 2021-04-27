@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup, Select as NDSSelect, SelectOption } from "@nulogy/components";
+import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup, Select as NDSSelect, SelectOption, DatePicker } from "@nulogy/components";
 import { PropTypes } from "react-view";
 import Editor from "./Editor";
 
@@ -88,7 +88,6 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
         </Spacing>
       );
     case PropTypes.String:
-    case PropTypes.Date:
       return (
         <Spacing>
           <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
@@ -111,6 +110,12 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
             labelText={<Label name={name} description={description} />}
             error={error}
           />
+        </Spacing>
+      );
+    case PropTypes.Date:
+      return (
+        <Spacing>
+          <DatePicker selected={value} width="100%" inputProps={{ labelText: <Label name={name} description={description} />, maxWidth: "100%", width: "100%" }} onChange={(e) => set(e, name)} />
         </Spacing>
       );
     case PropTypes.Enum:
@@ -197,10 +202,10 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
 
 const Knobs = ({ state, set, error }) => {
   const allKnobs = Object.keys(state);
-return (
-  <Box display={{medium: "flex"}} flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
-    {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
-  </Box>);
+  return (
+    <Box display={{ medium: "flex" }} flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
+      {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
+    </Box>);
 }
 
 export default Knobs;

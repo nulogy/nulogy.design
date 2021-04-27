@@ -74,6 +74,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
       {
+        name: "DatePicker",
+        href: "/components/date-picker"
+      },
+      {
         name: "CheckboxGroup",
         href: "/components/checkbox-group"
       },
