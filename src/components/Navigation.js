@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Box, Branding, List, StatusIndicator, Text, theme } from "@nulogy/components"
 import styled from "styled-components";
 import { navigationLinks } from "../data/navigationLinks";
@@ -34,9 +34,19 @@ const NavigationHeading = ({ children }) => (
   <Text fontSize="14px" color="whiteGrey" textTransform="uppercase" fontWeight="bold" marginY="x3" mb="x2">{children}</Text>
 )
 
-const Navigation = () => {
+const Navigation = ({ location }) => {
   const trimSlashes = path => path.replace(/^\/|\/$/g, "");
   const currentPath = trimSlashes(location?.pathname || "");
+  const selectedRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedRef && selectedRef.current) {
+      console.log("mount");
+      selectedRef.current.scrollIntoView({
+        block: "center",
+      });
+    }
+  }, [location]);
 
   return (
     <>
@@ -51,7 +61,7 @@ const Navigation = () => {
               {menuItem.links.map(menuLink => {
                 const selected = trimSlashes(menuLink.href) === currentPath;
                 return (
-                  <Text key={menuLink.href}><NavigationLink variants={variants} whileHover="hover" selected={selected} href={menuLink.href}>{menuLink.name}</NavigationLink></Text>
+                  <Text key={menuLink.href}><NavigationLink variants={variants} whileHover="hover" selected={selected} ref={selectedRef} href={menuLink.href}>{menuLink.name}</NavigationLink></Text>
                 );
               })}
             </>
