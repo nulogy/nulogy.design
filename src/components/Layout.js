@@ -6,18 +6,6 @@ import Transition from './Transition'
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
-const StripedBorder = () => (
-  <Flex height="16px">
-    <Box width={1 / 7} backgroundColor="black" />
-    <Box width={1 / 7} backgroundColor="blackBlue" />
-    <Box width={1 / 7} backgroundColor="darkBlue" />
-    <Box width={1 / 7} backgroundColor="blue" />
-    <Box width={1 / 7} backgroundColor="lightBlue" />
-    <Box width={1 / 7} backgroundColor="lightYellow" />
-    <Box width={1 / 7} backgroundColor="yellow" />
-  </Flex>
-)
-
 const Button = styled(Box)(({ theme }) => ({
   border: "none",
   background: "none",
@@ -27,7 +15,6 @@ const Button = styled(Box)(({ theme }) => ({
   padding: theme.space.x1,
   lineHeight: 0,
 }));
-
 
 const MenuButton = ({ isOpen, onClick }) => {
   const unitWidth = "4"; // width of the lines
