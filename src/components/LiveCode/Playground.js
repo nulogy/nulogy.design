@@ -4,17 +4,17 @@ import Compiler from './Compiler';
 import Editor from './Editor';
 import Knobs from './Knobs';
 import { Box, Divider } from "@nulogy/components";
-import {CODE_WIDTH} from "../CONSTANTS";
+import { CODE_WIDTH } from "../CONSTANTS";
 import ActionButtons from './ActionButtons';
 
-export default ({ componentName, scope,  props}) => {
+export default ({ componentName, scope, props }) => {
   const params = useView({
     componentName,
     props,
     scope,
     imports: {
       "@nulogy/components": {
-        named: [componentName]
+        named: Object.keys(scope),
       }
     },
   });
@@ -26,7 +26,7 @@ export default ({ componentName, scope,  props}) => {
         <Knobs {...params.knobProps} />
         <Editor {...params.editorProps} />
         <Error {...params.errorProps} />
-        <ActionButtons {...params.actions} openInSandbox code={params.editorProps.code} componentName={componentName}/>
+        <ActionButtons {...params.actions} openInSandbox code={params.editorProps.code} componentName={componentName} />
       </Box>
     </>
   )
