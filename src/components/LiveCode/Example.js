@@ -21,9 +21,9 @@ const getInitialCode = async (componentName, example) => {
   return codeExample.default
 };
 
-const Example = ({ componentName, scope, example, ...props }) => {
+const Example = ({ componentName, scope, example, showEditor = false }) => {
   const [code, setCode] = useState(null);
-  const [showCode, setShowCode] = useState(false);
+  const [showCode, setShowCode] = useState(showEditor);
 
   useEffect(() => {
     if (!code) {
