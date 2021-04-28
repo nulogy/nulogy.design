@@ -1,6 +1,6 @@
 import { Icon } from "@nulogy/components";
 import { PropTypes } from 'react-view';
-import { COLOURS, SIZES, SHADOWS, RADII } from "../utils/themeValues";
+import { COLOURS, SIZES } from "../utils/themeValues";
 
 export const config = {
   componentName: "Icon",
@@ -21,8 +21,9 @@ export const config = {
       description: "The icon to display. Accepts icons listed in Available Icons above.",
     },
     size: {
-      type: PropTypes.String,
+      type: PropTypes.Enum,
       value: "x3",
+      options: SIZES,
       default: "x3 (24px)",
       description: "The size of the icon using space tokens or px",
     },
