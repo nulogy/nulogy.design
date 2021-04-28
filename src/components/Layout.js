@@ -71,7 +71,13 @@ const MenuButton = ({ isOpen, onClick }) => {
     <Button
       as="button"
       display={{ extraSmall: "block", medium: "none" }}
-      onClick={onClick}>
+      onClick={onClick}
+      css={{
+        "&:hover": {
+          cursor: "pointer"
+        }
+      }}
+      >
       <motion.svg
         viewBox="0 0 4 4"
         overflow="visible"
