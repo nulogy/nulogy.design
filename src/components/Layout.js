@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Box, Flex, ApplicationFrame } from "@nulogy/components";
+import { ApplicationFrame, Box } from "@nulogy/components";
 import styled from "styled-components";
+import Footer from "./Footer";
 import Navigation from './Navigation'
 import Transition from './Transition'
 import { Helmet } from "react-helmet";
@@ -129,6 +130,7 @@ const Layout = ({ children, location }) => {
             >
               <Box mb="x6">{children}</Box>
             </Box>
+            <Footer />
           </Transition>
         </Box>
         <Box
