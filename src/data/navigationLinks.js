@@ -74,6 +74,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "LoadingAnimation",
+        href: "/components/loading-animation"
+      },
+{
         name: "Icon",
         href: "/components/icon"
       },
