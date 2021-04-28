@@ -1,5 +1,6 @@
 import { Icon } from "@nulogy/components";
 import { PropTypes } from 'react-view';
+import iconList from "../utils/iconList";
 import { COLOURS, SIZES } from "../utils/themeValues";
 
 export const config = {
@@ -16,7 +17,8 @@ export const config = {
       description: "The icon's colour, if different than parent's text colour.",
     },
     icon: {
-      type: PropTypes.String,
+      type: PropTypes.Enum,
+      options: iconList,
       value: "chatBubble",
       description: "The icon to display. Accepts icons listed in Available Icons above.",
     },

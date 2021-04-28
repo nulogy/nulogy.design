@@ -1,6 +1,7 @@
-import { Icon, Link } from "@nulogy/components";
+import { Icon, Link, Box, Text, Flex } from "@nulogy/components";
 import { config } from "../../playgrounds/icon";
-import { SLACK_LINK } from "../../components/CONSTANTS";
+import iconList from "../../utils/iconList";
+import { SLACK_LINK, CODE_WIDTH } from "../../components/CONSTANTS";
 
 # Icon
 
@@ -9,6 +10,13 @@ Icons can be used alongside text to help assist users in finding certain actions
 <Playground {...config} />
 
 If your interface requires an icon not listed here, please post a message in the <Link fontSize="20px" href={SLACK_LINK}>#design-ops</Link> slack channel.
+
+## All Icons
+
+<Flex flexWrap="wrap" width="100%" maxWidth={CODE_WIDTH} mx="auto">
+  {iconList.map((icon) => 
+  <Flex width="33%" p="x1"><Icon icon={icon} size="x3" pr="x1" /><Text>{icon}</Text></Flex>)}
+</Flex>
 
 ## Props
 

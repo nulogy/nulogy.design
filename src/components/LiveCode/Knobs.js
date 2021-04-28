@@ -38,6 +38,26 @@ const ColorSelect = ({ labelText, options, value, onChange }) => {
   );
 };
 
+const IconSelect = ({ labelText, options, value, onChange }) => {
+  const CustomOption = ({ children, ...props }) => {
+    const newChildren = <Text><Icon icon={children} size="20px" pt="half" mr="x1" />{children}</Text>;
+    return <SelectOption {...props}>{newChildren}</SelectOption>;
+  };
+  return (
+    <NDSSelect
+      value={value}
+      labelText={labelText}
+      placeholder="Pick an icon..."
+      options={options}
+      onChange={onChange}
+      components={{
+        Option: CustomOption,
+      }}
+      labelText={labelText}
+    />
+  );
+};
+
 
 const Select = styled.select(({ theme }) => ({
   width: "100%",
@@ -135,6 +155,22 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
           </Spacing>
         );
       }
+
+      if (name === "icon") {
+        const ndsSelectOptions = options.map((option) => ({
+          value: option,
+          label: option,
+        }));
+        const ndsHandleChange = (val) => {
+          set(val, name)
+        };
+        return (
+          <Spacing>
+            <IconSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={<Label name={name} description={description} error={error} />} />
+          </Spacing>
+        );
+      }
+
       return (
         <Spacing>
           {numberOfOptions <= 3 ? (
