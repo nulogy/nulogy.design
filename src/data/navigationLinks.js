@@ -73,9 +73,13 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
         name: "Buttons",
         href: "/components/buttons"
+      },
+      {
+        name: "DropdownMenu",
+        href: "/components/dropdown-menu"
       },
       {
         name: "DatePicker",
