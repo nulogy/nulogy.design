@@ -1,0 +1,86 @@
+import { Select, SelectOption, Box, Table } from "@nulogy/components";
+import { config } from "../../playgrounds/select";
+
+# Select
+
+For making one selection from a large list of options.
+
+If you need to fetch options for the select as the interacts with the select, please use the [AsyncSelect](/async-select).
+
+<Playground {...config} />
+
+## Variations
+
+### MultiSelect
+
+Give users the ability to select multiple options with the multiselect. Note that the value will now be represented as an Array rather than a string.
+
+<Example componentName="select" scope={{ Select }} example="Multi" />
+
+### Replacing Inner Components
+
+Using the `components` prop you can augment the inner components of the select. See the following example of adding a component to each option in the dropdown:
+
+<Example componentName="select" scope={{ Select, SelectOption, Box }} example="CustomOptions" showEditor />
+
+### List of All Replaceable components
+
+Here is a list of all the available components that can be overidden and customized
+
+<Table
+        columns={[
+          { label: "Object Key", dataKey: "keyName" },
+          { label: "Component Name", dataKey: "import" },
+          { label: "Description", dataKey: "description" }
+        ]}
+        rows={[
+          {
+            keyName: "Option",
+            import: "SelectOption",
+            description: "Individual options in the select's dropdown"
+          },
+          {
+            keyName: "Control",
+            import: "Control",
+            description: "Wraps the select field"
+          },
+          {
+            keyName: "MultiValue",
+            import: "SelectMultiValue",
+            description: "The selected options in a muliselect select"
+          },
+          {
+            keyName: "ClearIndicator",
+            import: "SelectClearIndicator",
+            description: "The clear button in the multiselect"
+          },
+          {
+            keyName: "SelectContainer",
+            import: "SelectContainer",
+            description: "The wrapper around the whole field and dropdown"
+          },
+          {
+            keyName: "Menu",
+            import: "SelectMenu",
+            description: "The wrapper around the dropdown options"
+          },
+          {
+            keyName: "Input",
+            import: "SelectInput",
+            description: "The typeable input in the select"
+          }
+        ]}
+/>
+
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Content guidelines
+
+To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+
+## Related Components
+
+- [AsyncSelect](/async-select)

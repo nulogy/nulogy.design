@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Select",
+        href: "/components/select"
+      },
+{
         name: "RadioGroup",
         href: "/components/radio-group"
       },
