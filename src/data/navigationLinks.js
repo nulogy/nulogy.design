@@ -7,21 +7,13 @@ export const navigationLinks = [
         href: ""
       },
       {
-        name: "Developing with NDS",
-        href: ""
+        name: "Developer Workflow",
+        href: "/guides/developer-workflow"
       },
       {
-        name: "Testing Components",
+        name: "Theme values",
         href: ""
       },
-      {
-        name: "Theming",
-        href: ""
-      },
-      {
-        name: "Using Style Props",
-        href: ""
-      }
     ]
   },
   {
@@ -136,8 +128,37 @@ export const navigationLinks = [
       },
       {
         name: "Data visualization",
-        href: "/guides/data-visualization"
+        href: "/patterns/data-visualization"
       }
     ]
   },
+  {
+    name: "Resources",
+    links: [
+      {
+        name: "Localization",
+        href: "/guides/localization"
+      },  
+      {
+        name: "Ops Core",
+        href: "/guides/ops-core"
+      },      
+      {
+        name: "Releasing",
+        href: "/guides/packages"
+      },      
+      {
+        name: "Style Props",
+        href: "/guides/style-props"
+      },                   
+      {
+        name: "Testing",
+        href: "/guides/testing"
+      },   
+      {
+        name: "Versioning",
+        href: "/guides/versioning"
+      }, 
+    ]
+  },    
 ];
