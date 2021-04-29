@@ -65,43 +65,47 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
+        name: "Textarea",
+        href: "/components/textarea"
+      },
+      {
         name: "Tabs",
         href: "/components/tabs"
       },
-{
+      {
         name: "StatusIndicator",
         href: "/components/status-indicator"
       },
-{
+      {
         name: "Sidebar",
         href: "/components/sidebar"
       },
-{
+      {
         name: "Select",
         href: "/components/select"
       },
-{
+      {
         name: "RadioGroup",
         href: "/components/radio-group"
       },
-{
+      {
         name: "Radio",
         href: "/components/radio"
       },
-{
+      {
         name: "Page",
         href: "/components/page"
       },
-{
+      {
         name: "Modal",
         href: "/components/modal"
       },
-{
+      {
         name: "LoadingAnimation",
         href: "/components/loading-animation"
       },
-{
+      {
         name: "Icon",
         href: "/components/icon"
       },
@@ -170,27 +174,27 @@ export const navigationLinks = [
       {
         name: "Localization",
         href: "/guides/localization"
-      },  
+      },
       {
         name: "Ops Core",
         href: "/guides/ops-core"
-      },      
+      },
       {
         name: "Releasing",
         href: "/guides/packages"
-      },      
+      },
       {
         name: "Style Props",
         href: "/guides/style-props"
-      },                   
+      },
       {
         name: "Testing",
         href: "/guides/testing"
-      },   
+      },
       {
         name: "Versioning",
         href: "/guides/versioning"
-      }, 
+      },
     ]
-  },    
+  },
 ];
