@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "StatusIndicator",
+        href: "/components/status-indicator"
+      },
+{
         name: "Sidebar",
         href: "/components/sidebar"
       },
