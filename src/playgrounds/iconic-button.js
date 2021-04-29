@@ -1,8 +1,9 @@
 import { IconicButton } from "@nulogy/components";
 import { PropTypes } from 'react-view';
+import iconList from "../utils/iconList";
 
 export const config = {
-  componentName: "IconicButton",
+componentName: "IconicButton",
   scope: {
     IconicButton
   },
@@ -13,7 +14,8 @@ export const config = {
       description: "The label for the icon.",
     },
     icon: {
-      type: PropTypes.String,
+      type: PropTypes.Enum,
+      options: iconList, 
       value: "delete",
       description: "The icon to display. See the Icons component for all possible options.",
     },
