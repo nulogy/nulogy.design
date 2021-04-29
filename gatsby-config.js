@@ -4,6 +4,8 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-sharp",
+    "gatsby-remark-images",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -15,7 +17,15 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve("./src/components/MarkdownRenderer.js"),
-        }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1024,
+            }
+          }
+        ]
       }
     },
     {
@@ -36,7 +46,6 @@ module.exports = {
         name: "pages",
         path: "./src/pages/",
       },
-      __key: "pages",
     },
   ],
 };

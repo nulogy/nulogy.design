@@ -4,7 +4,7 @@ export const navigationLinks = [
     links: [
       {
         name: "Designing with NDS",
-        href: ""
+        href: "/guides/designers"
       },
       {
         name: "Developer Workflow",

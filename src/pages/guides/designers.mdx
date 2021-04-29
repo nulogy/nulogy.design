@@ -1,0 +1,106 @@
+import { Box, Text } from "@nulogy/components";
+import { CODE_WIDTH } from "../../components/CONSTANTS";
+import figmaComponents from "./images/designers-guide/figma-components.gif";
+import figmaStyles from "./images/designers-guide/figma-styles.gif";
+import figmaText from "./images/designers-guide/figma-text.gif";
+import figmaGrid from "./images/designers-guide/figma-grid.gif";
+import figmaFrame from "./images/designers-guide/figma-frame.gif";
+import figmaVersion from "./images/designers-guide/figma-version.gif";
+import figmaSaveVersion from "./images/designers-guide/figma-save-version.gif";
+import { FIGMA_LINK } from "../../components/CONSTANTS";
+
+# Designers' Guide
+
+Learn how to start designing using the Nulogy Design System (NDS).
+
+## Tools and assets
+
+- [Figma](https://www.figma.com/) as our design tool for creating high-fidelity mockups, prototyping, version control, and team collaboration.
+- [IBM Plex](http://localhost:8000/guides/designers) as a Nulogy's sole typeface
+- [NDS UI kit](https://www.figma.com/file/jRQxfwCL27gfqfrdCxOIQG/NDS) as a library of Figma styles and components
+- This website as a component reference guide
+
+## Understanding NDS visual language
+
+To be effective at using the Nulogy Design System designers should familiarize themselves with the basics of NDS visual language. The following articles provide a good starting point:
+
+- [Colour](/design-language/colour)
+- [Spacing](/design-language/spacing)
+- [Typography](/design-language/typography)
+
+## Designing with NDS in Figma
+
+### NDS components
+
+In Figma, the NDS components are available under the `Assets` panel in Left Sidebar. The components are easily drag-and-dropped into the working frame and further customized through `Layer` and `Design` panels.
+
+<Box maxWidth={CODE_WIDTH} m="0 auto">
+  <img
+    src={figmaComponents}
+    alt="Animation showing how to access NDS components in Figma"
+  />
+</Box>
+<Text textAlign="center" fontSize="small" color="darkGrey">
+  Using NDS components in Figma
+</Text>
+
+### NDS styles
+
+By using available text, colours, shadows, and grid styles in the `Layer` panel, designers ensure that their designs stay in line with NDS' visual style.
+
+<Box maxWidth={CODE_WIDTH} m="0 auto">
+  <img
+    src={figmaStyles}
+    alt="Animation showing how to use NDS colour, and shadow styles in Figma"
+  />
+  <Text textAlign="center" fontSize="small" color="darkGrey" mb="6">
+    Using NDS colour, and shadow styles in Figma
+  </Text>
+  <img
+    src={figmaText}
+    alt="Animation showing how to use NDS text styles in Figma"
+  />
+  <Text textAlign="center" fontSize="small" color="darkGrey" mb="x6">
+    Using NDS text styles in Figma
+  </Text>
+  <img
+    src={figmaGrid}
+    alt="Animation showing how to use NDS grid and adjust nudge amount in Figma"
+  />
+  <Text textAlign="center" fontSize="small" color="darkGrey">
+    Using NDS grid styles and adjusting nudge amount in Figma
+  </Text>
+</Box>
+
+### Default sreen sizes and Frame component
+
+The NDS Frame component is created to help designers set the working canvas. It comes in different sizes that match breakpoints in NDS. Once imported the Frame component should be detached (Detach Instance) so that other elements can be nested inside.
+
+<Box maxWidth={CODE_WIDTH} m="0 auto">
+  <img
+    src={figmaFrame}
+    alt="Animation showing how to access NDS components in Figma"
+  />
+</Box>
+<Text textAlign="center" fontSize="small" color="darkGrey">
+  Using NDS Frame component and setting the working canvas
+</Text>
+
+### Using version history
+
+To leave a record of changes made throughout the design process and to be able to revert to desired revision designs should be regularelly saved to version history. Version history is available in
+`File` menu under `Show Version History`
+
+<Box maxWidth={CODE_WIDTH} m="0 auto">
+  <img
+    src={figmaSaveVersion}
+    alt="Animation showing how to save to version history"
+  />
+  <Text textAlign="center" fontSize="small" color="darkGrey" mb="x6">
+    Saving version history
+  </Text>
+  <img src={figmaVersion} alt="Animation showing how to view version history" />
+  <Text textAlign="center" fontSize="small" color="darkGrey">
+    Viewing version history
+  </Text>
+</Box>
