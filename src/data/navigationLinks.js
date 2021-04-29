@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Toast",
+        href: "/components/toast"
+      },
+{
         name: "TimeRange",
         href: "/components/time-range"
       },
