@@ -1,0 +1,26 @@
+import { Sidebar } from "@nulogy/components";
+import { config } from "../../playgrounds/sidebar";
+
+# Sidebar
+
+The Sidebar is designed for displaying additional information or editing/creating new items. The component provides animation, a close button, and consistent paddings and title positioining. Sidebars are always optional, and can be used on any Page you like.
+
+It is intended to be used within the [ApplicationFrame](/application-frame) and along side [BrandedNavBar](/branded-nav-bar).
+
+See props for accessibility features.
+
+<Playground {...config} />
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Content guidelines
+
+To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+
+## Related Components
+
+- [ApplicationFrame](/application-frame)
+- [Page](/page)
+- [BrandedNavBar](/branded-nav-bar)

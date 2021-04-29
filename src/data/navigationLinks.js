@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Sidebar",
+        href: "/components/sidebar"
+      },
+{
         name: "Select",
         href: "/components/select"
       },
