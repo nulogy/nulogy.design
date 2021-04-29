@@ -8,31 +8,30 @@ export const config = {
   },
   props: {
     labelText: {
-      type: PropTypes.ReactNode,
-      value: "",
-      default: "End Time",
+      type: PropTypes.String,
+      value: "End Time",
       description: "The label",
     },
     timeFormat: {
       type: PropTypes.String,
-      value: "",
+      value: "hh:mm aa",
       default: "hh:mm aa",
       description: "The default time format (see date-fns for available time formats)",
     },
     interval: {
       type: PropTypes.Number,
-      value: "",
+      value: 15,
       default: "15",
       description: "The time difference in minutes between the time options",
     },
     minTime: {
       type: PropTypes.String,
-      value: "",
+      value: "09:00",
       description: "The latest time that can be selected in 24 hour time string format e.g: 02: 30",
     },
     maxTime: {
       type: PropTypes.String,
-      value: "",
+      value: "17:00",
       description: "The latest time that can be selected in 24 hour time string e.g: 02: 30",
     },
     value: {
@@ -47,8 +46,13 @@ export const config = {
     },
     onInputChange: {
       type: PropTypes.Function,
-      value: "",
+      value: "(e) => console.log('onInputChange', e)",
       description: "Event handler for when the value typed into the input changes",
+    },
+    onChange: {
+      type: PropTypes.Function,
+      value: "(e) => console.log('onChange', e)",
+      description: "Event handler for when the selected value changes",
     },
   }
 }
