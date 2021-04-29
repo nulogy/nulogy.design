@@ -1,5 +1,6 @@
 import { Button } from "@nulogy/components";
 import { PropTypes } from 'react-view';
+import iconList from "../utils/iconList";
 
 export const config = {
   componentName: "Button",
@@ -40,7 +41,8 @@ export const config = {
     icon: {
       value: "",
       default: "",
-      type: PropTypes.String,
+      type: PropTypes.Enum,
+      options: iconList, 
       description: "The icon to display. Accepts icon names from the Icon component."
     },
     iconSide: {
