@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Tabs",
+        href: "/components/tabs"
+      },
+{
         name: "StatusIndicator",
         href: "/components/status-indicator"
       },
