@@ -65,6 +65,10 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
+{
+        name: "TimeRange",
+        href: "/components/time-range"
+      },
       {
         name: "TimePicker",
         href: "/components/time-picker"
