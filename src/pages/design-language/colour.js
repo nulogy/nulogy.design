@@ -51,6 +51,8 @@ const IndexPage = ({ location }) => {
         </Flex>
         <Divider mb="x6" />
         <Heading2>Contextual colours</Heading2>
+        <Text fontSize="24px" mb="x4">For providing meaning. For accessibility reasons, make sure the colour is not the sole way of doing this.</Text>
+
         <Flex>
           <Palette name="red" colour={theme.colors.red} context="For dangerous and destructive actions" />
           <Palette name="red" colour={theme.colors.lightRed} context="Danger accent colour" />
@@ -60,7 +62,19 @@ const IndexPage = ({ location }) => {
           <Palette name="lightGreen" colour={theme.colors.lightGreen} context="Success accent colour" />
           <Palette name="yellow" colour={theme.colors.yellow} context="To warn about something non-destructive" />
           <Palette name="lightYellow" colour={theme.colors.lightYellow} context="Warning accent colour" />          
-        </Flex>               
+        </Flex>  
+        <Divider mb="x6" />
+        <Heading2>Categorical colours</Heading2>
+        <Text fontSize="24px" mb="x4">These are used for charting and other data visualization. See <Link fontSize="24px" href="/patterns/data-visualization">Data Visualization</Link> for more information.</Text>
+        <Flex>
+          <Palette name="aqua" colour={theme.colors.categorical1} />
+          <Palette name="purple" colour={theme.colors.categorical2} />
+          <Palette name="pink" colour={theme.colors.categorical3} />
+          <Palette name="turquoise" colour={theme.colors.categorical4} />
+          <Palette name="orange" colour={theme.colors.categorical5} />
+          <Palette name="avocado" colour={theme.colors.categorical6} />
+
+        </Flex>                     
       </Box>
       <Box>
       </Box>
