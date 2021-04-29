@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Modal",
+        href: "/components/modal"
+      },
+{
         name: "LoadingAnimation",
         href: "/components/loading-animation"
       },
