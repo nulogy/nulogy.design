@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
       {
+        name: "TimePicker",
+        href: "/components/time-picker"
+      },
+      {
         name: "Textarea",
         href: "/components/textarea"
       },
