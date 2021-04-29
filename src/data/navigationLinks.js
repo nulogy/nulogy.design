@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Page",
+        href: "/components/page"
+      },
+{
         name: "Modal",
         href: "/components/modal"
       },
