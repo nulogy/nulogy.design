@@ -65,6 +65,10 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
+{
+        name: "Table",
+        href: "/components/table"
+      },
       {
         name: "Tooltip",
         href: "/components/tooltip"
