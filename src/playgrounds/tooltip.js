@@ -14,7 +14,7 @@ export const config = {
       description: "Trigger, must be a single child able to accept a ref."
     },
     tooltip: {
-      type: PropTypes.ReactNode,
+      type: PropTypes.String,
       value: "Tooltip!",
       description: "The content to display inside of the tooltip.",
     },
