@@ -65,15 +65,19 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
+        name: "Toggle",
+        href: "/components/toggle"
+      },
+      {
         name: "List",
         href: "/components/list"
       },
-{
+      {
         name: "Toast",
         href: "/components/toast"
       },
-{
+      {
         name: "TimeRange",
         href: "/components/time-range"
       },
