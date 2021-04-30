@@ -1,0 +1,26 @@
+import { Tooltip, Button } from "@nulogy/components";
+import { config } from "../../playgrounds/tooltip";
+
+# Tooltip
+
+User-triggered messages that provide additional information about something on a page. Tooltips are accessed by hovering with a mouse or tapping on a touch screen.
+
+<Playground {...config} />
+
+## Variations
+
+### With non-text content
+
+<Example componentName="tooltip" scope={{ Tooltip, Button }} example="CustomContent" />
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Content guidelines
+
+To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+
+## Related Components
+
+- [Box](/box)

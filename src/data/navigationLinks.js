@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
       {
+        name: "Tooltip",
+        href: "/components/tooltip"
+      },
+      {
         name: "Toggle",
         href: "/components/toggle"
       },
