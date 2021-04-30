@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "List",
+        href: "/components/list"
+      },
+{
         name: "Toast",
         href: "/components/toast"
       },
