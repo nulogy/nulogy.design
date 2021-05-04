@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Form",
+        href: "/components/form"
+      },
+{
         name: "BrandedNavBar",
         href: "/components/branded-nav-bar"
       },
