@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "FormSection",
+        href: "/components/form-section"
+      },
+{
         name: "Form",
         href: "/components/form"
       },
