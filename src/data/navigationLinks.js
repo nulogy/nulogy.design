@@ -65,11 +65,15 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
+        name: "Divider",
+        href: "/components/divider"
+      },
+      {
         name: "Flex",
         href: "/components/flex"
       },
-{
+      {
         name: "Table",
         href: "/components/table"
       },
