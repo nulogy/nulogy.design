@@ -7,7 +7,7 @@ import { Box, Divider } from "@nulogy/components";
 import { CODE_WIDTH } from "../CONSTANTS";
 import ActionButtons from './ActionButtons';
 
-export default ({ componentName, scope, props }) => {
+export default ({ componentName, scope, containWithin, compilerHeight, props }) => {
   const params = useView({
     componentName,
     props,
@@ -21,7 +21,7 @@ export default ({ componentName, scope, props }) => {
   return (
     <>
       <Box maxWidth={CODE_WIDTH} m="0 auto">
-        <Compiler {...params.compilerProps} />
+        <Compiler containWithin={containWithin} compilerHeight={compilerHeight} {...params.compilerProps} />
         <Divider />
         <Knobs {...params.knobProps} />
         <Editor {...params.editorProps} />

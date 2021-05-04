@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Overlay",
+        href: "/components/overlay"
+      },
+{
         name: "FormSection",
         href: "/components/form-section"
       },
