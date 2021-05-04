@@ -185,7 +185,7 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
                 <Radio
                   key={option}
                   value={option}
-                  labelText={option}
+                  labelText={option || "none"}
                 />
               ))}
             </RadioGroup>

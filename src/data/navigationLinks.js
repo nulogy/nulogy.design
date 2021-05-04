@@ -65,6 +65,10 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
+{
+        name: "BrandedNavBar",
+        href: "/components/branded-nav-bar"
+      },
       {
         name: "Divider",
         href: "/components/divider"
