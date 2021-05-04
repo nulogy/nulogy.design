@@ -66,6 +66,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
 {
+        name: "Flex",
+        href: "/components/flex"
+      },
+{
         name: "Table",
         href: "/components/table"
       },
