@@ -1,15 +1,16 @@
 import { theme } from "@nulogy/components";
-import { CODE_BLOCK } from "../components/CodeBlock.js";
+import CodeBlock from "../components/CodeBlock.js";
+
 
 # Theme
 
 All the available design options for creating interfaces in Nulogy's style can be accessed in Javascript via the theme.
 
-```jsx
-{
-  JSON.stringify(theme, null, "  ");
-}
-```
+<CodeBlock>
+  <div className="language-json">
+    {JSON.stringify(theme, null, "  ")}
+  </div>
+</CodeBlock>
 
 ## Usage
 
