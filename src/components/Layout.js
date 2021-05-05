@@ -1,24 +1,22 @@
 import React, { useState } from 'react'
-import { ApplicationFrame, Box } from "@nulogy/components";
+import { AnimatedBox, ApplicationFrame, Box } from "@nulogy/components";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Navigation from './Navigation'
 import Transition from './Transition'
 import Helmet from "./Helmet";
-import { motion } from "framer-motion";
 
-const Button = styled(Box)(({ theme }) => ({
+const Button = styled(Box)(({ isOpen, theme }) => ({
   border: "none",
   background: "none",
   position: "fixed",
-  top: theme.space.x2,
-  right: theme.space.x2,
-  padding: 0,
+  top: isOpen ? "12px" : theme.space.x1,
+  right: isOpen ? theme.space.x2 : theme.space.half,
+  padding: theme.space.half,
   lineHeight: 0,
 }));
 
 const MenuButton = ({ isOpen, onClick }) => {
-  const unitWidth = "4"; // width of the lines
   const variant = isOpen ? "opened" : "closed";
   const top = {
     closed: {
@@ -27,7 +25,7 @@ const MenuButton = ({ isOpen, onClick }) => {
     },
     opened: {
       rotate: 45,
-      translateY: 2
+      translateY: 2,
     }
   };
   const center = {
@@ -41,70 +39,53 @@ const MenuButton = ({ isOpen, onClick }) => {
   const bottom = {
     closed: {
       rotate: 0,
-      translateY: 0
+      translateY: 0,
     },
     opened: {
       rotate: -45,
-      translateY: -2
+      translateY: -10,
     }
   };
   const lineProps = {
-    stroke: isOpen ? "white" : "darkBlue",
-    strokeWidth: "2",
-    vectorEffect: "non-scaling-stroke",
+    height: "2px",
+    width: "20px",
+    mb: "4px",
+    bg: isOpen ? "white" : "darkBlue",
     initial: "closed",
     animate: variant,
   }
   return (
     <Button
       as="button"
+      isOpen={isOpen}
       display={{ extraSmall: "block", medium: "none" }}
       onClick={onClick}
+      aria-label={isOpen ? "close" : "open"}
       css={{
         "&:hover": {
           cursor: "pointer"
         }
       }}
     >
-      <motion.svg
-        viewBox="0 0 4 4"
-        overflow="visible"
-        preserveAspectRatio="none"
-        width="20px"
-        height="20px"
-      >
-        <motion.line
-          x1="0"
-          x2={unitWidth}
-          y1="0"
-          y2="0"
-          variants={top}
-          {...lineProps}
-        />
-        <motion.line
-          x1="0"
-          x2={unitWidth}
-          y1="2"
-          y2="2"
-          variants={center}
-          {...lineProps}
-        />
-        <motion.line
-          x1="0"
-          x2={unitWidth}
-          y1="4"
-          y2="4"
-          variants={bottom}
-          {...lineProps}
-        />
-      </motion.svg>
+      <AnimatedBox
+        variants={top}
+        {...lineProps}
+      />
+      <AnimatedBox
+        variants={center}
+        {...lineProps}
+      />
+      <AnimatedBox
+        variants={bottom}
+        {...lineProps}
+      />
     </Button>)
 }
 
 const Layout = ({ children, location, noPadding }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <ApplicationFrame>
+    <ApplicationFrame overflow={isOpen && "hidden"}>
       <Helmet location={location} />
       <Box display={{ medium: "flex" }}>
         <Box
