@@ -34,11 +34,9 @@ const HomeLink = styled(motion.a)({
   
 const HomeLinks = () => (
     <>
-        <HomeLink href="/design-language/colour" variants={variants} whileHover="hover">Design Language</HomeLink>
+        <HomeLink href="/design-language/colour" variants={variants} whileHover="hover">Developer workflow</HomeLink>
+        <HomeLink href="/design-language/colour" variants={variants} whileHover="hover">Desiging with NDS</HomeLink>
         <HomeLink href="/components/alert" variants={variants} whileHover="hover">Components</HomeLink>
-        <HomeLink>Content <StatusIndicator ml="x2">Coming soon</StatusIndicator></HomeLink>
-        <HomeLink href="/patterns/loading" variants={variants} whileHover="hover">Patterns</HomeLink>
-        <HomeLink href="/guides/localization" variants={variants} whileHover="hover">Resources</HomeLink>
     </>
 )
 
