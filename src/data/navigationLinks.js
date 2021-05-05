@@ -14,8 +14,8 @@ export const navigationLinks = [
         href: "/guides/developer-workflow"
       },
       {
-        name: "Theme values",
-        href: ""
+        name: "Theme",
+        href: "/theme"
       },
     ]
   },
