@@ -1,5 +1,5 @@
 import { BrandedNavBar } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 import { config } from "../../playgrounds/branded-nav-bar";
 
 # BrandedNavBar
@@ -16,19 +16,22 @@ BrandedNavBar is a component.
 
 The menuData prop is used to provide links to the NavBar and assemble their heirarchy. The direct children in the menuData object are shown below:
 
-<PropsTable propsConfig={{ 
-  primaryMenu: { 
-    type: PropTypes.Array,
-    value: "",
-    description: "Data to the main navigation menu, aligned to the left of the NavBar.", 
-    },
-    secondaryMenu: { 
+<PropsTable
+  propsConfig={{
+    primaryMenu: {
       type: PropTypes.Array,
       value: "",
-      description: "Data to the secondary navigation menu, aligned to the right of the NavBar.", 
-    
-     }}
-    }  />
+      description:
+        "Data to the main navigation menu, aligned to the left of the NavBar.",
+    },
+    secondaryMenu: {
+      type: PropTypes.Array,
+      value: "",
+      description:
+        "Data to the secondary navigation menu, aligned to the right of the NavBar.",
+    },
+  }}
+/>
 
 ## Adding Menu Items
 
@@ -48,39 +51,39 @@ Each menu item object requires a "name" key. The "name" key will be used as the 
 
 Menu items can be nested within eachother using the items key for as many levels of heirarchy that is needed.
 
-
-<PropsTable propsConfig={{ 
-  name: { 
-    type: PropTypes.ReactNode,
-    value: "",
-    description: "Unique identifier for the menu item.", 
+<PropsTable
+  propsConfig={{
+    name: {
+      type: PropTypes.ReactNode,
+      value: "",
+      description: "Unique identifier for the menu item.",
     },
-    ariaLabel: { 
+    ariaLabel: {
       type: PropTypes.String,
       value: "",
-      description: "Add an aria-label if the `name` value is not a readable label, like an icon.", 
-    
-     },
-     href: { 
+      description:
+        "Add an aria-label if the `name` value is not a readable label, like an icon.",
+    },
+    href: {
       type: PropTypes.String,
       value: "",
-      description: "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar.", 
-     },
-     items: { 
+      description:
+        "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar.",
+    },
+    items: {
       type: PropTypes.Array,
       value: "",
-      description: "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view.", 
-     },
-     render: { 
+      description:
+        "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view.",
+    },
+    render: {
       type: PropTypes.Function,
       value: "",
-      description: "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu. NOTE: Do not use `href` and `items` keys if you intend to use the render function.", 
-     },
-     }}  />
-
-## Content guidelines
-
-To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
+      description:
+        "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu. NOTE: Do not use `href` and `items` keys if you intend to use the render function.",
+    },
+  }}
+/>
 
 ## Related Components
 

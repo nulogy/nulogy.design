@@ -1,6 +1,11 @@
 import { Table, IconicButton } from "@nulogy/components";
 import { config } from "../../playgrounds/table";
-import { tableRowProps, tableColumnProps, cellRendererArgs, headerFormatterArgs } from "../../playgrounds/table-props";
+import {
+  tableRowProps,
+  tableColumnProps,
+  cellRendererArgs,
+  headerFormatterArgs,
+} from "../../playgrounds/table-props";
 import { rows, columns } from "../../examples/table/data";
 
 # Table
@@ -17,29 +22,49 @@ A custom component can be implemented using a `cellFormatter` (to maintain the e
 
 Similarly headers can be customized using the `headerFormatter` function props. See Storybook for other examples of implementing different custom components.
 
-<Example componentName="table" scope={{ Table, rows, columns, IconicButton }} example="CustomCells" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns, IconicButton }}
+  example="CustomCells"
+/>
 
 ### ColumnWidths
 
 A width for a column can be set (as actual size or percentage) inside the column data.
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="ColumnWidths" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="ColumnWidths"
+/>
 
 ### Compact Styling
 
 The table can be set to use compact styling which decreases the paddings when the compact prop is set to true.
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="CompactStyling" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="CompactStyling"
+/>
 
 ### Footer
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="FooterRows" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="FooterRows"
+/>
 
 ### StickyHeader
 
 The table header can remain fixed to the top of the table when scrolling by setting the prop stickyHeader to true.
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="StickyHeader" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="StickyHeader"
+/>
 
 ### Pagination
 
@@ -49,7 +74,11 @@ Providing a function to `onPageChange` will allow tracking of the current page n
 
 The [Pagination](/pagination) and Table components can also be used together to support server-side pagination or other custom behaviour. An example of such an implementation can be found in Storybook.
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="Pagination" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="Pagination"
+/>
 
 ### Headings
 
@@ -58,7 +87,6 @@ Headings that span the full width of a row can be added within the table's rows.
 ### Filtering
 
 Filtering can be implemented by passing filtered rows to the rows prop of the table. See an example of filtering in Storybook.
-
 
 ### Sorting
 
@@ -70,7 +98,11 @@ Setting `hasSelectableRows` on the Table will add a column of checkboxes to the 
 
 A `keyField` should be specified to provide unique ids for rows (by default the `keyField` will be "id" and expect a property of id in the row objects).
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="SelectableRows" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="SelectableRows"
+/>
 
 ### Expandable Rows
 
@@ -78,7 +110,11 @@ Setting `hasExpandableRows` and providing `expandedContent` on a row will add a 
 
 A `keyField` should be specified to provide unique ids for rows (by default the `keyField` will be "id" and expect a property of id in the row objects).
 
-<Example componentName="table" scope={{ Table, rows, columns }} example="ExpandableRows" />
+<Example
+  componentName="table"
+  scope={{ Table, rows, columns }}
+  example="ExpandableRows"
+/>
 
 ## Props
 
@@ -94,7 +130,6 @@ Rows should have keys corresponding to the dataKeys provided in the columns. In 
 
 <PropsTable propsConfig={tableRowProps} />
 
-
 ## CellRenderer / CellFormatter Argument Type
 
 Use cellFormatter to maintain the styles within the cell while providing a custom component or string. Use cellRenderer when using completely custom styles.
@@ -106,7 +141,3 @@ Use cellFormatter to maintain the styles within the cell while providing a custo
 Use headerFormatter to provide a custom header component. Styles on the header cell will be maintained.
 
 <PropsTable propsConfig={headerFormatterArgs} />
-
-## Content guidelines
-
-To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.

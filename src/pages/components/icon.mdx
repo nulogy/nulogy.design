@@ -16,17 +16,17 @@ If your interface requires an icon not listed here, please post a message in the
 Nulogy uses a selection of solid style <Link fontSize="20px" href="https://fonts.google.com/icons">Material Design</Link> icons.
 
 <Flex flexWrap="wrap" width="100%" maxWidth={CODE_WIDTH} mx="auto">
-  {iconList.map((icon) => 
-  <Flex width="33%" p="x1"><Icon icon={icon} size="x3" pr="x1" /><Text>{icon}</Text></Flex>)}
+  {iconList.map((icon) => (
+    <Flex width="33%" p="x1">
+      <Icon icon={icon} size="x3" pr="x1" />
+      <Text>{icon}</Text>
+    </Flex>
+  ))}
 </Flex>
 
 ## Props
 
 <PropsTable propsConfig={config.props} />
-
-## Content guidelines
-
-To provide a more detailed explanation of the message that is being communicated, a link to the new screen can be provided in the child content using a Link component.
 
 ## Related Components
 
