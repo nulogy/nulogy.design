@@ -1,3 +1,6 @@
+/* This Array configures the the sections and name, href, and title for each page on the website.
+For the page title that appears in the browser tab, the name will be used unless a title is specified. */
+
 export const navigationLinks = [
   {
     name: "Start here",
@@ -65,19 +68,19 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
         name: "Overlay",
         href: "/components/overlay"
       },
-{
+      {
         name: "FormSection",
         href: "/components/form-section"
       },
-{
+      {
         name: "Form",
         href: "/components/form"
       },
-{
+      {
         name: "BrandedNavBar",
         href: "/components/branded-nav-bar"
       },
@@ -229,11 +232,13 @@ export const navigationLinks = [
       },
       {
         name: "Ops Core",
-        href: "/guides/ops-core"
+        href: "/guides/ops-core",
+        title: "Using NDS in Operational Solution Core"
       },
       {
         name: "Releasing",
-        href: "/guides/packages"
+        href: "/guides/packages",
+        title: "How the Nulogy Design Ops team releases packages"
       },
       {
         name: "Style Props",

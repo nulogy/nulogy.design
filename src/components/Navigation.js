@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import { Box, Branding, List, StatusIndicator, Text, theme } from "@nulogy/components"
 import styled from "styled-components";
+import findMatchingPath from '../utils/findMatchingPath';
 import { navigationLinks } from "../data/navigationLinks";
 import { motion } from "framer-motion";
 
@@ -36,9 +37,7 @@ const NavigationHeading = ({ children }) => (
   <Text fontSize="14px" color="whiteGrey" textTransform="uppercase" fontWeight="bold" marginY="x3" mb="x2">{children}</Text>
 )
 
-const Navigation = ({ location, isOpen }) => {
-  const trimSlashes = path => path.replace(/^\/|\/$/g, "");
-  const currentPath = trimSlashes(location?.pathname || "");
+const Navigation = ({ location }) => {
   const selectedRef = useRef(null);
 
   useEffect(() => {
@@ -60,7 +59,7 @@ const Navigation = ({ location, isOpen }) => {
           <List pl="0">
             <>
               {menuItem.links.map(menuLink => {
-                const selected = trimSlashes(menuLink.href) === currentPath;
+                const selected = menuLink.name === findMatchingPath(location?.pathname).name;
                 return (
                   <Text key={menuLink.href}><NavigationLink variants={variants} whileHover="hover" selected={selected} ref={selectedRef} href={menuLink.href}>{menuLink.name}</NavigationLink></Text>
                 );

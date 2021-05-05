@@ -4,16 +4,16 @@ import styled from "styled-components";
 import Footer from "./Footer";
 import Navigation from './Navigation'
 import Transition from './Transition'
-import { Helmet } from "react-helmet";
+import Helmet from "./Helmet";
 import { motion } from "framer-motion";
 
 const Button = styled(Box)(({ theme }) => ({
   border: "none",
   background: "none",
-  position: "absolute",
-  top: theme.space.x1,
+  position: "fixed",
+  top: theme.space.x2,
   right: theme.space.x2,
-  padding: theme.space.x1,
+  padding: 0,
   lineHeight: 0,
 }));
 
@@ -65,7 +65,7 @@ const MenuButton = ({ isOpen, onClick }) => {
           cursor: "pointer"
         }
       }}
-      >
+    >
       <motion.svg
         viewBox="0 0 4 4"
         overflow="visible"
@@ -98,26 +98,14 @@ const MenuButton = ({ isOpen, onClick }) => {
           {...lineProps}
         />
       </motion.svg>
-    </Button >)
+    </Button>)
 }
 
 const Layout = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <ApplicationFrame overflow={isOpen && "hidden"}>
-      <Helmet titleTemplate="%s | Nulogy Design System">
-        <html lang="en" />
-        <meta charSet="utf-8" />
-        <title>Welcome</title>
-        <link
-          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono"
-          rel="stylesheet"
-        />
-      </Helmet>
+    <ApplicationFrame>
+      <Helmet location={location} />
       <Box display={{ medium: "flex" }}>
         <Box
           width={{ medium: "calc(100% - 320px)" }}
