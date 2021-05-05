@@ -101,7 +101,7 @@ const MenuButton = ({ isOpen, onClick }) => {
     </Button>)
 }
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, noPadding }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <ApplicationFrame>
@@ -113,8 +113,8 @@ const Layout = ({ children, location }) => {
         >
           <Transition location={location}>
             <Box as="main"
-              paddingTop="x6"
-              paddingX={{ extraSmall: "x6", medium: "x8" }}
+              paddingTop={noPadding ? null : "x6"}
+              paddingX={noPadding ? null : { extraSmall: "x6", medium: "x8" }}
             >
               <Box mb="x6">{children}</Box>
             </Box>
