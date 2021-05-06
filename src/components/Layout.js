@@ -10,8 +10,8 @@ const Button = styled(Box)(({ isOpen, theme }) => ({
   border: "none",
   background: "none",
   position: "fixed",
-  top: isOpen ? "12px" : theme.space.x1,
-  right: isOpen ? theme.space.x2 : theme.space.half,
+  top: theme.space.x4,
+  right: theme.space.x2,
   padding: theme.space.half,
   lineHeight: 0,
 }));
