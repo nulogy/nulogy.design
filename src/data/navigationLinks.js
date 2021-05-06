@@ -69,6 +69,10 @@ export const navigationLinks = [
       },
       /* Add routes here */
       {
+        name: "AsyncSelect",
+        href: "/components/async-select"
+      },
+      {
         name: "Overlay",
         href: "/components/overlay"
       },
