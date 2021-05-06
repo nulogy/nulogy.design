@@ -54,7 +54,7 @@ const Navigation = ({ location }) => {
         <a style={{ textDecoration: "none" }} href="/" textDecoration="none"><Branding size="large" logoColor="white" withLine mt="x4" mb="x8" subtext="Design System" /></a>
       </Box>
       {sortedNavigationLinks.map(menuItem => (
-        <Box mb="x6">
+        <Box mb="x6" key={menuItem.name}>
           <NavigationHeading>{menuItem.name}</NavigationHeading>
           <List pl="0">
             <>
@@ -67,7 +67,8 @@ const Navigation = ({ location }) => {
             </>
           </List>
         </Box>
-      ))}
+      ))
+      }
       <NavigationHeading>CONTENT <StatusIndicator ml="half">Coming soon</StatusIndicator></NavigationHeading>
     </>
   )

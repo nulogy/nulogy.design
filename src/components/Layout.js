@@ -85,7 +85,7 @@ const MenuButton = ({ isOpen, onClick }) => {
 const Layout = ({ children, location, noPadding }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <ApplicationFrame overflow={isOpen && "hidden"}>
+    <ApplicationFrame overflow={isOpen ? "hidden" : "auto"}>
       <Helmet location={location} />
       <Box display={{ medium: "flex" }}>
         <Box
