@@ -212,6 +212,10 @@ export const navigationLinks = [
         name: "Text",
         href: "/components/text"
       },
+      {
+        name: "Headings",
+        href: "/components/headings"
+      }
     ]
   },
   {
