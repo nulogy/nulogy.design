@@ -16,7 +16,7 @@ export const config = {
   },
   props: {
     isOpen: {
-      type: PropTypes.String,
+      type: PropTypes.Boolean,
       value: false,
       description: "An event handler for opening the Sidebar.",
       stateful: true
