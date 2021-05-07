@@ -16,37 +16,37 @@ export const config = {
     width: {
         value: "100%",
         type: PropTypes.String,
-        description: ""
+        description: "A width, in any unit."
     },
     bg: {
       value: "white",
       type: PropTypes.Enum,
       options: COLOURS,
-      description: ""
+      description: "A background colour, chosen from the theme. A unique value can also be provided."
     },    
     color: {
       value: "black",
       type: PropTypes.Enum,
       options: COLOURS,
-      description: ""
+      description: "A text colour, chosen from the theme. A unique value can also be provided."
     },        
     padding: {
       value: "",
       type: PropTypes.Enum,
       options: SIZES,
-      description: ""
+      description: "A padding, chosen from the theme. A unique value can also be provided."
     },
     boxShadow: {
       value: "",
       type: PropTypes.Enum,
       options: SHADOWS,
-      description: ""
+      description: "A box shadow size, chosen from the theme. A unique value can also be provided."
     },
     borderRadius: {
       value: "",
       type: PropTypes.Enum,
       options: RADII,
-      description: ""
+      description: "A border radius, chosen from the theme. A uniique value can also be provided."
     },
   }
 }
