@@ -1,8 +1,29 @@
+const path = require('path');
+
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: "nulogy.design",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: `IBM Plex Sans`,
+              variants: [`300`, `400`, `500`, `600`]
+            },
+            {
+              family: `IBM Plex Mono`
+            },
+          ],
+        },
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-remark-images",
