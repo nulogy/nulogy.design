@@ -68,6 +68,10 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
+{
+        name: "ButtonGroup",
+        href: "/components/button-group"
+      },
       {
         name: "AsyncSelect",
         href: "/components/async-select"
