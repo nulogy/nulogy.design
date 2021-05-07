@@ -89,7 +89,7 @@ export const config = {
     closeOnOutsideClick: {
       type: PropTypes.Boolean,
       value: true,
-      default: "true",
+      default: true,
       description: "If true, calls onClose when the user clicks anywhere but the Sidebar.",
       stateful: true,
     },

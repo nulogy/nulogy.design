@@ -23,7 +23,7 @@ propName.propTypes = {
 
 export const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
-    {cellData}
+    {String(cellData)}
   </Text>
 );
 
