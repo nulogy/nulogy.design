@@ -69,7 +69,7 @@ const Navigation = ({ location }) => {
         </Box>
       ))
       }
-      <NavigationHeading>CONTENT <StatusIndicator ml="half">Coming soon</StatusIndicator></NavigationHeading>
+      <NavigationHeading>CONTENT <StatusIndicator ml="half" as="span">Coming soon</StatusIndicator></NavigationHeading>
     </>
   )
 }
