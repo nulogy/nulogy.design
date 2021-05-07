@@ -11,7 +11,7 @@ export const alertConfig = {
       value: "informative",
       defaultValue: "informative",
       type: PropTypes.Enum,
-      options: ["informative", "success", "danger"],
+      options: ["informative", "success", "warning", "danger"],
       description: "The type of alert. Accepts informative, danger, warning and success."
     },
     children: {
