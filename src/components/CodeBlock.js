@@ -7,7 +7,6 @@ import { CODE_WIDTH } from "./CONSTANTS";
 export default (props) => {
   const className = props.children.props.className || ''
   const matches = className.match(/language-(?<lang>.*)/);
-  console.log(matches);
   return (
     <Box maxWidth={CODE_WIDTH} m="0 auto">
       <Highlight {...defaultProps} code={props.children.props.children.trim()} language={
