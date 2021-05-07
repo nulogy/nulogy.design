@@ -217,7 +217,9 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
     case PropTypes.Object:
       return (
         <Spacing>
-          <Text fontWeight="bold" mb="half" fontSize="small" mt="0"><Label name={name} description={description} /></Text>
+          <Box fontWeight="bold" mb="half" fontSize="small" mt="0">
+            <Label name={name} description={description} />
+          </Box>
           <InputBorder>
             <Editor
               onChange={code => {
