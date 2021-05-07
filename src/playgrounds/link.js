@@ -1,6 +1,6 @@
 import { Link } from "@nulogy/components";
 import { PropTypes } from 'react-view';
-import {COLOURS, SIZES, SHADOWS, RADII} from "../utils/themeValues";
+import { COLOURS, SIZES, SHADOWS, RADII } from "../utils/themeValues";
 
 export const config = {
   componentName: "Link",
@@ -15,22 +15,22 @@ export const config = {
     },
     href: {
       value: "http://nulogy.design",
-      default: "",
+      defaultValue: "",
       type: PropTypes.String,
       description: "The URL the link should lead to"
-    },    
+    },
     color: {
       value: "blue",
-      default: "blue",
+      defaultValue: "blue",
       type: PropTypes.Enum,
       options: COLOURS,
       description: "A custom colour to display the link in"
-    },        
+    },
     underline: {
       value: true,
-      default: true,
+      defaultValue: true,
       type: PropTypes.Boolean,
       description: "Whether to show an underline or not"
-    }      
+    }
   }
 }

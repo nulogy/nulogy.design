@@ -3,7 +3,7 @@ import { PropTypes } from 'react-view';
 import iconList from "../utils/iconList";
 
 export const config = {
-componentName: "IconicButton",
+  componentName: "IconicButton",
   scope: {
     IconicButton
   },
@@ -15,7 +15,7 @@ componentName: "IconicButton",
     },
     icon: {
       type: PropTypes.Enum,
-      options: iconList, 
+      options: iconList,
       value: "delete",
       description: "The icon to display. See the Icons component for all possible options.",
     },
@@ -27,7 +27,7 @@ componentName: "IconicButton",
     disabled: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: false,
       description: "Lightens the opacity and makes the button unable to be clicked.",
     },
     className: {

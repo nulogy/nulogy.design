@@ -15,42 +15,42 @@ export const config = {
     },
     disabled: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Marks the button as disabled and unable to be interacted with."
     },
     size: {
       value: "medium",
-      default: "medium",
+      defaultValue: "medium",
       options: ["small", "medium", "large"],
       type: PropTypes.Enum,
       description: "Whether the Button should be small, medium or large."
-    },  
+    },
     fullWidth: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Whether the Button should take the full width of it's container or not."
     },
     asLink: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "If true, the button will use an <a/> tag"
-    },       
+    },
     icon: {
       value: "",
-      default: "",
+      defaultValue: "",
       type: PropTypes.Enum,
-      options: iconList, 
+      options: iconList,
       description: "The icon to display. Accepts icon names from the Icon component."
     },
     iconSide: {
       value: "",
-      default: "",
+      defaultValue: "",
       type: PropTypes.Enum,
       options: ["left", "right"],
       description: "Whether to display the icon to the left or the right of the text."
-    }                  
+    }
   }
 }

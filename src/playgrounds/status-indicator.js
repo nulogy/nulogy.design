@@ -16,7 +16,7 @@ export const config = {
       value: "neutral",
       type: PropTypes.Enum,
       options: ["neutral", "dark", "informative", "danger", "warning", "success", "quiet"],
-      default: "neutral",
+      defaultValue: "neutral",
       description:
         "The type of Status Indicator determines its style. Accepts neutral, dark, informative, danger, warning, success, and quiet."
     }

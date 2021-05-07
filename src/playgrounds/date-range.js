@@ -25,7 +25,7 @@ export const dateRangeConfig = {
     dateFormat: {
       type: PropTypes.String,
       value: "MMM yyyy",
-      default: "MMM yyyy",
+      defaultValue: "MMM yyyy",
       description: "The default date format (see date-fns for available date formats)",
     },
     errorMessage: {
@@ -56,19 +56,19 @@ export const dateRangeConfig = {
     labelProps: {
       type: PropTypes.Object,
       value: "",
-      default: "{ labelText: 'Date Range'}",
+      defaultValue: "{ labelText: 'Date Range'}",
       description: "Options for the month range label. See Label Props for available option keys.",
     },
     disableRangeValidation: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Disables the end date before start date error message.",
     },
     showTimes: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Shows time pickers next to the date inputs so that a times can be selected.",
     },
     minTime: {
@@ -94,19 +94,19 @@ export const dateRangeConfig = {
     timeFormat: {
       type: PropTypes.String,
       value: "hh:mm aa",
-      default: "hh:mm aa",
+      defaultValue: "hh:mm aa",
       description: "The default date format (see date-fns for available date formats)",
     },
     interval: {
       type: PropTypes.Number,
       value: "15",
-      default: "15",
+      defaultValue: "15",
       description: "The time difference in minutes between the time options",
     },
     disableFlipping: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input",
     },
     startDateInputProps: {

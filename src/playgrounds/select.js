@@ -13,19 +13,19 @@ export const config = {
         { value: "accepted", label: "Accepted" },
         { value: "assigned", label: "Assigned to a line" },
       ]`,
-      default: "Required",
+      defaultValue: "Required",
       description: "The options available to be selected, containing a value and a label",
     },
     autocomplete: {
       type: PropTypes.Boolean,
       value: "",
-      default: "true",
+      defaultValue: true,
       description: "Whether or not typing will filter the options list",
     },
     maxHeight: {
       type: PropTypes.String,
       value: "",
-      default: "256px",
+      defaultValue: "256px",
       description: "Max height of the select dropdown menu, content is scrollable",
     },
     multiselect: {
@@ -66,13 +66,13 @@ export const config = {
     noOptionsMessage: {
       type: PropTypes.Function,
       value: "({ inputValue}) => `No options were found for: ${inputValue}`",
-      default: "No options",
+      defaultValue: "No options",
       description: "A function that returns the string you you like to show up when no options are available",
     },
     menuPosition: {
       type: PropTypes.String,
       value: "absolute",
-      default: "absolute",
+      defaultValue: "absolute",
       description: "The CSS position value of the menu. ex: 'fixed'",
     },
     components: {
@@ -83,7 +83,7 @@ export const config = {
     closeMenuOnSelect: {
       type: PropTypes.Boolean,
       value: true,
-      default: "true",
+      defaultValue: true,
       description: "Close the select menu when the user selects an option",
     }
   }

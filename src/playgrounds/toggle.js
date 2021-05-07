@@ -10,13 +10,13 @@ export const config = {
     defaultToggled: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: "false",
       description: "Display the toggle as checked by default.",
     },
     disabled: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: "false",
       description: "Marks the toggle as disabled and disallows user input.",
     },
     helpText: {
@@ -32,13 +32,13 @@ export const config = {
     offText: {
       type: PropTypes.String,
       value: "disabled",
-      default: "false",
+      defaultValue: "false",
       description: "A label for the toggle's off state.",
     },
     onText: {
       type: PropTypes.String,
       value: "enabled",
-      default: "false",
+      defaultValue: "false",
       description: "A label for the toggle's on state.",
     },
     toggled: {
@@ -54,7 +54,7 @@ export const config = {
     required: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Makes the field require input before the form will submit.",
     },
     requirementText: {

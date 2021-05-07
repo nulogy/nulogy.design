@@ -20,25 +20,25 @@ export const config = {
     defaultChecked: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: false,
       description: "Makes the field checked by default",
     },
     disabled: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: false,
       description: "Marks the field as disabled and disallows user input",
     },
     error: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: false,
       description: "Marks the field as invalid and turns red",
     },
     labelText: {
       type: PropTypes.String,
       value: "option A",
-      default: "Required",
+      defaultValue: "Required",
       description: "Label for the input",
     },
     onChange: {
@@ -49,13 +49,13 @@ export const config = {
     required: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: false,
       description: "Makes the field require input before the form will submit",
     },
     id: {
       type: PropTypes.String,
       value: "",
-      default: "null",
+      defaultValue: "",
       description: "A unique ID for this input",
     },
     className: {

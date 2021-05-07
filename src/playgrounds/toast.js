@@ -15,7 +15,7 @@ export const config = {
     triggered: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Whether to display to the tooltip or not",
     },
     onShow: {

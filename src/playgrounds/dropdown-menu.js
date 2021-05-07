@@ -24,43 +24,43 @@ export const config = {
     disabled: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: "false",
       description: "Marks the button as disabled and unable to be activated.",
     },
     backgroundColor: {
       type: PropTypes.String,
       value: "",
-      default: "whiteGrey",
+      defaultValue: "whiteGrey",
       description: "Background color of the menu container.",
     },
     showArrow: {
       type: PropTypes.Boolean,
       value: false,
-      default: "true",
+      defaultValue: "true",
       description: "Determines if the arrow is shown on the menu container.",
     },
     placement: {
       type: PropTypes.String,
       value: "",
-      default: "bottom-start",
+      defaultValue: "bottom-start",
       description: "One of top, bottom, left, or right with optional -start or -end appended to place the menu container relative to the trigger.",
     },
     showDelay: {
       type: PropTypes.Number,
       value: "",
-      default: "100",
+      defaultValue: "100",
       description: "Buffer delay time to show the dropdown menu when opening.",
     },
     hideDelay: {
       type: PropTypes.Number,
       value: "",
-      default: "200",
+      defaultValue: "200",
       description: "Buffer delay time to hide the dropdown menu when closing.",
     },
     defaultOpen: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "State of the dropdown menu when mounted.",
     },
     trigger: {
@@ -81,7 +81,7 @@ export const config = {
     openAriaLabel: {
       type: PropTypes.String,
       value: "",
-      default: "open",
+      defaultValue: "open",
       description: "aria label when the dropdown is closed",
     },
   }

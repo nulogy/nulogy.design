@@ -30,25 +30,25 @@ export const config = {
           },
         ]
       }`,
-      default: "null",
+      defaultValue: "null",
       description: "Data used to build link heirarchy functionality. See menuData Prop section below.",
     },
     subtext: {
       type: PropTypes.String,
       value: "",
-      default: "null",
+      defaultValue: "null",
       description: "The subtext under the Nulogy logo.",
     },
     brandingLinkHref: {
       type: PropTypes.String,
       value: "",
-      default: "/",
+      defaultValue: "/",
       description: "A custom link for the logo.",
     },
     breakpointUpper: {
       type: PropTypes.Number,
       value: "",
-      default: "1024",
+      defaultValue: "1024",
       description: "Provides the breakpoint where menu items will be collapsed into a dropdown menu.",
     },
     environment: {

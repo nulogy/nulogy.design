@@ -25,7 +25,7 @@ export const config = {
     dateFormat: {
       type: PropTypes.String,
       value: "dd MMM yyyy",
-      default: "dd MMM yyyy",
+      defaultValue: "dd MMM yyyy",
       description: "The default date format (see date-fns for available date formats)",
     },
     errorMessage: {
@@ -51,7 +51,7 @@ export const config = {
     disableFlipping: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input",
     },
     inputProps: {
@@ -67,7 +67,7 @@ export const config = {
     id: {
       type: PropTypes.String,
       value: "",
-      default: "null",
+      defaultValue: "null",
       description: "A unique ID for this input",
     },
     name: {

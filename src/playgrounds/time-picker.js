@@ -15,13 +15,13 @@ export const config = {
     timeFormat: {
       type: PropTypes.String,
       value: "hh:mm aa",
-      default: "hh:mm aa",
+      defaultValue: "hh:mm aa",
       description: "The default time format (see date-fns for available time formats)",
     },
     interval: {
       type: PropTypes.Number,
       value: 15,
-      default: "15",
+      defaultValue: "15",
       description: "The time difference in minutes between the time options",
     },
     minTime: {

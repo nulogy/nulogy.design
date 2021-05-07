@@ -12,7 +12,7 @@ export const config = {
     isOpen: {
       type: PropTypes.Boolean,
       value: false,
-      default: "true",
+      defaultValue: "true",
       description: "Controls whether the modal is open or closed.",
       stateful: true,
     },
@@ -39,25 +39,25 @@ export const config = {
     onAfterOpen: {
       type: PropTypes.Function,
       value: "(e) => console.log('onAfterOpen', e)",
-      default: "null",
+      defaultValue: "null",
       description: "Function that is run after the modal has opened.",
     },
     maxWidth: {
       type: PropTypes.String,
       value: "624px",
-      default: "624px",
+      defaultValue: "624px",
       description: "Maximum width of the modal, modal will always compress responsively when the screen shrinks.",
     },
     shouldFocusAfterRender: {
       type: PropTypes.Boolean,
       value: true,
-      default: "true",
+      defaultValue: "true",
       description: "Move focus into the modal when it is rendered.",
     },
     shouldReturnFocusAfterClose: {
       type: PropTypes.Boolean,
       value: true,
-      default: "true",
+      defaultValue: "true",
       description: "Move focus back to what triggered the modal after it closes.",
     },
     ariaLabel: {
@@ -88,7 +88,7 @@ export const config = {
     closeAriaLabel: {
       type: PropTypes.String,
       value: "",
-      default: "close",
+      defaultValue: "close",
       description: "Aria label on close button",
     },
   }

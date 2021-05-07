@@ -19,13 +19,13 @@ export const inputConfig = {
     },
     disabled: {
       value: false,
-      default: "false",
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Marks the field as disabled and disallows user input",
     },
     required: {
       value: false,
-      default: "false",
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Makes the field require selection before the form will submit."
     },

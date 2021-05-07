@@ -43,19 +43,19 @@ export const config = {
     required: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Makes the field require selection before the form will submit.",
     },
     disabled: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Marks the entire group as disabled and unable to be toggled.",
     },
     requirementText: {
       type: PropTypes.String,
       value: false,
-      default: "null",
+      defaultValue: "null",
       description: "(Optional) or (Required).",
     },
     name: {

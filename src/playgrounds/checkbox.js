@@ -15,25 +15,25 @@ export const config = {
     onChange: {
       type: PropTypes.Function,
       value: "",
-      default: "null",
+      defaultValue: "null",
       description: "",
     },
     required: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Makes the field require input before the form will submit",
     },
     checked: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Whether or not the checkbox has been checked",
     },
     indeterminate: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Displays the checkbox in an indeterminate state if checked. You must use the checkbox as a controlled input (give the checked prop a value) when using this prop",
     },
     value: {
@@ -44,13 +44,13 @@ export const config = {
     disabled: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Marks the field as disabled and disallows user input",
     },
     error: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Marks the field as invalid and turns red",
     },
     id: {
@@ -66,7 +66,7 @@ export const config = {
     defaultChecked: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Makes the field checked by default",
     },
     className: {

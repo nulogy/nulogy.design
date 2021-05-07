@@ -25,7 +25,7 @@ export const config = {
     timeFormat: {
       type: PropTypes.String,
       value: "hh:mm aa",
-      default: "hh:mm aa",
+      defaultValue: "hh:mm aa",
       description: "The default date format (see date-fns for available date formats)",
     },
     errorMessage: {
@@ -59,19 +59,19 @@ export const config = {
       { labelText: "Time Range",
         helpText: "Specify a start and end time for the shift."
       }`,
-      default: "{ labelText: 'Time Range'}",
+      defaultValue: "{ labelText: 'Time Range'}",
       description: "Options for the month range label.",
     },
     disableRangeValidation: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Disables the the end date before start date error message.",
     },
     interval: {
       type: PropTypes.Number,
       value: 15,
-      default: "15",
+      defaultValue: "15",
       description: "The time difference in minutes between the time options",
     },
   }

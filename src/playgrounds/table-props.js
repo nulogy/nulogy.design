@@ -47,14 +47,14 @@ export const tableColumnProps = {
   dataKey: {
     type: PropTypes.String,
     value: "",
-    default: "Required",
+    defaultValue: "Required",
     description: "Unique key for the column, used as the keys to define cell content for the column of each row",
   },
   align: {
     type: PropTypes.Enum,
     value: "",
     options: ['left', 'right', 'center'],
-    default: "left",
+    defaultValue: "left",
     description: "sets the alignment of the text for the column in the default cell, 'left', 'right' or 'center'",
   },
   cellFormatter: {

@@ -33,37 +33,37 @@ export const config = {
     offset: {
       type: PropTypes.String,
       value: "0px",
-      default: "0px",
+      defaultValue: "0px",
       description: "The amount of pixels to offset the Sidebar from on the right of the screen. Mostly used for in the case of multiple Sidebars.",
     },
     top: {
       type: PropTypes.String,
       value: "",
-      default: "0px",
+      defaultValue: "0px",
       description: "The amount of pixels to offset the Sidebar from on the top of the screen. Mostly used for in the case of multiple Sidebars.",
     },
     hideCloseButton: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "When true, hides the close button",
     },
     closeButtonTestId: {
       type: PropTypes.String,
       value: "",
-      default: "Sidebar-close-button",
+      defaultValue: "Sidebar-close-button",
       description: "To use the close button in a test.",
     },
     closeButtonAriaLabel: {
       type: PropTypes.String,
       value: "",
-      default: "close",
+      defaultValue: "close",
       description: "Aria label for the close button.",
     },
     duration: {
       type: PropTypes.Number,
       value: "0.25",
-      default: "0.25",
+      defaultValue: "0.25",
       description: "The length of the animation for sliding in and out the Sidebar.",
     },
     footer: {
@@ -89,16 +89,14 @@ export const config = {
     closeOnOutsideClick: {
       type: PropTypes.Boolean,
       value: true,
-      default: true,
+      defaultValue: true,
       description: "If true, calls onClose when the user clicks anywhere but the Sidebar.",
-      stateful: true,
     },
     overlay: {
       type: PropTypes.Boolean,
       value: true,
-      default: "true",
+      defaultValue: true,
       description: "If true, displays an overlay behind the sidebar when it is open.",
-      stateful: true,
     },
   }
 }

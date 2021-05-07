@@ -16,7 +16,7 @@ export const config = {
       type: PropTypes.Enum,
       value: "currentColor",
       options: Object.keys(theme.colors),
-      default: "currentColor",
+      defaultValue: "currentColor",
       description: "Text color",
     },
     textTransform: {
@@ -28,14 +28,14 @@ export const config = {
     fontSize: {
       type: PropTypes.Enum,
       value: "medium",
-      default: "medium",
+      defaultValue: "medium",
       options: Object.keys(theme.fontSizes),
       description: "Font size",
     },
     lineHeight: {
       type: PropTypes.Enum,
       value: "medium",
-      default: "medium",
+      defaultValue: "medium",
       options: Object.keys(theme.lineHeights),
       description: "Font size",
     },
@@ -54,13 +54,13 @@ export const config = {
     disabled: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: "false",
       description: "Lightens text to imply that it's disabled.",
     },
     inline: {
       type: PropTypes.Boolean,
       value: "",
-      default: "false",
+      defaultValue: "false",
       description: "Displays text inline instead of as a block.",
     },
     className: {

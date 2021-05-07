@@ -13,7 +13,7 @@ export const config = {
       type: PropTypes.Enum,
       options: COLOURS,
       value: "currentColor",
-      default: "currentColor",
+      defaultValue: "currentColor",
       description: "The icon's colour, if different than parent's text colour.",
     },
     icon: {
@@ -26,7 +26,7 @@ export const config = {
       type: PropTypes.Enum,
       value: "x3",
       options: SIZES,
-      default: "x3 (24px)",
+      defaultValue: "x3",
       description: "The size of the icon using space tokens or px",
     },
     title: {

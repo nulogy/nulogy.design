@@ -20,7 +20,7 @@ export const config = {
     placeholder: {
       type: PropTypes.String,
       value: "Some placeholder text...",
-      default: "null",
+      defaultValue: "null",
       description: "A hint to the expected format for the field. Not a replacement for a label.",
     },
     errorMessage: {
@@ -41,7 +41,7 @@ export const config = {
     disabled: {
       type: PropTypes.Boolean,
       value: false,
-      default: "false",
+      defaultValue: "false",
       description: "Marks the field as disabled and disallows user input",
     },
     onChange: {
@@ -57,7 +57,7 @@ export const config = {
     rows: {
       type: PropTypes.Number,
       value: "3",
-      default: "3",
+      defaultValue: "3",
       description: "A custom number of rows to show by default.",
     },
     value: {

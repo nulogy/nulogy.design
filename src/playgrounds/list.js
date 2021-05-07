@@ -1,6 +1,6 @@
 import { List, ListItem } from "@nulogy/components";
 import { PropTypes } from 'react-view';
-import {COLOURS, SIZES} from "../utils/themeValues";
+import { COLOURS, SIZES } from "../utils/themeValues";
 
 export const config = {
   componentName: "List",
@@ -17,35 +17,35 @@ export const config = {
     },
     compact: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Will remove margins between list items if set to true"
     },
     leftAlign: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Will align list flush with left-side if set to true"
     },
     bg: {
       value: "",
-      default: "",
+      defaultValue: "",
       options: COLOURS,
       type: PropTypes.Enum,
       description: "The background colour of the surrounding box"
     },
     color: {
       value: "",
-      default: "",
+      defaultValue: "",
       options: COLOURS,
       type: PropTypes.Enum,
       description: "The text colour inside the list."
     },
     padding: {
       value: "",
-      default: "",
+      defaultValue: "",
       options: SIZES,
-      type: PropTypes.Enum      
+      type: PropTypes.Enum
     }
   }
 }

@@ -46,7 +46,7 @@ const columns = [
   },
   {
     label: "Default",
-    dataKey: "default",
+    dataKey: "defaultValue",
     width: "15%",
     cellRenderer: smallTextRenderer
   },

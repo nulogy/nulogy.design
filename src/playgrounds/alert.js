@@ -9,7 +9,7 @@ export const alertConfig = {
   props: {
     type: {
       value: "informative",
-      default: "informative",
+      defaultValue: "informative",
       type: PropTypes.Enum,
       options: ["informative", "success", "danger"],
       description: "The type of alert. Accepts informative, danger, warning and success."
@@ -31,7 +31,7 @@ export const alertConfig = {
     },
     isCloseable: {
       value: true,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "Provides a close icon in the top right corner."
     },
@@ -42,7 +42,7 @@ export const alertConfig = {
     },
     controlled: {
       value: false,
-      default: false,
+      defaultValue: false,
       type: PropTypes.Boolean,
       description: "If true, will allow the Alert's opened and closed state to be controlled through props rather than within the component's internal state"
     }
