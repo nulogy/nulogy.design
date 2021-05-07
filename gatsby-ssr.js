@@ -5,7 +5,7 @@ import { NDSProvider } from "@nulogy/components";
 
 
 export const wrapPageElement = ({ element, props }) => {
-    let path = props.location.pathname;
+    let path = props.location?.pathName;
 
     return <NDSProvider>{path === '/' ? <div>{element}</div> : <Layout {...props}>{element}</Layout>}</NDSProvider>
 }

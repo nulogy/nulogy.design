@@ -26,7 +26,7 @@ const Transition = ({ children, location }) => {
   return (
     <AnimatePresence>
       <motion.div
-        key={location.pathname}
+        key={location?.pathName}
         variants={variants}
         initial="initial"
         animate="enter"

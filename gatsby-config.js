@@ -1,9 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  flags: {
-    DEV_SSR: true
-  },
   siteMetadata: {
     title: "nulogy.design",
   },
