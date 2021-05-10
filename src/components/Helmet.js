@@ -7,7 +7,7 @@ const Helmet = ({ location }) => {
   return <ReactHelmet titleTemplate="%s | Nulogy Design System">
     <html lang="en" />
     <meta charSet="utf-8" />
-    <title>{currentMenuItem?.title || currentMenuItem?.name}</title>
+    <title>{currentMenuItem?.title || currentMenuItem?.name || "Welcome"}</title>
   </ReactHelmet>
 };
 
