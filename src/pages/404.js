@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout"
 
 // Check 404 page in prod ssr build, preview in dev mode is not reliable.
 
