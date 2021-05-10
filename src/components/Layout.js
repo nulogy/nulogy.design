@@ -9,7 +9,7 @@ import Helmet from "./Helmet";
 const Button = styled(Box)(({ isOpen, theme }) => ({
   border: "none",
   background: "none",
-  position: "fixed",
+  position: "absolute",
   top: theme.space.x4,
   right: theme.space.x2,
   padding: theme.space.half,
