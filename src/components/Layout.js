@@ -89,8 +89,8 @@ const Layout = ({ children, location, noPadding }) => {
       <Helmet location={location} />
       <Box display={{ medium: "flex" }}>
         <Box
-          width={{ medium: "calc(100% - 320px)" }}
-          marginLeft={{ medium: "320px" }}
+          width={{ medium: "calc(100% - 340px)" }}
+          marginLeft={{ medium: "340px" }}
         >
           <Transition location={location}>
             <Box as="main"
@@ -108,7 +108,7 @@ const Layout = ({ children, location, noPadding }) => {
           top={isOpen && "0"}
           height="100%"
           overflow="auto"
-          width={{ extraSmall: "100%", medium: "320px" }}
+          width={{ extraSmall: "100%", medium: "340px" }}
           px="x8"
           py="x8"
           opacity={{ extraSmall: isOpen ? "1" : "0", medium: "1" }}

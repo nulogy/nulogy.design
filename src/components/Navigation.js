@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const variants = {
   hover: {
-    paddingLeft: theme.space.x1,
+    left: theme.space.x1,
     textDecoration: "underline",
   },
 }
@@ -21,6 +21,8 @@ const NavigationLink = styled(motion.a)(({ selected }) => ({
   paddingX: theme.space.half,
   textDecoration: "none",
   marginBottom: theme.space.x2,
+  position: "relative",
+  left: 0,
 }))
 
 const sortedNavigationLinks = navigationLinks.map((navGroup) => {
