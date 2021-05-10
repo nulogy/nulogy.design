@@ -41,7 +41,7 @@ const Navigation = ({ location }) => {
   const selectedRef = useRef(null);
 
   useEffect(() => {
-    if (selectedRef && selectedRef.current && location?.pathName !== "/") {
+    if (selectedRef && selectedRef.current && location?.pathname !== "/") {
       selectedRef.current.scrollIntoView({
         block: "center",
       });
