@@ -1,0 +1,92 @@
+import { BrandedNavBar } from "@nulogy/components";
+import { PropTypes } from "react-view";
+import { config } from "../../playgrounds/branded-nav-bar";
+
+# BrandedNavBar
+
+A light navigation bar that can optionally support a customer's logo.
+
+<Playground {...config} />
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## MenuData PropsTable
+
+The menuData prop is used to provide links to the NavBar and assemble their heirarchy. The direct children in the menuData object are shown below:
+
+<PropsTable
+  propsConfig={{
+    primaryMenu: {
+      type: PropTypes.Array,
+      value: "",
+      description:
+        "Data to the main navigation menu, aligned to the left of the NavBar.",
+    },
+    secondaryMenu: {
+      type: PropTypes.Array,
+      value: "",
+      description:
+        "Data to the secondary navigation menu, aligned to the right of the NavBar.",
+    },
+  }}
+/>
+
+## Adding Menu Items
+
+Both primaryMenu and secondaryMenu expect an array of objects. Each object represents a link or a heading to a group of links under it, with the following shape:
+
+```jsx
+const primaryMenu = [
+  {
+    name = "string",
+    href = "/",      // optional
+    render = ()=>(), // optional
+    items = [],      // optional
+  },
+]
+```
+
+Each menu item object requires a "name" key. The "name" key will be used as the label for the menu item unless a "render" key is used. Adding "items" to the menu item object will render a dropdown with the specified items.
+
+Menu items can be nested within eachother using the items key for as many levels of heirarchy that is needed.
+
+<PropsTable
+  propsConfig={{
+    name: {
+      type: PropTypes.ReactNode,
+      value: "",
+      description: "Unique identifier for the menu item.",
+    },
+    ariaLabel: {
+      type: PropTypes.String,
+      value: "",
+      description:
+        "Add an aria-label if the `name` value is not a readable label, like an icon.",
+    },
+    href: {
+      type: PropTypes.String,
+      value: "",
+      description:
+        "URL or link to an element similar to a standard <a> tag, this causes the menu item to render as a link within the NavBar.",
+    },
+    items: {
+      type: PropTypes.Array,
+      value: "",
+      description:
+        "Array of menu item objects. This causes the menu item to render as a dropdown in desktop view or as a heading in mobile view.",
+    },
+    render: {
+      type: PropTypes.Function,
+      value: "",
+      description:
+        "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu. NOTE: Do not use `href` and `items` keys if you intend to use the render function.",
+    },
+  }}
+/>
+
+## Related Components
+
+- [Page](/components/page)
+- [ApplicationFrame](/components/application-frame)

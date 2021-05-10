@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Table, Text } from "@nulogy/components";
-import InlineCode from "./InlineCode";
+import styled from "styled-components";
+import { Box, Table, Text } from "@nulogy/components";
+import { CODE_WIDTH } from "./CONSTANTS";
+
+const InlineCode = styled.span(({ theme }) => ({
+  display: "inline",
+  fontFamily: theme.fonts.mono,
+  background: theme.colors.lightBlue,
+  fontSize: theme.fontSizes.small
+}));
 
 export const propName = ({ cellData }) => (
   <Text py="x1" fontSize="small">
@@ -15,7 +23,7 @@ propName.propTypes = {
 
 export const smallTextRenderer = ({ cellData }) => (
   <Text py="x1" fontSize="small">
-    {cellData}
+    {String(cellData)}
   </Text>
 );
 
@@ -50,19 +58,16 @@ const columns = [
   }
 ];
 
-const PropsTable = ({ propsRows }) => (
-  <Table rows={propsRows} columns={columns} keyField="name" rowHovers={false} />
-);
+const PropsTable = ({ propsConfig }) => {
 
-PropsTable.propTypes = {
-  propsRows: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      type: PropTypes.string,
-      defaultValue: PropTypes.string,
-      description: PropTypes.string
-    })
-  ).isRequired
+  const propsArr = Object.keys(propsConfig).reduce((acc, prop) => [
+    ...acc,
+    {
+      name: prop,
+      ...propsConfig[prop],
+    }
+  ], []);
+  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto" overflowX="auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2" /></Box>
 };
 
 export default PropsTable;

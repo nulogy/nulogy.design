@@ -1,0 +1,37 @@
+import { Link } from "@nulogy/components";
+
+# Style Props
+
+Nulogy's components use styled-system to apply groups of style props to different types of components. These props correspond to their css equivalents and allow individual manipulation of a component's style.
+
+## Prop categories
+
+| Category     | Props                                                                                                                                                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `space`      | margin, marginTop, marginRight, marginBottom, marginLeft, marginX, marginY, padding, paddingTop, paddingRight, paddingBottom, paddingLeft, paddingX, paddingY, m, mt, mr, mb, ml, mx, my, p, pt, pr, pb, pl, px, py, |
+| `layout`     | width, height, minWidth, minHeight, maxWidth, maxHeight, display, verticalAlign, size                                                                                                                                |
+| `typography` | fontFamily, fontSize, fontWeight, lineHeight, letterSpacing, fontStyle, textAlign                                                                                                                                    |
+| `colour`     | color, backgroundColor, bg                                                                                                                                                                                           |
+| `border`     | border, borderWidth, borderStyle, borderColor, borderRadius, borderTop, borderRight, borderBottom, borderLeft, borderX, borderY,                                                                                     |
+| `position`   | position, zIndex, top, right, bottom, left                                                                                                                                                                           |
+
+For more information on each of these props, see the [styled-system docs](https://github.com/styled-system/styled-system/blob/master/docs/table.md).
+
+## Usage
+
+To see which props each component includes, see that component's documentation. But in general, the following rules apply:
+
+- Block-level components (Alerts, Buttons, Cards, etc.) have access to space props.
+- Text components (Text, Headings, Link) also have access to typography and colour props.
+- The Box component has access to layout props and can be used to add borders, colours, and boxShadows around anything.
+
+<Alert>
+  Note that inputs don't have access to any of these props because they're
+  already pre-composed. To stack multiple inputs with proper spacing on top of
+  each other, wrap them in the{" "}
+  <Link href="https://nulogy.design/components/form">Form</Link> component.
+</Alert>
+
+## Theme
+
+Styled-system will check the [theme](/theme) and use that if a key matches, e.g setting a `textColor` to `blue` will display Nulogy's `#216beb`, instead of the html default. If a key can't be found, it will be processed as a CSS value.

@@ -1,42 +1,51 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: "Nulogy Design System",
-    description: "Documentation for the Nulogy Design System",
-    author: "Nulogy"
+    title: "nulogy.design",
   },
   plugins: [
-    "gatsby-plugin-remove-serviceworker",
-    "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        name: "images",
-        path: `${__dirname}/src/images/`
-      }
+        fonts: {
+          google: [
+            {
+              family: `IBM Plex Sans`,
+              variants: [`300`, `400`, `500`, `600`]
+            },
+            {
+              family: `IBM Plex Mono`
+            },
+          ],
+        },
+      },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/markdown/`,
-        name: "markdown-pages"
-      }
-    },
-    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
+    "gatsby-remark-images",
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        plugins: [
+        trackingId: "xxx",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/MarkdownRenderer.js"),
+        },
+        gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 990
+              maxWidth: 1024,
             }
           }
         ]
       }
     },
-    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -47,14 +56,14 @@ module.exports = {
         theme_color: "#663399",
         display: "minimal-ui",
         icon: `${__dirname}/src/images/favicon.svg` // This path is relative to the root of the site.
-      }
+      },
     },
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        trackingId: "UA-5984624-20"
-      }
+        name: "pages",
+        path: "./src/pages/",
+      },
     },
-    "gatsby-plugin-netlify" // THE DOCS SAY THIS HAS TO BE LAST IN THIS ARRAY: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-netlify
-  ]
+  ],
 };

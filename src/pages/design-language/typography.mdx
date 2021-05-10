@@ -1,0 +1,85 @@
+import {
+  Box,
+  Flex,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+} from "@nulogy/components";
+import { COPY_WIDTH } from "../../components/CONSTANTS";
+
+# Typography
+
+Nulogy applications are data heavy and used in various environments. Sticking to a typographic scale makes our applications more predictable and scannable for our users. Below are all the sizes and line heights available to use for Nulogy applications.
+
+## Typeface
+
+Our primary typeface is IBM Plex Sans. This is used for all headings and body copy. We also have a monospace version available for lining up numbers.
+
+<Flex
+  maxWidth={COPY_WIDTH}
+  mx="auto"
+  flexDirection={{ extraSmall: "column", small: "row" }}
+>
+  <Box
+    width={{ extraSmall: 1, medium: 1 / 2 }}
+    mb={{ extraSmall: "x3", small: 0 }}
+  >
+    <Heading3>IBM Plex Sans</Heading3>
+    <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
+  </Box>
+  <Box width={{ extraSmall: 1, medium: 1 / 2 }}>
+    <Heading3 fontFamily="mono">IBM Plex Mono</Heading3>
+    <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
+  </Box>
+</Flex>
+
+## Headings
+
+<Box maxWidth={COPY_WIDTH} mx="auto">
+  <Box mb="x4">
+    <Text color="darkGrey" fontSize="small" mb="half">
+      Heading 1 (38px/40px)
+    </Text>
+    <Heading1>The quick brown fox jumps over the lazy dog</Heading1>
+  </Box>
+  <Box mb="x4">
+    <Text color="darkGrey" fontSize="small" mb="half">
+      Heading 2 (30px/40px)
+    </Text>
+    <Heading2>The quick brown fox jumps over the lazy dog</Heading2>
+  </Box>
+  <Box mb="x4">
+    <Text color="darkGrey" fontSize="small" mb="half">
+      Heading 3 (24px/32px)
+    </Text>
+    <Heading3>The quick brown fox jumps over the lazy dog</Heading3>
+  </Box>
+  <Box mb="x4">
+    <Text color="darkGrey" fontSize="small" mb="half">
+      Heading 4 (18px/24px)
+    </Text>
+    <Heading4>The quick brown fox jumps over the lazy dog</Heading4>
+  </Box>
+</Box>
+
+## Interface text
+
+Standard text should set at 16px for most cases, but 14px or 12px is also available for special cases.
+
+## Usage
+
+Plex can be loaded in your application through whichever method you prefer to load fonts. An example of loading through Google fonts is shown below.
+
+```jsx
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
+```
+
+_Note that if your application supports Simplified Chinese, you'll also need to load the [Noto Sans SC](https://www.google.com/get/noto/) font. For more information, see the [README](https://github.com/nulogy/design-system/blob/master/components/README.md#2-add-fonts)._
+
+## Related links
+
+- [NDS theme](/theme)
+- [Text](/components/text)
+- [Headings](/components/headings)

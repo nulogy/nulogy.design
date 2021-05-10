@@ -1,0 +1,66 @@
+import {
+  DropdownMenu,
+  DropdownLink,
+  DropdownButton,
+  Button,
+  DropdownItem,
+} from "@nulogy/components";
+import { config } from "../../playgrounds/dropdown-menu";
+
+# DropdownMenu
+
+Dropdown Menus are used to collapse a group of associated actions together.
+
+<Playground {...config} />
+
+## Variations
+
+### Custom Trigger
+
+A custom trigger element can be passed to change the trigger that opens the dropdowns.
+
+<Example
+  componentName="dropdownMenu"
+  scope={{ DropdownMenu, DropdownLink, DropdownButton, Button }}
+  example="CustomTrigger"
+/>
+
+### Custom Colors
+
+A custom trigger element can be passed to change the trigger that opens the dropdowns.
+
+<Example
+  componentName="dropdownMenu"
+  scope={{ DropdownMenu, DropdownLink, DropdownButton }}
+  example="CustomColours"
+/>
+
+### DropdownItem
+
+Using the Dropdown Link and DropdownButton components with the DropdownMenu are recommended as they provide the correct link and button styles for the dropdown. However, wrapping another component with DropdownItem will also apply correct styling for the DropdownMenu.
+
+<Example
+  componentName="dropdownMenu"
+  scope={{ DropdownMenu, DropdownLink, DropdownButton, DropdownItem }}
+  example="DropdownLink"
+  showEditor
+/>
+
+### As a Controlled Component
+
+The DropdownMenu is currently to be used as an uncontrolled component. However, the component does come with hooks to use to close the menu when elements within the menu are clicked. Use the closeMenu function provided by the DropdownMenu component via the [render props](https://reactjs.org/docs/render-props.html) React pattern as shown below. Note: event must be passed in to closeMenu.
+
+<Example
+  componentName="dropdownMenu"
+  scope={{ DropdownMenu, DropdownButton }}
+  example="Controlled"
+  showEditor
+/>
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [IconicButton](/components/iconic-button)

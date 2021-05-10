@@ -1,0 +1,3 @@
+<Branding>
+    An example
+</Branding>

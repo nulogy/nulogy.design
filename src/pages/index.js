@@ -1,105 +1,56 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import {
-  Box,
-  PrimaryButton,
-  Flex,
-  Text,
-  Title,
-  SectionTitle,
-  List,
-  ListItem,
-  Link
-} from "@nulogy/components";
-import { Intro, IntroText, Layout } from "../components";
+import React from "react"
+import {AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import Layout from "../components/Layout"
+import {COPY_WIDTH, SLACK_LINK} from "../components/CONSTANTS";
 
-const IndexPage = ({ location }) => (
-  <Layout location={location}>
-    <Helmet>
-      <meta
-        name="description"
-        content="The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices."
-      />
-    </Helmet>
-    <Intro>
-      <Title>Nulogy Design System</Title>
-      <IntroText>
-        The Nulogy Design System is a collection of Visual Guidelines and UI
-        Components that will allow designers and developers to quickly create
-        consistent experiences for our customers using established best
-        practices.
-      </IntroText>
-    </Intro>
+const variants = {
+    hover: {
+        color: theme.colors.darkBlue,
+        x: theme.space.x1,
+        textDecoration: "underline"
+    },
+}
 
-    <Flex
-      flexDirection={{ extraSmall: "column", small: "row" }}
-      mb={{ extraSmall: "x6", medium: 0 }}
-    >
-      <Box width={{ extraSmall: 1, small: 1 / 2 }} mb="x6">
-        <SectionTitle mb="x3">Visual Style</SectionTitle>
-        <Text mb="x3">
-          Learn about the style that makes up Nulogy applications; including
-          logo usage, typography, our colour system, iconography and spacing.
-        </Text>
-        <PrimaryButton asLink href="/style/colour">
-          Use our visual style
-        </PrimaryButton>
-      </Box>
+const titleVariants = {
+    initial: {
+        y: 200,
+        opacity: 0
+    },
+    animated: {
+        opacity: 1,
+        y: 0
+    }
+}
 
-      <Box width={{ extraSmall: 1, small: 1 / 2 }}>
-        <SectionTitle mb="x3">Components</SectionTitle>
-        <Text mb="x3">
-          Built using React, components are tested interface design patterns
-          designed to ensure a consistent experience for our users.
-        </Text>
-        <PrimaryButton asLink href="components/alert">
-          Use our components
-        </PrimaryButton>
-      </Box>
-    </Flex>
+const IndexPage = ({ location }) => {
+  return (
+    <>
+      <Layout noPadding location={location}>
+      <AnimatedBox minHeight="calc(100vh - 497px)" variants={titleVariants} initial="initial" animate="animated">
+      <Box maxWidth={COPY_WIDTH} mx="auto" my="128px" px="x4">
+        <Heading1 mt="x8" mb="x8">nulogy.design</Heading1>
+        <Text fontSize="24px" mb="x8">Welcome to the Nulogy Design System: a collection of design decisions, components, and practices we use at Nulogy to ensure consistent and efficient UI design and development.</Text>
+       </Box>
+        <Box display={{medium: "flex"}} maxWidth={{extraSmall: COPY_WIDTH, medium: "1200px"}} mx="auto" mt="x8" px="x2">
+            <Box width={{medium: 1/3}} px="x2">
+                <Heading2>🎨 Designing</Heading2>
+                <Text fontSize="20px" mb="x6">The Nulogy Design System contains visual design guidelines, patterns, and a UI kit built with Figma. Read the <Link fontSize="20px" href="/guides/designers">Designer's Guide</Link> to learn more.</Text>
+            </Box>
+            <Box width={{medium: 1/3}} px="x2">
+                <Heading2>👩‍💻 Developing</Heading2>
+                <Text fontSize="20px" mb="x6">NDS includes a React-based component library with all you need to build an interface that looks like Nulogy. Read the <Link fontSize="20px" href="/guides/developer-workflow">Developer workflow</Link> to learn how.</Text>
+            </Box>
+            <Box width={{medium: 1/3}} px="x2">
+                <Heading2>🙌🏼 Contributing</Heading2>
+                <Text fontSize="20px" mb="x6">If you work at Nulogy and see something missing or incorrect, feel free to start a conversation in <Link href={SLACK_LINK} fontSize="20px"> #design-system</Link>.</Text>
+            </Box>
+        </Box>
+      </AnimatedBox>
+      </Layout>
+    </>
+  )
+}
 
-    <Box mb="x8">
-      <SectionTitle mb="x3" id="guides">
-        Guides
-      </SectionTitle>
-      <List>
-        <ListItem>
-          <Link href="/guides/developer-workflow">Developer workflow</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/designers">Designers guide to NDS</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/developers">NDS usage instructions</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/layout">Building layouts</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/versioning">How NDS packages are versioned</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/packages">How NDS packages are released</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/localization">
-            Localization with @nulogy/components
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/testing">Testing @nulogy/components</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/ops-core">Using NDS in Ops Core</Link>
-        </ListItem>
-        <ListItem>
-          <Link href="/guides/style-props">
-            Using Style Props with @nulogy/components
-          </Link>
-        </ListItem>
-      </List>
-    </Box>
-  </Layout>
-);
-
-export default IndexPage;
+export default IndexPage

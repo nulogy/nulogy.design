@@ -1,0 +1,42 @@
+import {
+  Modal,
+  Button,
+  PrimaryButton,
+  QuietButton,
+  ButtonGroup,
+} from "@nulogy/components";
+import { config } from "../../playgrounds/modal";
+
+# Modal
+
+Modal is a window that appears on top of the main content and allows the introduction of secondary flows while maintaining the original context.
+
+Switch isOpen to true to view the modal.
+
+<Playground {...config} />
+
+## Use
+
+- When important warnings require immediate attention.
+- To prevent irreversible changes by creating friction.
+- To fragment a complex workflow into simpler steps such as creating, editing, etc.
+- Closing the Modal
+- To close the modal using the built-in methods, the prop onRequestClose must be passed in. This prop should be the function that closes the modal. By providing this prop all three methods of closing the modal are enabled together: the close button, clicking outside the modal, and pressing the escape key. If you do not provide the onRequestClose prop, ensure that there is another way to close the modal, for example a cancel button.
+
+## Accessibility guidelines
+
+In order to hide the rest of the application to screen-readers when the modal is open, make sure to use `Modal.setAppElement(el)` where el is the root element of the app. This will set `aria-hidden=true` when the modal is open.
+
+When there is no visible label on the Modal (ie. title prop), you should use the ariaLabel prop to provide a modal label. The aria-labelledby attribute is automatically applied if the title prop is specified. If the modal requires additional description for screen-readers, use the ariaDescribedBy prop.
+
+## Responsive information
+
+The Modal component has a width of "100%" and a customizable set maxWidth value. The Modal will force maxWidth to 100% when the screen is smaller than the small breakpoint (768px).
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [Overlay](/components/overlay)

@@ -1,0 +1,34 @@
+import { theme } from "@nulogy/components";
+import CodeBlock from "../components/CodeBlock.js";
+
+# Theme
+
+All the available design options for creating interfaces in Nulogy's style can be accessed in Javascript via the theme.
+
+<CodeBlock>
+  <div className="language-json">{JSON.stringify(theme, null, "  ")}</div>
+</CodeBlock>
+
+## Usage
+
+The theme can be accessed via our building block component props. E.g a [Box](/components/box)'s `backgroundColor` prop will map to the `colours` object in our theme. Similarly, a [Text](/components/Text) component's `fontSizes` property will map to the `fontSizes` object, etc.
+
+## Custom themes
+
+As of version 3.0, themes can be overriden at the NDSProvider level. This allows changing all definitions of a property at once.
+
+For example, if you were working in one of our legacy Operational Solution modules and wanted the "medium" font size used in all components to be 14px instead of 16px:
+
+```jsx
+import { NDSProvider } from "@nulogy/components"
+
+<NDSProvider theme={fontSizes: {medium: "14px"}}>
+    // app
+</NDSProvider>
+```
+
+<Alert fontSize="20px" mt="x4">
+  This is a powerful feature, but should be used sparingly. Please let Design
+  Ops know when you've overriden the theme for any reason, in case there are
+  systemic problems we could be solving in the system directly instead.
+</Alert>

@@ -1,0 +1,22 @@
+import { {{name}} } from "@nulogy/components";
+import { config } from "../../playgrounds/{{toSnakeCase name}}";
+
+# {{name}}
+
+{{ name }} is a component.
+
+<Playground {...config} />
+
+## Variations
+
+### A variant
+
+<Example componentName="{{toCamelCase name}}" scope=\{{ {{ name }} }} example="Example{{name}}" />
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [Box](/box)

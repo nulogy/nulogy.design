@@ -1,44 +1,22 @@
-// Markdown
-
 const path = require("path");
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
-
-  const blogPostTemplate = path.resolve(
-    `${__dirname}/src/templates/markdown.js`
-  );
-
-  return graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___intro] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-    }
-  `)
-    .then(rejectErrors)
-    .then(createPagesFromData);
-
-  function rejectErrors(result) {
-    return result.errors ? Promise.reject(result.errors) : result;
-  }
-
-  function createPagesFromData(result) {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {} // additional data can be passed via context
-      });
-    });
-  }
+// this resolves a common error with 'fs' resolution https://www.gatsbyjs.com/docs/how-to/local-development/troubleshooting-common-errors/#issues-with-fs-resolution
+exports.onCreateWebpackConfig = ({ actions, plugins }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        path: require.resolve("path-browserify"),
+        fs: false,
+        Buffer: require.resolve("buffer"),
+        assert: require.resolve("assert/"),
+        os: require.resolve("os-browserify/browser"),
+      },
+    },
+    plugins: [
+      plugins.provide({
+        Buffer: ['buffer', 'Buffer'],
+        process: ["process"]
+      })
+    ]
+  });
 };

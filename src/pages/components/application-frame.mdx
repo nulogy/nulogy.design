@@ -1,0 +1,38 @@
+import {
+  ApplicationFrame,
+  BrandedNavBar,
+  Text,
+  Link,
+  Breadcrumbs,
+  Page,
+} from "@nulogy/components";
+import { config } from "../../playgrounds/application-frame";
+
+# Application Frame
+
+There are three components we use to build up Nulogy's standard layout: An ApplicationFrame, a Page, and an optional Sidebar.
+
+<Example
+  componentName="applicationFrame"
+  scope={{
+    ApplicationFrame,
+    BrandedNavBar,
+    Text,
+    Link,
+    Breadcrumbs,
+    Link,
+    Page,
+  }}
+  example="ApplicationFrame"
+/>
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+The Application Frame component has access to all style props. See the `style` prop documentation for a full list of available props.
+
+## Related Components
+
+- [Page](/components/page)
+- [Sidebar](/components/sidebar)

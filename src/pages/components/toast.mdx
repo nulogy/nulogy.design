@@ -1,0 +1,27 @@
+import { Toast } from "@nulogy/components";
+import { config } from "../../playgrounds/toast";
+
+# Toast
+
+Temporarily displayed messages that provide additional information or feedback about a user's action or event. Hovering over a message will keep it in view.
+
+<Playground {...config} />
+
+## Use when
+
+- There are low priority messages to display in response to some event or action — i.e. messages that are helpful, although not intrinsic to the experience
+- The information contained is very concise and easy to read and understand within seconds
+- The message is less than 2 lines long or 150 characters
+
+## Don't use when
+
+- The information contained is vital to completing a task
+- The message is too long to read and understood within seconds (> 150 characters)
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [Alert](/components/alert)

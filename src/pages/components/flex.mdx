@@ -1,0 +1,24 @@
+import { Flex, Box } from "@nulogy/components";
+import { config } from "../../playgrounds/flex";
+
+# Flex
+
+A wrapper component that extends [Box](/box) to create layouts using Flexbox.
+
+<Playground {...config} />
+
+### Responsive
+
+Like Box, all props can be used responsively by using an object that defines small, medium and/or large, based on the [theme.breakpoints](https://nulogy.design/theme/) object
+
+This example displays columns on small screens and rows on large ones.
+
+<Example componentName="flex" scope={{ Flex, Box }} example="ResponsiveFlex" />
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [Box](/components/box)

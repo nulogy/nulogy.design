@@ -1,0 +1,3 @@
+<BrandedNavBar>
+    An example
+</BrandedNavBar>

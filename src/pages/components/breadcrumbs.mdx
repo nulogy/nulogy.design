@@ -1,0 +1,34 @@
+import { Breadcrumbs, Link } from "@nulogy/components";
+import { config } from "../../playgrounds/breadcrumbs";
+
+# Breadcrumbs
+
+A breadcrumbs component that wraps around links or text to help orient the user within the application.
+
+<Playground {...config} />
+
+## Using with React-Router
+
+The Breadcrumbs component can be used with React Router by using the `as` prop.
+
+```jsx
+import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
+import { Breadcrumbs, Link } from "@nulogy/components";
+
+export const WithReactRouter = () => (
+  <BrowserRouter>
+    <Breadcrumbs>
+      <Link as={ReactRouterLink} to="/">
+        Home
+      </Link>
+      <Link as={ReactRouterLink} to="/Tenants">
+        Tenants
+      </Link>
+    </Breadcrumbs>
+  </BrowserRouter>
+);
+```
+
+## Props
+
+<PropsTable propsConfig={config.props} />

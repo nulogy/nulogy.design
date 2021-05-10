@@ -1,0 +1,27 @@
+# Localization
+
+NDS components include some default strings for commonly used labels and aria-labels.
+
+To pass a locale to NDSProvider, locate the NDSProvider within your app and pass in the locale prop.
+
+`<NDSProvider locale={yourLocale} />`
+
+The default language used by these strings is English (US) unless a different locale is passed to the NDSProvider. All strings within NDS can be overridden using the component's props.
+
+To see an example of a localized component, go to the [Pagination](https://master--5f60c6c285eaad0022dce67f.chromatic.com/?path=/story/components-pagination--pagination) story and in the "Knobs" section you should be able to select an NDS Provider Locale from a dropdown and observe the labels translate according to the selected locale.
+
+## Available NDS Locales
+
+Below is a list of all locales currently accepted by NDSProvider. Use the "Locale Prop Value" as the string value to pass to NDSProvider's locale prop.
+
+| Language                   | Locale Prop Value |
+| -------------------------- | ----------------- |
+| German (Germany)           | de_DE             |
+| English (US)               | en_US             |
+| Spanish (Mexico)           | es_MX             |
+| France (French)            | fr_FR             |
+| Dutch (Netherlands)        | nl_NL             |
+| Polish (Poland)            | pl_PL             |
+| Portuguese (Brazil)        | pt_BR             |
+| Romanian (Romania)         | ro_RO             |
+| Simplified Chinese (China) | zh_CN             |

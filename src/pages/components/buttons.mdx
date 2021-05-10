@@ -1,0 +1,112 @@
+import {
+  Box,
+  Flex,
+  Text,
+  Heading3,
+  Button,
+  PrimaryButton,
+  DangerButton,
+  QuietButton,
+} from "@nulogy/components";
+import { config } from "../../playgrounds/button";
+import { COPY_WIDTH } from "../../components/CONSTANTS";
+
+# Button
+
+Buttons make common actions immediately detectable and easy to perform.
+
+<Playground {...config} />
+
+## Types of buttons
+
+There are three other types of buttons for different contexts, which all share the same properties as `Button`. They can be imported as their own components, e.g:
+
+```jsx
+import * as React from "react";
+import { QuietButton } from "@nulogy/components";
+
+export default () => {
+  return <PrimaryButton>Create project</PrimaryButton>;
+};
+```
+
+<Flex
+  maxWidth={COPY_WIDTH}
+  m="0 auto"
+  alignItems="center"
+  justifyContent="space-between"
+  mb="x4"
+>
+  <Box maxWidth="75%">
+    <Heading3>PrimaryButton</Heading3>
+    <Text fontSize="20px">
+      PrimaryButtons are used for the main action in a particular context. There
+      is usually not more than one primary button per screen and not all of the
+      screens require a Primary button.
+    </Text>
+  </Box>
+  <Box>
+    <PrimaryButton>Create project</PrimaryButton>
+  </Box>
+</Flex>
+
+<Flex
+  maxWidth={COPY_WIDTH}
+  m="0 auto"
+  alignItems="center"
+  justifyContent="space-between"
+  mb="x4"
+>
+  <Box maxWidth="75%">
+    <Heading3>DangerButton</Heading3>
+    <Text fontSize="20px">
+      DangerButtons are used for destructive actions such as deleting. They are
+      most likely to appear in confirmation dialogs.
+    </Text>
+  </Box>
+  <Box>
+    <DangerButton>Cancel project</DangerButton>
+  </Box>
+</Flex>
+
+<Flex
+  maxWidth={COPY_WIDTH}
+  m="0 auto"
+  alignItems="center"
+  justifyContent="space-between"
+>
+  <Box maxWidth="75%">
+    <Heading3>QuietButton</Heading3>
+    <Text fontSize="20px">
+      QuietButtons are used for less important actions such as “Cancel” or
+      actions that are not directly related to the context of the page (e.g
+      Learn more …). Quiet buttons are often paired with a Primary button.
+    </Text>
+  </Box>
+  <Box>
+    <QuietButton>See more details</QuietButton>
+  </Box>
+</Flex>
+
+## Content and UX guidelines
+
+### Labelling
+
+- Always lead with an actionable verb.
+- Whenever possible follow with a clear noun (e.g: Create shipment, Approve delivery).
+- Always use sentence case.
+
+### Grouping
+
+- Use the [ButtonGroup](/components/buttongroup) component to associate a group of buttons together.
+- Order buttons in a group from most important on the left to least important on the right.
+- Only have one `PrimaryButton` or `DangerButton` on the page at one time
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [ButtonGroup](/components/button-group)
+- [IconicButton](/components/iconic-button)

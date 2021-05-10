@@ -1,0 +1,40 @@
+import { Tooltip, Button } from "@nulogy/components";
+import { config } from "../../playgrounds/tooltip";
+
+# Tooltip
+
+User-triggered messages that provide additional information about something on a page. Tooltips are accessed by hovering with a mouse or tapping on a touch screen.
+
+<Playground {...config} />
+
+## Use when
+
+There is additional information that could be helpful to a user
+
+## Don't use when
+
+The information contained is vital to completing a task
+
+## Variations
+
+### With non-text content
+
+<Example
+  componentName="tooltip"
+  scope={{ Tooltip, Button }}
+  example="CustomContent"
+/>
+
+## Usage Guidelines
+
+- The Tooltip component is only supported for Buttons and Links
+- Only add a Tooltip to other elements that are focusable
+
+## Props
+
+<PropsTable propsConfig={config.props} />
+
+## Related Components
+
+- [IconicButton](/components/iconic-button)
+- [TruncatedText](/components/truncated-text)
