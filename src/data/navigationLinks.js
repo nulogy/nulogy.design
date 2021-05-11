@@ -265,7 +265,7 @@ export const navigationLinks = [
         href: "/guides/versioning"
       },
       {
-        name: "** We're hiring **",
+        name: "*** We're hiring ***",
         title: "Senior Frontend Developer job posting",
         href: "developer"
       }
