@@ -20,7 +20,7 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout noPadding location={location}>
-      <Box display={{extraSmall: "none", medium: "block"}} my="x2" mx="auto"  position="absolute" top="0" right="-6px" maxWidth="400px">
+      <Box display={{extraSmall: "none", medium: "block"}} my="x2" mx="auto" position="absolute" top="0" right="0" maxWidth="400px">
         <Alert title="We're hiring!">Are you an experienced front-end developer? Do you like building cool stuff? If so, <Link href="/developer">check this out</Link>.</Alert>
       </Box>
       <AnimatedBox minHeight="calc(100vh - 497px)" variants={titleVariants} initial="initial" animate="animated">
