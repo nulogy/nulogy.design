@@ -266,7 +266,7 @@ export const navigationLinks = [
       },
       {
         name: "** We're hiring **",
-        title: "Senior Front-end Developer job posting",
+        title: "Senior Frontend Developer job posting",
         href: "developer"
       }
     ]

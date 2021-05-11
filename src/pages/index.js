@@ -5,14 +5,6 @@ import { motion } from "framer-motion";
 import Layout from "../components/Layout"
 import {COPY_WIDTH, SLACK_LINK} from "../components/CONSTANTS";
 
-const variants = {
-    hover: {
-        color: theme.colors.darkBlue,
-        x: theme.space.x1,
-        textDecoration: "underline"
-    },
-}
-
 const titleVariants = {
     initial: {
         y: 200,
