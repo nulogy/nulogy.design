@@ -1,5 +1,5 @@
 import React from "react"
-import {AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
+import {Alert, AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout"
@@ -30,6 +30,7 @@ const IndexPage = ({ location }) => {
       <Layout noPadding location={location}>
       <AnimatedBox minHeight="calc(100vh - 497px)" variants={titleVariants} initial="initial" animate="animated">
       <Box maxWidth={COPY_WIDTH} mx="auto" my="128px" px="x4">
+      <Alert title="We're hiring!">Are you an experienced front-end developer? Do you like building cool stuff? If so, <Link href="/developer">check this out</Link>.</Alert>
         <Heading1 mt="x8" mb="x8">nulogy.design</Heading1>
         <Text fontSize="24px" mb="x8">Welcome to the Nulogy Design System: a collection of design decisions, components, and practices we use at Nulogy to ensure consistent and efficient UI design and development.</Text>
        </Box>
