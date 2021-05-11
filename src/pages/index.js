@@ -28,9 +28,11 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout noPadding location={location}>
+      <Box display={{extraSmall: "none", medium: "block"}} my="x2" mx="auto"  position="absolute" top="0" right="-6px" maxWidth="400px">
+        <Alert title="We're hiring!">Are you an experienced front-end developer? Do you like building cool stuff? If so, <Link href="/developer">check this out</Link>.</Alert>
+      </Box>
       <AnimatedBox minHeight="calc(100vh - 497px)" variants={titleVariants} initial="initial" animate="animated">
       <Box maxWidth={COPY_WIDTH} mx="auto" my="128px" px="x4">
-      <Alert title="We're hiring!">Are you an experienced front-end developer? Do you like building cool stuff? If so, <Link href="/developer">check this out</Link>.</Alert>
         <Heading1 mt="x8" mb="x8">nulogy.design</Heading1>
         <Text fontSize="24px" mb="x8">Welcome to the Nulogy Design System: a collection of design decisions, components, and practices we use at Nulogy to ensure consistent and efficient UI design and development.</Text>
        </Box>
