@@ -1,17 +1,9 @@
 import React from "react"
-import {AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
+import {Alert, AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout"
 import {COPY_WIDTH, SLACK_LINK} from "../components/CONSTANTS";
-
-const variants = {
-    hover: {
-        color: theme.colors.darkBlue,
-        x: theme.space.x1,
-        textDecoration: "underline"
-    },
-}
 
 const titleVariants = {
     initial: {
@@ -28,6 +20,9 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout noPadding location={location}>
+      <Box display={{extraSmall: "none", medium: "block"}} my="x2" mx="auto"  position="absolute" top="0" right="-6px" maxWidth="400px">
+        <Alert title="We're hiring!">Are you an experienced front-end developer? Do you like building cool stuff? If so, <Link href="/developer">check this out</Link>.</Alert>
+      </Box>
       <AnimatedBox minHeight="calc(100vh - 497px)" variants={titleVariants} initial="initial" animate="animated">
       <Box maxWidth={COPY_WIDTH} mx="auto" my="128px" px="x4">
         <Heading1 mt="x8" mb="x8">nulogy.design</Heading1>
