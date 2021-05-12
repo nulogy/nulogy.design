@@ -1,5 +1,7 @@
 # nulogy.design
 
+Documentation site for https://github.com/nulogy/design-system. 
+
 ## Development
 
 * run `yarn start`. This will start a local server at http://localhost:8000. 
