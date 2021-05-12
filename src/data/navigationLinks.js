@@ -68,7 +68,7 @@ export const navigationLinks = [
         href: "/components/pagination"
       },
       /* Add routes here */
-{
+      {
         name: "ButtonGroup",
         href: "/components/button-group"
       },
@@ -267,7 +267,7 @@ export const navigationLinks = [
       {
         name: "*** We're hiring ***",
         title: "Senior Frontend Developer job posting",
-        href: "developer"
+        href: "/developer"
       }
     ]
   },
