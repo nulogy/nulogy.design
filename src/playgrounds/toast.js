@@ -43,5 +43,12 @@ export const config = {
       value: false,
       description: "displays a close button in the Toast when true, and the Toast must then by manually dismissed by clicking the close button",
     },
+    type: {
+      value: "informative",
+      defaultValue: "informative",
+      type: PropTypes.Enum,
+      options: ["informative", "success", "warning", "danger"],
+      description: "The type of alert. Accepts informative, danger, warning and success."
+    },
   }
 }
