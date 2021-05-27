@@ -87,7 +87,7 @@ const InputBorder = styled(Box)(({ theme }) => ({
   }
 }));
 
-const Label = ({ name, description }) => <Flex alignItems="center">
+const Label = ({ name, description, ...props }) => <Flex alignItems="center" {...props}>
   {name}
   <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half" /></Tooltip>
 </Flex>
@@ -191,8 +191,8 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
             </RadioGroup>
           ) : (
             <>
-              <Text fontWeight="bold" mb="half" fontSize="small" mt="0"><Label name={name} description={description} /></Text>
-              <Box position="relative">
+              <Label fontWeight="bold" mb="half" fontSize="small" mt="0" name={name} description={description} />
+              <Flex position="relative">
                 <Box position="absolute" right="5px" bottom="50%" transform="translateY(50%)" lineHeight="0" pointerEvents="none">
                   <Icon icon="downArrow" size="x3" color="grey" />
                 </Box>
@@ -206,7 +206,7 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
                     </option>
                   ))}
                 </Select>
-              </Box>
+              </Flex>
             </>
           )}
         </Spacing>
