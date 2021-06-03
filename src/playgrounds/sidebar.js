@@ -79,7 +79,7 @@ export const config = {
     triggerRef: {
       type: PropTypes.Object,
       value: "",
-      description: "The button that was used to open the Sidebar. Setting this can will allow focus to return to that element when the Sidebar is closed. If it's not set, the focus will be set to the first element on the page.",
+      description: "The button that was used to open the Sidebar. Setting this will allow focus to return to that element when the Sidebar is closed. If it's not set, the focus will be set to the first element on the page.",
     },
     onClose: {
       type: PropTypes.Function,
