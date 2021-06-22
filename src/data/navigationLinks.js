@@ -23,6 +23,10 @@ export const navigationLinks = [
     name: "Design Language",
     links: [
       {
+        name: "Design Principles",
+        href: "/design-language/principles"
+      },
+      {
         name: "Colour",
         href: "/design-language/colour"
       },
