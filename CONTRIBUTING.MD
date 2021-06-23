@@ -10,7 +10,7 @@ nulogy.design is powered by the following technologies:
 
 1. Put a new .mdx file inside the pages directory and it will be automatically turned into a page, using the directory structure to build the url. e.g to create a page at http://nulogy.design/guides/developer-workflow/, add a file called `developer-workflow.mdx` to to `guides` folder. 
 
-2. Add the page to `src/components/navigationTitle.js`. By default, the page will take it's title from the `name` key and display it both in the navigation menu and at the top of the page. A `title` key can be added if a longer page title is desired on the actual, e.g:
+2. Add the page to `src/components/navigationLinks.js`. By default, the page will take it's title from the `name` key and display it both in the navigation menu and at the top of the page. A `title` key can be added if a longer page title is desired on the actual, e.g:
 
 ```
 {

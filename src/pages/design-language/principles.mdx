@@ -1,0 +1,120 @@
+import {
+  Box,
+  List,
+  ListItem,
+  Link,
+  SectionTitle,
+  SubsectionTitle,
+  Title,
+  Text,
+  Divider,
+  Flex,
+} from "@nulogy/components";
+import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
+
+<Box m="0 auto" mb="x8" maxWidth={CODE_WIDTH}>
+    <Title>Design principles</Title>
+    <Text fontSize="24px" mb="x4">Design principles embody our design philosophy and guide the design decision making process.</Text>
+</Box>
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">1</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">See the big picture</SectionTitle>
+    </Flex>
+    <Box width="100%">
+        <Text mr="x8" mb="x4" ml="x8">Keep the platform in mind. No matter how small the design decision, consider the strategy and larger impacts on the entire platform.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Consider the impact of the design change on the users beyond the primary role</ListItem>
+            <ListItem>Seek the opportunities to extend and improve the collaboration of the users of our system</ListItem>
+            <ListItem>Consider the impact of the design change on the rest of the platform</ListItem>
+            <ListItem>Consider the impact of the change on the larger market segment</ListItem>
+            <ListItem>Refer to patterns and guidelines that ensure consistency of UX across the platform</ListItem>
+        </List>
+    </Box>
+</Flex>
+<Divider mb="x6" maxWidth={CODE_WIDTH} />
+
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">2</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Design iteratively</SectionTitle>
+    </Flex>
+    <Box width="100%">        
+        <Text mr="x8" mb="x4" ml="x8">Commit to continuous improvement. Implement where you can to generate feedback on which to improve.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Don't be afraid to deliver design solutions based on assumptions if full validation is not possible</ListItem>
+            <ListItem>Have a post-launch strategy on how to collect learnings and evolve design solutions</ListItem>
+            <ListItem>Ensure that you are delivering sufficient user value with each iteration</ListItem>
+            <ListItem>Advocate for the incremental improvements of the design solution</ListItem>
+            <ListItem>Don't create a bottleneck in the product development cycle by perfecting the design</ListItem>
+            <ListItem>Don't give up on pursuing the optimal solution. "Good enough" may be fine temporarily, but not permanently.</ListItem>
+        </List>
+    </Box>
+</Flex>
+<Divider mb="x6" maxWidth={CODE_WIDTH} />
+
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">3</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Empower users</SectionTitle>
+    </Flex>
+    <Box width="100%">
+        <Text mr="x8" mb="x4" ml="x8">Give users full control and transparency. Provide the user with timely and relevant information that empowers them with the tools they need to move forward.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Boost user confidence through in-app training, help, and supporting documentation</ListItem>
+            <ListItem>Provide transparency of automated processes</ListItem>
+            <ListItem>Build trust through timely and relevant recommendations</ListItem>
+            <ListItem>Build more trust through error prevention mechanisms</ListItem>
+            <ListItem>Optimize experience for different levels of proficiency and user needs</ListItem>
+        </List>
+    </Box>
+</Flex>
+<Divider mb="x6" maxWidth={CODE_WIDTH} />
+
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">4</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Promote collaboration</SectionTitle>
+    </Flex>
+    <Box width="100%">
+        <Text mr="x8" mb="x4" ml="x8">Pursue collaboration within the design team, the company, and with customers. Multiple perspectives make better products.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Maintain trust-based work relationship with PM on the team &mdash; this is the person you will collaborate with the most</ListItem>
+            <ListItem>Establish and nurture the partnership with clients and subject matter experts</ListItem>
+            <ListItem>Embrace collaborative spirit through sharing with and learning from the design team</ListItem>
+            <ListItem>Contribute to shared understanding by documenting knowledge</ListItem>
+        </List>
+    </Box>
+</Flex>
+<Divider mb="x6" maxWidth={CODE_WIDTH} />
+
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">5</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Think beyond design</SectionTitle>
+    </Flex>
+    <Box width="100%">
+        <Text mr="x8" mb="x4" ml="x8">Seek out a deep understanding of our industry, users, and business and use cases in order to better shape product solutions.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Invest heavily in early stages of research (upstream research) that provide a deep understanding of supply chain industry, business needs of both Nulogy and our clients, and our users' needs</ListItem>
+            <ListItem>Analyze the problem from a business, industry, and communal/environmental perspective, along with UX perspective</ListItem>
+            <ListItem>Understand the competing priorities of different disciplines within Nulogy</ListItem>
+        </List>
+    </Box>
+</Flex>
+<Divider mb="x6" maxWidth={CODE_WIDTH} />
+
+<Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
+    <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">6</Flex>
+        <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Value great design</SectionTitle>
+    </Flex>
+    <Box width="100%">
+        <Text mr="x8" mb="x4" ml="x8">Great products are accessible, efficient, delightful, and easy to learn. Strike the right balance that matches the product's current evolutionary/maturity stage and work towards normalizing the balance across our products.</Text>
+        <List mr="x8" mb="x6" ml="x5" fontSize="small">
+            <ListItem>Comply with WCAG 2.1. AA accessibility guidelines which are in the designer's control</ListItem>
+            <ListItem>Optimize experiences for specific needs based on supporting data</ListItem>
+            <ListItem>Support desirability of our products by creating delightful experiences, especially in the early stages of market adoption</ListItem>
+        </List>
+    </Box>
+</Flex>
