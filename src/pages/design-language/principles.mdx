@@ -9,7 +9,6 @@ import {
   Text,
   Divider,
   Flex,
-  theme,
 } from "@nulogy/components";
 import pr1img from "./images/see-the-big-picture.png";
 import pr2img from "./images/copack.png";
@@ -25,7 +24,7 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 </Box>
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">1</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">1</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">See the big picture</SectionTitle>
     </Flex>
     <Box width="100%">
@@ -43,7 +42,7 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">2</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">2</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Design iteratively</SectionTitle>
     </Flex>
     <Box width="100%">        
@@ -62,7 +61,7 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">3</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">3</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Empower users</SectionTitle>
     </Flex>
     <Box width="100%">
@@ -80,13 +79,13 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">4</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">4</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Promote collaboration</SectionTitle>
     </Flex>
     <Box width="100%">
         <Text mr="x8" mb="x4" ml="x8">Pursue collaboration within the design team, the company, and with customers. Multiple perspectives make better products.</Text>
         <List mr="x8" mb="x6" ml="x5" fontSize="small">
-            <ListItem>Maintain trust-based work relationship with MP on the team &mdash; this is the person you will collaborate with the most</ListItem>
+            <ListItem>Maintain trust-based work relationship with PM on the team &mdash; this is the person you will collaborate with the most</ListItem>
             <ListItem>Establish and nurture the partnership with clients and subject matter experts</ListItem>
             <ListItem>Embrace collaborative spirit through sharing with and learning from the design team</ListItem>
             <ListItem>Contribute to shared understanding by documenting knowledge</ListItem>
@@ -97,7 +96,7 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">5</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">5</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Think beyond design</SectionTitle>
     </Flex>
     <Box width="100%">
@@ -113,7 +112,7 @@ import { COPY_WIDTH, CODE_WIDTH } from "../../components/CONSTANTS";
 
 <Flex maxWidth={CODE_WIDTH} m="0 auto" mb="x2" alignItems="center" flexDirection={{ extraSmall: "column", small: "row", medium: "column", large: "row" }}>
     <Flex mb={{ extraSmall: "0", small: "x2", medium: "0", large: "x2" }} flexDirection="row" alignItems="stretch" width="100%" maxWidth={{ large: "460px" }} >
-        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor={theme.colors.lightGrey} color={theme.colors.darkGrey} fontSize="small" fontWeight="bold">6</Flex>
+        <Flex mr={{ extraSmall: "x2", small: "x3", medium: "x2", large: "x3" }} justifyContent="center" alignItems="center" width={{ extraSmall: "x6", small: "x8", medium: "x6", large: "x8" }} textAlign="center" borderRight="solid 1px" borderColor="lightGrey" color="darkGrey" fontSize="small" fontWeight="bold">6</Flex>
         <SectionTitle width="100%" mb="0" pb="x1" fontSize={{ extraSmall: "40px", small: "56px", medium: "40px", large: "56px" }} lineHeight="52px" fontWeight="bold">Value great design</SectionTitle>
     </Flex>
     <Box width="100%">
