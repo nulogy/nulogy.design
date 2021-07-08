@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/tooltip/CustomContent.jsx"],"names":[],"mappings":"4HAAA","file":"3075-16a76f57272afc5b979b.js","sourcesContent":["export default \"<Tooltip tooltip={<Button href=\\\"/\\\">Button inception</Button>}>\\n    <Button>Hover me</Button>\\n</Tooltip>\";"],"sourceRoot":""}

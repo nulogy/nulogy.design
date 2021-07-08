@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[9877],{99877:function(t,n,e){"use strict";e.r(n),n.default='<Alert type="informative" title="Important information" isCloseable>\n  Details about important information\n</Alert>'}}]);
+//# sourceMappingURL=9877-b47e03a8dadd8434f193.js.map

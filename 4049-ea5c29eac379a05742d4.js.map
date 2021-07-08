@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/dropdown-menu/Controlled.jsx"],"names":[],"mappings":"4HAAA","file":"4049-ea5c29eac379a05742d4.js","sourcesContent":["export default \"<DropdownMenu>\\n  {({ closeMenu }) => (\\n    <DropdownButton onClick={(e) => { closeMenu(e) }}>Dropdown Button</DropdownButton>\\n  )}\\n</DropdownMenu>\";"],"sourceRoot":""}

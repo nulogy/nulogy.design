@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[1463],{91463:function(n,e,a){"use strict";a.r(e),e.default="<BrandedNavBar>\n    An example\n</BrandedNavBar>"}}]);
+//# sourceMappingURL=1463-0339fb26d1ca09a2d71b.js.map

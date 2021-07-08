@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[4222],{34222:function(s,n,u){"use strict";u.r(n),n.default="<Table columns={columns} rows={rows} compact />"}}]);
+//# sourceMappingURL=4222-43c5c8180b512d74b544.js.map

@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[8119],{78119:function(n,e,t){"use strict";t.r(e),e.default='<Table columns={columns} rows={rows} footerRows={[\n  {\n    date: "Total",\n    expectedQuantity: "18,000 eaches",\n    actualQuantity: "7,725 eaches",\n    id: "r1"\n  },\n  {\n    date: "Attainment",\n    expectedQuantity: "",\n    actualQuantity: "41.5%",\n    id: "r2"\n  }\n]} />'}}]);
+//# sourceMappingURL=8119-3b55ca0c14ebb8285ae3.js.map

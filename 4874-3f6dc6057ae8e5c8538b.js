@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[4874],{84874:function(n,e,o){"use strict";o.r(e),e.default='<DropdownMenu>\n  <DropdownItem>\n    <a href="/" style={{ textDecoration: "none" }}>Custom Link Component</a>\n  </DropdownItem>\n</DropdownMenu>'}}]);
+//# sourceMappingURL=4874-3f6dc6057ae8e5c8538b.js.map

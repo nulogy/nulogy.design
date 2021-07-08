@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[1627],{61627:function(n,e,a){"use strict";a.r(e),e.default="<DateRange\n  onRangeChange={(val) => val}\n  showTimes\n/>"}}]);
+//# sourceMappingURL=1627-c3c0fe1c889f5db35ddd.js.map

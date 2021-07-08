@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[4049],{94049:function(n,o,e){"use strict";e.r(o),o.default="<DropdownMenu>\n  {({ closeMenu }) => (\n    <DropdownButton onClick={(e) => { closeMenu(e) }}>Dropdown Button</DropdownButton>\n  )}\n</DropdownMenu>"}}]);
+//# sourceMappingURL=4049-ea5c29eac379a05742d4.js.map

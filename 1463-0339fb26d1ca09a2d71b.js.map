@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/branded-nav-bar/ExampleBrandedNavBar.jsx"],"names":[],"mappings":"4HAAA","file":"1463-0339fb26d1ca09a2d71b.js","sourcesContent":["export default \"<BrandedNavBar>\\n    An example\\n</BrandedNavBar>\";"],"sourceRoot":""}

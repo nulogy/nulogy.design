@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[3075],{83075:function(t,n,o){"use strict";o.r(n),n.default='<Tooltip tooltip={<Button href="/">Button inception</Button>}>\n    <Button>Hover me</Button>\n</Tooltip>'}}]);
+//# sourceMappingURL=3075-16a76f57272afc5b979b.js.map
