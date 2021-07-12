@@ -6,13 +6,13 @@ A guide to writing automated tests for NDS components. Here you can find informa
 
 Unit tests check if small pieces of our code do what they are supposed to do, e.g “When a user clicks a button does that fire the correct onClickHandler?”. They’re located alongside the component file, written using [Jest](https://jestjs.io/) and [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro).
 
-- [Unit testing example](https://github.com/nulogy/design-system/blob/master/components/src/Select/Select.spec.js)
+- [Unit testing example](https://github.com/nulogy/design-system/blob/master/src/Select/Select.spec.tsx)
 
 ## End-to-end Tests
 
-End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with [Cypress](https://www.cypress.io/) in our [components-e2e](https://github.com/nulogy/design-system/tree/master/components/components-e2e) package.
+End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with [Cypress](https://www.cypress.io/).
 
-- [e2e testing example](https://github.com/nulogy/design-system/blob/master/components/components-e2e/cypress/integration/components/Select.spec.js)
+- [e2e testing example](https://github.com/nulogy/design-system/blob/master/cypress/integration/components/Select.spec.js)
 
 ## Selector Priority
 
