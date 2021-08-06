@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react"
-import { Box, Branding, List, StatusIndicator, Text, theme } from "@nulogy/components"
+import { Box, Branding, Link, List, StatusIndicator, Text, theme } from "@nulogy/components"
 import styled from "styled-components";
 import findMatchingPath from '../utils/findMatchingPath';
 import { navigationLinks } from "../data/navigationLinks";
 import { motion } from "framer-motion";
-
-
 
 const variants = {
   hover: {
@@ -71,7 +69,8 @@ const Navigation = ({ location }) => {
         </Box>
       ))
       }
-      <NavigationHeading>CONTENT <StatusIndicator ml="half" as="span">Coming soon</StatusIndicator></NavigationHeading>
+      <NavigationHeading>CONTENT <StatusIndicator as="span" ml="half" type="dark">NEW</StatusIndicator></NavigationHeading>
+      <Text color="white" fontSize="20px">Visit the <Link fontSize="20px" color="white" href="https://content.nulogy.design">Nulogy Content Guide</Link> to learn how to write in our applications.</Text>
     </>
   )
 }
