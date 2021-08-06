@@ -1,7 +1,5 @@
 import React from "react"
-import {Alert, AnimatedBox, Box, Flex, Link, Heading1, Heading2, Text, theme } from "@nulogy/components";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import {Alert, AnimatedBox, Box, Flex, Link, Heading1, Heading2, StatusIndicator, Text} from "@nulogy/components";
 import Layout from "../components/Layout"
 import {COPY_WIDTH, CODE_WIDTH, SLACK_LINK} from "../components/CONSTANTS";
 
@@ -41,7 +39,7 @@ const IndexPage = ({ location }) => {
           </Flex>
             <Flex px="x2" justifyContent="space-between">
               <Box width="49%">
-                <Heading2>✏️ Writing</Heading2>
+                <Heading2>✏️ Writing <StatusIndicator type="informative" style={{position: "relative", top: "-3px"}}>NEW</StatusIndicator></Heading2>
                 <Text fontSize="20px" mb="x6">Visit the external <Link fontSize="20px" mb="x6" href="https://content.nulogy.design">Content guide</Link> to learn best practices for writing in Nulogy's voice and adhering to our grammar best practices. </Text>
               </Box>            
               <Box width="49%">
