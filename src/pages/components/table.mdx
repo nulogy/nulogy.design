@@ -9,6 +9,8 @@ import {
 import { rows, columns } from "../../examples/table/data";
 import { STORYBOOK_LINK } from "../../components/CONSTANTS";
 
+export const StoryBookLink = () => <a href={STORYBOOK_LINK}>Storybook</a>;
+
 # Table
 
 Tables are used for displaying columns and rows of data.
@@ -21,7 +23,7 @@ Tables are used for displaying columns and rows of data.
 
 A custom component can be implemented using a `cellFormatter` (to maintain the existing cell styles) or `cellRenderer` (for completely custom styles).
 
-Similarly headers can be customized using the `headerFormatter` function props. See [Storybook](STORYBOOK_LINK) for other examples of implementing different custom components.
+Similarly headers can be customized using the `headerFormatter` function props. See <StoryBookLink /> for other examples of implementing different custom components.
 
 <Example
   componentName="table"
@@ -75,7 +77,7 @@ Setting `rowsPerPage` on the Table will add a [Pagination](/pagination) componen
 
 Providing a function to `onPageChange` will allow tracking of the current page number. It is fired whenever the page changes and takes in the current page number as an argument.
 
-The [Pagination](/pagination) and Table components can also be used together to support server-side pagination or other custom behaviour. An example of such an implementation can be found in [Storybook](STORYBOOK_LINK).
+The [Pagination](/pagination) and Table components can also be used together to support server-side pagination or other custom behaviour. An example of such an implementation can be found in <StoryBookLink />.
 
 <Example
   componentName="table"
@@ -85,15 +87,15 @@ The [Pagination](/pagination) and Table components can also be used together to 
 
 ### Headings
 
-Headings that span the full width of a row can be added within the table's rows. To add a heading add a row with a key of `heading` The appearance of the heading can be customized by adding a `cellRenderer` to the row. See an example in [Storybook](STORYBOOK_LINK).
+Headings that span the full width of a row can be added within the table's rows. To add a heading add a row with a key of `heading` The appearance of the heading can be customized by adding a `cellRenderer` to the row. See an example in <StoryBookLink />.
 
 ### Filtering
 
-Filtering can be implemented by passing filtered rows to the rows prop of the table. See an example of filtering in [Storybook](STORYBOOK_LINK).
+Filtering can be implemented by passing filtered rows to the rows prop of the table. See an example of filtering in <StoryBookLink />.
 
 ### Sorting
 
-Sorting can be implemented using the headerFormatter to pass a SortingHeader component or another custom header to the column that should be sortable. See an example of the complete implementation with table in [Storybook](STORYBOOK_LINK).
+Sorting can be implemented using the headerFormatter to pass a SortingHeader component or another custom header to the column that should be sortable. See an example of the complete implementation with table in <StoryBookLink />.
 
 ### Selectable Rows
 
