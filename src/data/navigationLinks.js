@@ -7,272 +7,276 @@ export const navigationLinks = [
     links: [
       {
         name: "Designing with NDS",
-        href: "/guides/designers"
+        href: "/guides/designers",
       },
       {
         name: "Developer Workflow",
-        href: "/guides/developer-workflow"
+        href: "/guides/developer-workflow",
       },
       {
         name: "Theme",
-        href: "/theme"
+        href: "/theme",
       },
-    ]
+    ],
   },
   {
     name: "Design Language",
     links: [
       {
         name: "Design Principles",
-        href: "/design-language/principles"
+        href: "/design-language/principles",
       },
       {
         name: "Colour",
-        href: "/design-language/colour"
+        href: "/design-language/colour",
       },
       {
         name: "Typography",
-        href: "/design-language/typography"
+        href: "/design-language/typography",
       },
       {
         name: "Spacing",
-        href: "/design-language/spacing"
+        href: "/design-language/spacing",
       },
       {
         name: "Shadows",
-        href: "/design-language/shadows"
-      }
-    ]
+        href: "/design-language/shadows",
+      },
+    ],
   },
   {
     name: "Components",
     links: [
       {
         name: "Alert",
-        href: "/components/alert"
+        href: "/components/alert",
       },
       {
         name: "Box",
-        href: "/components/box"
+        href: "/components/box",
       },
       {
         name: "Breadcrumbs",
-        href: "/components/breadcrumbs"
+        href: "/components/breadcrumbs",
       },
       {
         name: "DateRange",
-        href: "/components/date-range"
+        href: "/components/date-range",
       },
       {
         name: "Input",
-        href: "/components/input"
+        href: "/components/input",
       },
       {
         name: "Pagination",
-        href: "/components/pagination"
+        href: "/components/pagination",
       },
       /* Add routes here */
       {
         name: "ButtonGroup",
-        href: "/components/button-group"
+        href: "/components/button-group",
       },
       {
         name: "AsyncSelect",
-        href: "/components/async-select"
+        href: "/components/async-select",
       },
       {
         name: "Overlay",
-        href: "/components/overlay"
+        href: "/components/overlay",
       },
       {
         name: "FormSection",
-        href: "/components/form-section"
+        href: "/components/form-section",
       },
       {
         name: "Form",
-        href: "/components/form"
+        href: "/components/form",
       },
       {
         name: "BrandedNavBar",
-        href: "/components/branded-nav-bar"
+        href: "/components/branded-nav-bar",
       },
       {
         name: "Divider",
-        href: "/components/divider"
+        href: "/components/divider",
       },
       {
         name: "Flex",
-        href: "/components/flex"
+        href: "/components/flex",
       },
       {
         name: "Table",
-        href: "/components/table"
+        href: "/components/table",
       },
       {
         name: "Tooltip",
-        href: "/components/tooltip"
+        href: "/components/tooltip",
       },
       {
         name: "Toggle",
-        href: "/components/toggle"
+        href: "/components/toggle",
       },
       {
         name: "List",
-        href: "/components/list"
+        href: "/components/list",
       },
       {
         name: "Toast",
-        href: "/components/toast"
+        href: "/components/toast",
       },
       {
         name: "TimeRange",
-        href: "/components/time-range"
+        href: "/components/time-range",
       },
       {
         name: "TimePicker",
-        href: "/components/time-picker"
+        href: "/components/time-picker",
       },
       {
         name: "Textarea",
-        href: "/components/textarea"
+        href: "/components/textarea",
       },
       {
         name: "Tabs",
-        href: "/components/tabs"
+        href: "/components/tabs",
       },
       {
         name: "StatusIndicator",
-        href: "/components/status-indicator"
+        href: "/components/status-indicator",
+      },
+      {
+        name: "Switcher",
+        href: "/components/switcher",
       },
       {
         name: "Sidebar",
-        href: "/components/sidebar"
+        href: "/components/sidebar",
       },
       {
         name: "Select",
-        href: "/components/select"
+        href: "/components/select",
       },
       {
         name: "RadioGroup",
-        href: "/components/radio-group"
+        href: "/components/radio-group",
       },
       {
         name: "Radio",
-        href: "/components/radio"
+        href: "/components/radio",
       },
       {
         name: "Page",
-        href: "/components/page"
+        href: "/components/page",
       },
       {
         name: "Modal",
-        href: "/components/modal"
+        href: "/components/modal",
       },
       {
         name: "LoadingAnimation",
-        href: "/components/loading-animation"
+        href: "/components/loading-animation",
       },
       {
         name: "Icon",
-        href: "/components/icon"
+        href: "/components/icon",
       },
       {
         name: "TruncatedText",
-        href: "/components/truncated-text"
+        href: "/components/truncated-text",
       },
       {
         name: "IconicButton",
-        href: "/components/iconic-button"
+        href: "/components/iconic-button",
       },
       {
         name: "Buttons",
-        href: "/components/buttons"
+        href: "/components/buttons",
       },
       {
         name: "DropdownMenu",
-        href: "/components/dropdown-menu"
+        href: "/components/dropdown-menu",
       },
       {
         name: "DatePicker",
-        href: "/components/date-picker"
+        href: "/components/date-picker",
       },
       {
         name: "CheckboxGroup",
-        href: "/components/checkbox-group"
+        href: "/components/checkbox-group",
       },
       {
         name: "Checkbox",
-        href: "/components/checkbox"
+        href: "/components/checkbox",
       },
       {
         name: "Link",
-        href: "/components/link"
+        href: "/components/link",
       },
       {
         name: "ApplicationFrame",
-        href: "/components/application-frame"
+        href: "/components/application-frame",
       },
       {
         name: "Branding",
-        href: "/components/branding"
+        href: "/components/branding",
       },
       {
         name: "Text",
-        href: "/components/text"
+        href: "/components/text",
       },
       {
         name: "Headings",
-        href: "/components/headings"
-      }
-    ]
+        href: "/components/headings",
+      },
+    ],
   },
   {
     name: "Patterns",
     links: [
       {
         name: "Loading content",
-        href: "/patterns/loading"
+        href: "/patterns/loading",
       },
       {
         name: "Data visualization",
-        href: "/patterns/data-visualization"
-      }
-    ]
+        href: "/patterns/data-visualization",
+      },
+    ],
   },
   {
     name: "Resources",
     links: [
       {
         name: "Localization",
-        href: "/guides/localization"
+        href: "/guides/localization",
       },
       {
         name: "Ops Core",
         href: "/guides/ops-core",
-        title: "Using NDS in Operational Solution Core"
+        title: "Using NDS in Operational Solution Core",
       },
       {
         name: "Releasing",
         href: "/guides/packages",
-        title: "How the Nulogy Design Ops team releases packages"
+        title: "How the Nulogy Design Ops team releases packages",
       },
       {
         name: "Style Props",
-        href: "/guides/style-props"
+        href: "/guides/style-props",
       },
       {
         name: "Testing",
-        href: "/guides/testing"
+        href: "/guides/testing",
       },
       {
         name: "Versioning",
-        href: "/guides/versioning"
+        href: "/guides/versioning",
       },
       {
         name: "*** We're hiring ***",
         title: "Senior Frontend Developer job posting",
-        href: "/developer"
-      }
-    ]
+        href: "/developer",
+      },
+    ],
   },
 ];
