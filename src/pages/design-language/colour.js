@@ -28,7 +28,7 @@ const IndexPage = ({ location }) => {
           <Text fontSize="24px" mb="x6"><Link href={FIGMA_LINK} fontSize="24px">View colours in Figma</Link> | <Link href="/theme" fontSize="24px">View theme file</Link></Text>
         </Box>
         <Heading2>Text & Interactive Colours</Heading2>
-        <Text fontSize="24px" mb="x4">These colours are used for text, links and other interactive elements.</Text>
+        <Text fontSize="24px" mb="x4">These colours are generally used for text, links and other interactive elements.</Text>
         <Text fontSize="24px" mb="x4"></Text>
         <Flex>
           <Palette name="black" colour={theme.colors.black} context="The default text colour." />
@@ -43,6 +43,7 @@ const IndexPage = ({ location }) => {
         <Heading2>UI & Background Colours</Heading2>
         <Text fontSize="24px" mb="x4">These colours are generally used to build out the backgrounds and layers in our user interfaces.</Text>
         <Flex>
+          <Palette name="darkGrey" colour={theme.colors.blackGrey} />
           <Palette name="darkGrey" colour={theme.colors.darkGrey} />
           <Palette name="grey" colour={theme.colors.grey} />
           <Palette name="lightGrey" colour={theme.colors.lightGrey} />
