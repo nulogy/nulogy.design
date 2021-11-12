@@ -1,16 +1,17 @@
 import { DateRange } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const dateRangeConfig = {
   componentName: "DateRange",
   scope: {
-    DateRange
+    DateRange,
   },
   props: {
     onRangeChange: {
       type: PropTypes.Function,
       value: "(e) => console.log(e)",
-      description: "The function that will be called whenever the dates in the month range change. Returns an object with the start date, end date and current error, if any.",
+      description:
+        "The function that will be called whenever the dates in the month range change. Returns an object with the start date, end date and current error, if any.",
     },
     defaultStartDate: {
       type: PropTypes.String,
@@ -26,7 +27,8 @@ export const dateRangeConfig = {
       type: PropTypes.String,
       value: "MMM yyyy",
       defaultValue: "MMM yyyy",
-      description: "The default date format (see date-fns for available date formats)",
+      description:
+        "The default date format (see date-fns for available date formats)",
     },
     errorMessage: {
       type: PropTypes.String,
@@ -57,7 +59,8 @@ export const dateRangeConfig = {
       type: PropTypes.Object,
       value: "",
       defaultValue: "{ labelText: 'Date Range'}",
-      description: "Options for the month range label. See Label Props for available option keys.",
+      description:
+        "Options for the month range label. See Label Props for available option keys.",
     },
     disableRangeValidation: {
       type: PropTypes.Boolean,
@@ -69,7 +72,8 @@ export const dateRangeConfig = {
       type: PropTypes.Boolean,
       value: false,
       defaultValue: "false",
-      description: "Shows time pickers next to the date inputs so that a times can be selected.",
+      description:
+        "Shows time pickers next to the date inputs so that a times can be selected.",
     },
     minTime: {
       type: PropTypes.String,
@@ -95,7 +99,8 @@ export const dateRangeConfig = {
       type: PropTypes.String,
       value: "hh:mm aa",
       defaultValue: "hh:mm aa",
-      description: "The default date format (see date-fns for available date formats)",
+      description:
+        "The default date format (see date-fns for available date formats)",
     },
     interval: {
       type: PropTypes.Number,
@@ -107,17 +112,20 @@ export const dateRangeConfig = {
       type: PropTypes.Boolean,
       value: false,
       defaultValue: "false",
-      description: "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input",
+      description:
+        "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input",
     },
     startDateInputProps: {
       type: PropTypes.Object,
       value: "",
-      description: "Options for the start date input field, see inputProps table.",
+      description:
+        "Options for the start date input field, see inputProps table.",
     },
     endDateInputProps: {
       type: PropTypes.Object,
       value: "",
-      description: "Options for the end date input field, see inputProps table.",
+      description:
+        "Options for the end date input field, see inputProps table.",
     },
-  }
-}
+  },
+};

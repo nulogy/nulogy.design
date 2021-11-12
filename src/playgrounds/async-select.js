@@ -1,10 +1,10 @@
 import { AsyncSelect } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "AsyncSelect",
   scope: {
-    AsyncSelect
+    AsyncSelect,
   },
   props: {
     loadOptions: {
@@ -18,22 +18,24 @@ export const config = {
       })
     }));`,
       type: PropTypes.Function,
-      description: "Visible message."
+      description: "Visible message.",
     },
     labelText: {
       value: "Country",
       type: PropTypes.ReactNode,
-      description: "Visible message."
+      description: "Visible message.",
     },
     defaultOptions: {
       value: false,
       type: PropTypes.Boolean,
-      description: "if true will fetch results when the input is focussed and display them, otherwise you can pass in a list of label and value objects to display until the user types"
+      description:
+        "if true will fetch results when the input is focussed and display them, otherwise you can pass in a list of label and value objects to display until the user types",
     },
     cacheOptions: {
       value: false,
       type: PropTypes.Boolean,
-      description: "If cacheOptions is truthy, then the loaded data will be cached. The cache will remain until cacheOptions changes value."
+      description:
+        "If cacheOptions is truthy, then the loaded data will be cached. The cache will remain until cacheOptions changes value.",
     },
-  }
-}
+  },
+};

@@ -1,16 +1,17 @@
 import { TimeRange } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "TimeRange",
   scope: {
-    TimeRange
+    TimeRange,
   },
   props: {
     onRangeChange: {
       type: PropTypes.Function,
       value: "(e) => console.log('onRangeChange', e)",
-      description: "The function that will be called whenever the dates in the month range change. Returns an object with the start date, end date and current error, if any.",
+      description:
+        "The function that will be called whenever the dates in the month range change. Returns an object with the start date, end date and current error, if any.",
     },
     defaultStartTime: {
       type: PropTypes.String,
@@ -26,7 +27,8 @@ export const config = {
       type: PropTypes.String,
       value: "hh:mm aa",
       defaultValue: "hh:mm aa",
-      description: "The default date format (see date-fns for available date formats)",
+      description:
+        "The default date format (see date-fns for available date formats)",
     },
     errorMessage: {
       type: PropTypes.String,
@@ -46,12 +48,14 @@ export const config = {
     minTime: {
       type: PropTypes.String,
       value: "05:00",
-      description: "The earliest time that can be selected in 24 hour time string e.g: 02: 30.",
+      description:
+        "The earliest time that can be selected in 24 hour time string e.g: 02: 30.",
     },
     maxTime: {
       type: PropTypes.String,
       value: "23:30",
-      description: "The latest time that can be selected in 24 hour time string e.g: 02: 30.",
+      description:
+        "The latest time that can be selected in 24 hour time string e.g: 02: 30.",
     },
     labelProps: {
       type: PropTypes.Object,
@@ -74,5 +78,5 @@ export const config = {
       defaultValue: "15",
       description: "The time difference in minutes between the time options",
     },
-  }
-}
+  },
+};

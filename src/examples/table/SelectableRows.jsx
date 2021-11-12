@@ -3,5 +3,7 @@
   columns={columns}
   rows={rows}
   keyField="date"
-  onRowSelectionChange={selectedRows => console.log("onRowSelectionChange", selectedRows)}
-/>
+  onRowSelectionChange={(selectedRows) =>
+    console.log("onRowSelectionChange", selectedRows)
+  }
+/>;

@@ -1,3 +1,1 @@
-<BrandedNavBar>
-    An example
-</BrandedNavBar>
+<BrandedNavBar>An example</BrandedNavBar>;

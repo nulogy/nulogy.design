@@ -1,4 +1,1 @@
-<DateRange
-  onRangeChange={(val) => val}
-  showTimes
-/>
+<DateRange onRangeChange={(val) => val} showTimes />;

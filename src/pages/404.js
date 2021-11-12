@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <h1>Page not found</h1>
       <p>The page you're looking for is not here.</p>
     </>
-  )
-}
+  );
+};
 
 export default NotFoundPage;

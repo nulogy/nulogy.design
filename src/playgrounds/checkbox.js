@@ -1,10 +1,10 @@
 import { Checkbox } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Checkbox",
   scope: {
-    Checkbox
+    Checkbox,
   },
   props: {
     labelText: {
@@ -34,12 +34,14 @@ export const config = {
       type: PropTypes.Boolean,
       value: false,
       defaultValue: "false",
-      description: "Displays the checkbox in an indeterminate state if checked. You must use the checkbox as a controlled input (give the checked prop a value) when using this prop",
+      description:
+        "Displays the checkbox in an indeterminate state if checked. You must use the checkbox as a controlled input (give the checked prop a value) when using this prop",
     },
     value: {
       type: PropTypes.String,
       value: "",
-      description: "The value of the checkbox that is submitted with the form. Required when using `indeterminate` checkbox.",
+      description:
+        "The value of the checkbox that is submitted with the form. Required when using `indeterminate` checkbox.",
     },
     disabled: {
       type: PropTypes.Boolean,
@@ -74,5 +76,5 @@ export const config = {
       value: "",
       description: "className passed to the wrapper",
     },
-  }
-}
+  },
+};

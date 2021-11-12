@@ -1,10 +1,10 @@
 import { Textarea } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Textarea",
   scope: {
-    Textarea
+    Textarea,
   },
   props: {
     labelText: {
@@ -15,13 +15,15 @@ export const config = {
     helpText: {
       type: PropTypes.String,
       value: "Please add any additional notes here.",
-      description: "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.",
+      description:
+        "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.",
     },
     placeholder: {
       type: PropTypes.String,
       value: "Some placeholder text...",
       defaultValue: "null",
-      description: "A hint to the expected format for the field. Not a replacement for a label.",
+      description:
+        "A hint to the expected format for the field. Not a replacement for a label.",
     },
     errorMessage: {
       value: undefined,
@@ -31,7 +33,8 @@ export const config = {
     required: {
       type: PropTypes.Boolean,
       value: false,
-      description: "Makes the field require selection before the form will submit.",
+      description:
+        "Makes the field require selection before the form will submit.",
     },
     requirementText: {
       type: PropTypes.String,
@@ -47,12 +50,14 @@ export const config = {
     onChange: {
       type: PropTypes.Function,
       value: "(e) => console.log('onChange', e)",
-      description: "Change event handler that will be run whenever the value of the input is updated.",
+      description:
+        "Change event handler that will be run whenever the value of the input is updated.",
     },
     onBlur: {
       type: PropTypes.Function,
       value: "(e) => console.log('onBlur', e)",
-      description: "Change event handler that will be run whenever the input loses focus.",
+      description:
+        "Change event handler that will be run whenever the input loses focus.",
     },
     rows: {
       type: PropTypes.Number,
@@ -84,6 +89,6 @@ export const config = {
       type: PropTypes.String,
       value: "",
       description: "A unique name for this input",
-    }
-  }
-}
+    },
+  },
+};

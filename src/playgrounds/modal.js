@@ -1,5 +1,5 @@
 import { Modal, PrimaryButton, Button } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Modal",
@@ -19,7 +19,7 @@ export const config = {
     children: {
       value: "Hello, this is the modal",
       type: PropTypes.ReactNode,
-      description: "Inner content"
+      description: "Inner content",
     },
     title: {
       type: PropTypes.String,
@@ -29,12 +29,14 @@ export const config = {
     onRequestClose: {
       type: PropTypes.Function,
       value: "(e) => setIsOpen(false)",
-      description: "Function that is run when the modal requests to be closed (esc key, clicking outside, clicking close), also renders the close button is passed in.",
+      description:
+        "Function that is run when the modal requests to be closed (esc key, clicking outside, clicking close), also renders the close button is passed in.",
     },
     footerContent: {
       type: PropTypes.ReactNode,
       value: "<PrimaryButton>Submit</PrimaryButton>",
-      description: "The content (usually buttons) to appear at the bottom of the modal.",
+      description:
+        "The content (usually buttons) to appear at the bottom of the modal.",
     },
     onAfterOpen: {
       type: PropTypes.Function,
@@ -46,7 +48,8 @@ export const config = {
       type: PropTypes.String,
       value: "624px",
       defaultValue: "624px",
-      description: "Maximum width of the modal, modal will always compress responsively when the screen shrinks.",
+      description:
+        "Maximum width of the modal, modal will always compress responsively when the screen shrinks.",
     },
     shouldFocusAfterRender: {
       type: PropTypes.Boolean,
@@ -58,17 +61,20 @@ export const config = {
       type: PropTypes.Boolean,
       value: true,
       defaultValue: "true",
-      description: "Move focus back to what triggered the modal after it closes.",
+      description:
+        "Move focus back to what triggered the modal after it closes.",
     },
     ariaLabel: {
       type: PropTypes.String,
       value: "",
-      description: "String indicating how the modal content should be announced to screenreaders.",
+      description:
+        "String indicating how the modal content should be announced to screenreaders.",
     },
     ariaDescribedBy: {
       type: PropTypes.String,
       value: "",
-      description: "String indicating the aria description of the modal (optional for enhanced accessibility if needed).",
+      description:
+        "String indicating the aria description of the modal (optional for enhanced accessibility if needed).",
     },
     className: {
       type: PropTypes.String,
@@ -78,7 +84,8 @@ export const config = {
     portalClassName: {
       type: PropTypes.String,
       value: "",
-      description: "className passed to the portal created for the modal component.",
+      description:
+        "className passed to the portal created for the modal component.",
     },
     overlayClassName: {
       type: PropTypes.String,
@@ -91,5 +98,5 @@ export const config = {
       defaultValue: "close",
       description: "Aria label on close button",
     },
-  }
-}
+  },
+};

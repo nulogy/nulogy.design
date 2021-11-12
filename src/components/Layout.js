@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { AnimatedBox, ApplicationFrame, Box } from "@nulogy/components";
 import styled from "styled-components";
 import Footer from "./Footer";
-import Navigation from './Navigation'
-import Transition from './Transition'
+import Navigation from "./Navigation";
+import Transition from "./Transition";
 import Helmet from "./Helmet";
 
 const Button = styled(Box)(({ isOpen, theme }) => ({
@@ -21,20 +21,20 @@ const MenuButton = ({ isOpen, onClick }) => {
   const top = {
     closed: {
       rotate: 0,
-      translateY: 0
+      translateY: 0,
     },
     opened: {
       rotate: 45,
       translateY: 2,
-    }
+    },
   };
   const center = {
     closed: {
-      opacity: 1
+      opacity: 1,
     },
     opened: {
-      opacity: 0
-    }
+      opacity: 0,
+    },
   };
   const bottom = {
     closed: {
@@ -44,7 +44,7 @@ const MenuButton = ({ isOpen, onClick }) => {
     opened: {
       rotate: -45,
       translateY: -10,
-    }
+    },
   };
   const lineProps = {
     height: "2px",
@@ -53,7 +53,7 @@ const MenuButton = ({ isOpen, onClick }) => {
     bg: isOpen ? "white" : "darkBlue",
     initial: "closed",
     animate: variant,
-  }
+  };
   return (
     <Button
       as="button"
@@ -63,24 +63,16 @@ const MenuButton = ({ isOpen, onClick }) => {
       aria-label={isOpen ? "close" : "open"}
       css={{
         "&:hover": {
-          cursor: "pointer"
-        }
+          cursor: "pointer",
+        },
       }}
     >
-      <AnimatedBox
-        variants={top}
-        {...lineProps}
-      />
-      <AnimatedBox
-        variants={center}
-        {...lineProps}
-      />
-      <AnimatedBox
-        variants={bottom}
-        {...lineProps}
-      />
-    </Button>)
-}
+      <AnimatedBox variants={top} {...lineProps} />
+      <AnimatedBox variants={center} {...lineProps} />
+      <AnimatedBox variants={bottom} {...lineProps} />
+    </Button>
+  );
+};
 
 const Layout = ({ children, location, noPadding }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,7 +85,8 @@ const Layout = ({ children, location, noPadding }) => {
           marginLeft={{ medium: "340px" }}
         >
           <Transition location={location}>
-            <Box as="main"
+            <Box
+              as="main"
               paddingTop={noPadding ? null : "x6"}
               paddingX={noPadding ? null : { extraSmall: "x6", medium: "x8" }}
             >
@@ -120,7 +113,7 @@ const Layout = ({ children, location, noPadding }) => {
         <MenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </Box>
     </ApplicationFrame>
-  )
+  );
 };
 
-export default Layout
+export default Layout;

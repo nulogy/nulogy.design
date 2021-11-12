@@ -1,11 +1,11 @@
 import { CheckboxGroup, Checkbox } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "CheckboxGroup",
   scope: {
     CheckboxGroup,
-    Checkbox
+    Checkbox,
   },
   props: {
     children: {
@@ -33,7 +33,8 @@ export const config = {
     helpText: {
       type: PropTypes.String,
       value: "Select a setting from the menu below:",
-      description: "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.",
+      description:
+        "Placed below the label to provide assistance on how to fill out a field or the expected format. It can also provide an explanation of why the information is needed and how it will be used.",
     },
     labelText: {
       type: PropTypes.String,
@@ -44,13 +45,15 @@ export const config = {
       type: PropTypes.Boolean,
       value: false,
       defaultValue: "false",
-      description: "Makes the field require selection before the form will submit.",
+      description:
+        "Makes the field require selection before the form will submit.",
     },
     disabled: {
       type: PropTypes.Boolean,
       value: false,
       defaultValue: "false",
-      description: "Marks the entire group as disabled and unable to be toggled.",
+      description:
+        "Marks the entire group as disabled and unable to be toggled.",
     },
     requirementText: {
       type: PropTypes.String,
@@ -68,5 +71,5 @@ export const config = {
       value: "",
       description: "className passed to the group wrapper.",
     },
-  }
-}
+  },
+};

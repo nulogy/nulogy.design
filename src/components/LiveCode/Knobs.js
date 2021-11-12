@@ -1,6 +1,20 @@
 import React from "react";
-import styled from 'styled-components';
-import { Box, Icon, Input, Tooltip, Flex, Link, Toggle, Text, Radio, RadioGroup, Select as NDSSelect, SelectOption, DatePicker } from "@nulogy/components";
+import styled from "styled-components";
+import {
+  Box,
+  Icon,
+  Input,
+  Tooltip,
+  Flex,
+  Link,
+  Toggle,
+  Text,
+  Radio,
+  RadioGroup,
+  Select as NDSSelect,
+  SelectOption,
+  DatePicker,
+} from "@nulogy/components";
 import { PropTypes } from "react-view";
 import Editor from "./Editor";
 
@@ -40,7 +54,12 @@ const ColorSelect = ({ labelText, options, value, onChange }) => {
 
 const IconSelect = ({ labelText, options, value, onChange }) => {
   const CustomOption = ({ children, ...props }) => {
-    const newChildren = <Text><Icon icon={children} size="20px" pt="half" mr="x1" />{children}</Text>;
+    const newChildren = (
+      <Text>
+        <Icon icon={children} size="20px" pt="half" mr="x1" />
+        {children}
+      </Text>
+    );
     return <SelectOption {...props}>{newChildren}</SelectOption>;
   };
   return (
@@ -58,7 +77,6 @@ const IconSelect = ({ labelText, options, value, onChange }) => {
   );
 };
 
-
 const Select = styled.select(({ theme }) => ({
   width: "100%",
   height: "40px",
@@ -72,9 +90,8 @@ const Select = styled.select(({ theme }) => ({
     outline: "none",
     boxShadow: theme.shadows.focus,
     borderColor: theme.colors.blue,
-  }
+  },
 }));
-
 
 const InputBorder = styled(Box)(({ theme }) => ({
   border: `1px solid ${theme.colors.grey}`,
@@ -84,15 +101,23 @@ const InputBorder = styled(Box)(({ theme }) => ({
     outline: "none",
     boxShadow: theme.shadows.focus,
     borderColor: theme.colors.blue,
-  }
+  },
 }));
 
-const Label = ({ name, description, ...props }) => <Flex alignItems="center" {...props}>
-  {name}
-  <Tooltip tooltip={description}><Icon icon="help" size="x2" color="darkGrey" pl="half" /></Tooltip>
-</Flex>
+const Label = ({ name, description, ...props }) => (
+  <Flex alignItems="center" {...props}>
+    {name}
+    <Tooltip tooltip={description}>
+      <Icon icon="help" size="x2" color="darkGrey" pl="half" />
+    </Tooltip>
+  </Flex>
+);
 
-const Spacing = ({ children }) => <Box width={{ small: "100%", medium: "calc(50% - 8px)" }} mt="x2">{children}</Box>;
+const Spacing = ({ children }) => (
+  <Box width={{ small: "100%", medium: "calc(50% - 8px)" }} mt="x2">
+    {children}
+  </Box>
+);
 
 const Knob = ({ name, description, set, type, value, options, error }) => {
   switch (type) {
@@ -110,13 +135,26 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
     case PropTypes.String:
       return (
         <Spacing>
-          <Input value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
+          <Input
+            value={value}
+            onChange={(e) => set(e.target.value, name)}
+            labelText={
+              <Label name={name} description={description} error={error} />
+            }
+          />
         </Spacing>
       );
     case PropTypes.Number:
       return (
         <Spacing>
-          <Input type="number" value={value} onChange={(e) => set(e.target.value, name)} labelText={<Label name={name} description={description} error={error} />} />
+          <Input
+            type="number"
+            value={value}
+            onChange={(e) => set(e.target.value, name)}
+            labelText={
+              <Label name={name} description={description} error={error} />
+            }
+          />
         </Spacing>
       );
     case PropTypes.Boolean:
@@ -135,7 +173,16 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
     case PropTypes.Date:
       return (
         <Spacing>
-          <DatePicker selected={value} width="100%" inputProps={{ labelText: <Label name={name} description={description} />, maxWidth: "100%", width: "100%" }} onChange={(e) => set(e, name)} />
+          <DatePicker
+            selected={value}
+            width="100%"
+            inputProps={{
+              labelText: <Label name={name} description={description} />,
+              maxWidth: "100%",
+              width: "100%",
+            }}
+            onChange={(e) => set(e, name)}
+          />
         </Spacing>
       );
     case PropTypes.Enum:
@@ -147,11 +194,18 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
           label: option,
         }));
         const ndsHandleChange = (val) => {
-          set(val, name)
+          set(val, name);
         };
         return (
           <Spacing>
-            <ColorSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={<Label name={name} description={description} error={error} />} />
+            <ColorSelect
+              options={ndsSelectOptions}
+              onChange={ndsHandleChange}
+              value={value}
+              labelText={
+                <Label name={name} description={description} error={error} />
+              }
+            />
           </Spacing>
         );
       }
@@ -162,11 +216,18 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
           label: option,
         }));
         const ndsHandleChange = (val) => {
-          set(val, name)
+          set(val, name);
         };
         return (
           <Spacing>
-            <IconSelect options={ndsSelectOptions} onChange={ndsHandleChange} value={value} labelText={<Label name={name} description={description} error={error} />} />
+            <IconSelect
+              options={ndsSelectOptions}
+              onChange={ndsHandleChange}
+              value={value}
+              labelText={
+                <Label name={name} description={description} error={error} />
+              }
+            />
           </Spacing>
         );
       }
@@ -176,12 +237,14 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
           {numberOfOptions <= 3 ? (
             <RadioGroup
               name={`radio-${name}`}
-              onChange={e => set(e.target.value, name)}
-              labelText={<Label name={name} description={description} error={error} />}
+              onChange={(e) => set(e.target.value, name)}
+              labelText={
+                <Label name={name} description={description} error={error} />
+              }
               value={value}
               error={error}
             >
-              {options.map(option => (
+              {options.map((option) => (
                 <Radio
                   key={option}
                   value={option}
@@ -191,17 +254,31 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
             </RadioGroup>
           ) : (
             <>
-              <Label fontWeight="bold" mb="half" fontSize="small" mt="0" name={name} description={description} />
+              <Label
+                fontWeight="bold"
+                mb="half"
+                fontSize="small"
+                mt="0"
+                name={name}
+                description={description}
+              />
               <Flex position="relative">
-                <Box position="absolute" right="5px" bottom="50%" transform="translateY(50%)" lineHeight="0" pointerEvents="none">
+                <Box
+                  position="absolute"
+                  right="5px"
+                  bottom="50%"
+                  transform="translateY(50%)"
+                  lineHeight="0"
+                  pointerEvents="none"
+                >
                   <Icon icon="downArrow" size="x3" color="grey" />
                 </Box>
-                <Select value={value} onChange={(e) => set(e.target.value, name)}>
-                  {options.map(option => (
-                    <option
-                      key={option}
-                      value={option}
-                    >
+                <Select
+                  value={value}
+                  onChange={(e) => set(e.target.value, name)}
+                >
+                  {options.map((option) => (
+                    <option key={option} value={option}>
                       {option}
                     </option>
                   ))}
@@ -222,11 +299,11 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
           </Box>
           <InputBorder>
             <Editor
-              onChange={code => {
+              onChange={(code) => {
                 set(code, name);
               }}
               light
-              code={value ? String(value) : ''}
+              code={value ? String(value) : ""}
             />
           </InputBorder>
         </Spacing>
@@ -241,9 +318,18 @@ const Knob = ({ name, description, set, type, value, options, error }) => {
 const Knobs = ({ state, set, error }) => {
   const allKnobs = Object.keys(state);
   return (
-    <Box display={{ medium: "flex" }} flexWrap="wrap" pb="x2" alignItems="flex-start" justifyContent="space-between">
-      {allKnobs.map((name) => <Knob key={name} {...state[name]} name={name} set={set} error={error} />)}
-    </Box>);
-}
+    <Box
+      display={{ medium: "flex" }}
+      flexWrap="wrap"
+      pb="x2"
+      alignItems="flex-start"
+      justifyContent="space-between"
+    >
+      {allKnobs.map((name) => (
+        <Knob key={name} {...state[name]} name={name} set={set} error={error} />
+      ))}
+    </Box>
+  );
+};
 
 export default Knobs;

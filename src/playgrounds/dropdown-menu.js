@@ -1,9 +1,5 @@
-import {
-  DropdownMenu,
-  DropdownLink,
-  DropdownButton,
-} from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { DropdownMenu, DropdownLink, DropdownButton } from "@nulogy/components";
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "DropdownMenu",
@@ -43,7 +39,8 @@ export const config = {
       type: PropTypes.String,
       value: "",
       defaultValue: "bottom-start",
-      description: "One of top, bottom, left, or right with optional -start or -end appended to place the menu container relative to the trigger.",
+      description:
+        "One of top, bottom, left, or right with optional -start or -end appended to place the menu container relative to the trigger.",
     },
     showDelay: {
       type: PropTypes.Number,
@@ -66,7 +63,8 @@ export const config = {
     trigger: {
       type: PropTypes.Function,
       value: "",
-      description: "Function that returns a button component that will be used as the trigger.",
+      description:
+        "Function that returns a button component that will be used as the trigger.",
     },
     className: {
       type: PropTypes.String,
@@ -76,7 +74,8 @@ export const config = {
     boundariesElement: {
       type: PropTypes.String,
       value: "",
-      description: "The element which will define the boundaries of the dropdown position. The opened dropdown will never be placed outside of the defined boundaries",
+      description:
+        "The element which will define the boundaries of the dropdown position. The opened dropdown will never be placed outside of the defined boundaries",
     },
     openAriaLabel: {
       type: PropTypes.String,
@@ -84,5 +83,5 @@ export const config = {
       defaultValue: "open",
       description: "aria label when the dropdown is closed",
     },
-  }
-}
+  },
+};

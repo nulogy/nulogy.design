@@ -1,10 +1,10 @@
 import { BrandedNavBar } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "BrandedNavBar",
   scope: {
-    BrandedNavBar
+    BrandedNavBar,
   },
   props: {
     menuData: {
@@ -31,7 +31,8 @@ export const config = {
         ]
       }`,
       defaultValue: "null",
-      description: "Data used to build link heirarchy functionality. See menuData Prop section below.",
+      description:
+        "Data used to build link heirarchy functionality. See menuData Prop section below.",
     },
     subtext: {
       type: PropTypes.String,
@@ -49,18 +50,20 @@ export const config = {
       type: PropTypes.Number,
       value: "",
       defaultValue: "1024",
-      description: "Provides the breakpoint where menu items will be collapsed into a dropdown menu.",
+      description:
+        "Provides the breakpoint where menu items will be collapsed into a dropdown menu.",
     },
     environment: {
       type: PropTypes.Enum,
-      options: ['training', 'development', ""],
+      options: ["training", "development", ""],
       value: "",
-      description: "If defined, shows a blue banner above the navbar which indicates the set environment",
+      description:
+        "If defined, shows a blue banner above the navbar which indicates the set environment",
     },
     logo: {
       type: PropTypes.String,
       value: "",
       description: "A path to a logo file",
     },
-  }
-}
+  },
+};

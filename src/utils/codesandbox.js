@@ -1,4 +1,4 @@
-import { finaliseCSB, sendFilesToCSB } from 'codesandboxer';
+import { finaliseCSB, sendFilesToCSB } from "codesandboxer";
 
 const html = `<div id="root" />`;
 const index = `
@@ -31,36 +31,33 @@ ReactDOM.render(
 );
 `;
 
-export const setupSandbox = async (
-  title,
-  source,
-)  => {
+export const setupSandbox = async (title, source) => {
   try {
     const { parameters } = finaliseCSB(
       {
         files: {
-          'public/index.html': {content: html},
-          'src/index.js': {content: index},
-          'src/example.js': {content: source},
+          "public/index.html": { content: html },
+          "src/index.js": { content: index },
+          "src/example.js": { content: source },
         },
         deps: {
-          '@nulogy/components': 'latest',
-          react: 'latest',
-          'react-dom': 'latest',
-          'react-scripts': 'latest',
-          '@nulogy/icons': 'latest',
-          'styled-components': 'latest',
+          "@nulogy/components": "latest",
+          react: "latest",
+          "react-dom": "latest",
+          "react-scripts": "latest",
+          "@nulogy/icons": "latest",
+          "styled-components": "latest",
         },
       },
       {
-        fileName: 'src/example.js',
+        fileName: "src/example.js",
         name: title,
-      },
+      }
     );
     const { sandboxId } = await sendFilesToCSB(parameters);
     return `https://codesandbox.io/s/${sandboxId}?module=src/example.js`;
   } catch (error) {
-    console.error('Failed to set up code sandbox:', error);
+    console.error("Failed to set up code sandbox:", error);
     return null;
   }
-}
+};

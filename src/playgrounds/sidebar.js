@@ -1,10 +1,5 @@
-import {
-  Sidebar,
-  PrimaryButton,
-  Select,
-  Box
-} from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { Sidebar, PrimaryButton, Select, Box } from "@nulogy/components";
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Sidebar",
@@ -19,7 +14,7 @@ export const config = {
       type: PropTypes.Boolean,
       value: false,
       description: "An event handler for opening the Sidebar.",
-      stateful: true
+      stateful: true,
     },
     children: {
       value: `
@@ -28,19 +23,21 @@ export const config = {
       <Select options={[]} labelText="Delivery:" />
       `,
       type: PropTypes.ReactNode,
-      description: "Inner content."
+      description: "Inner content.",
     },
     offset: {
       type: PropTypes.String,
       value: "0px",
       defaultValue: "0px",
-      description: "The amount of pixels to offset the Sidebar from on the right of the screen. Mostly used for in the case of multiple Sidebars.",
+      description:
+        "The amount of pixels to offset the Sidebar from on the right of the screen. Mostly used for in the case of multiple Sidebars.",
     },
     top: {
       type: PropTypes.String,
       value: "",
       defaultValue: "0px",
-      description: "The amount of pixels to offset the Sidebar from on the top of the screen. Mostly used for in the case of multiple Sidebars.",
+      description:
+        "The amount of pixels to offset the Sidebar from on the top of the screen. Mostly used for in the case of multiple Sidebars.",
     },
     hideCloseButton: {
       type: PropTypes.Boolean,
@@ -64,7 +61,8 @@ export const config = {
       type: PropTypes.Number,
       value: "0.25",
       defaultValue: "0.25",
-      description: "The length of the animation for sliding in and out the Sidebar.",
+      description:
+        "The length of the animation for sliding in and out the Sidebar.",
     },
     footer: {
       type: PropTypes.ReactNode,
@@ -79,7 +77,8 @@ export const config = {
     triggerRef: {
       type: PropTypes.Object,
       value: "",
-      description: "The button that was used to open the Sidebar. Setting this will allow focus to return to that element when the Sidebar is closed. If it's not set, the focus will be set to the first element on the page.",
+      description:
+        "The button that was used to open the Sidebar. Setting this will allow focus to return to that element when the Sidebar is closed. If it's not set, the focus will be set to the first element on the page.",
     },
     onClose: {
       type: PropTypes.Function,
@@ -90,13 +89,15 @@ export const config = {
       type: PropTypes.Boolean,
       value: true,
       defaultValue: true,
-      description: "If true, calls onClose when the user clicks anywhere but the Sidebar.",
+      description:
+        "If true, calls onClose when the user clicks anywhere but the Sidebar.",
     },
     overlay: {
       type: PropTypes.Boolean,
       value: true,
       defaultValue: true,
-      description: "If true, displays an overlay behind the sidebar when it is open.",
+      description:
+        "If true, displays an overlay behind the sidebar when it is open.",
     },
-  }
-}
+  },
+};

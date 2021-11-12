@@ -5,9 +5,9 @@ import {
   Textarea,
   Box,
   PrimaryButton,
-  QuietButton
+  QuietButton,
 } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Form",
@@ -18,7 +18,7 @@ export const config = {
     Textarea,
     Box,
     PrimaryButton,
-    QuietButton
+    QuietButton,
   },
   props: {
     children: {
@@ -31,12 +31,12 @@ export const config = {
   <QuietButton>Cancel</QuietButton>
 </Box>`,
       type: PropTypes.ReactNode,
-      description: "Inner content."
+      description: "Inner content.",
     },
     title: {
       value: "Form Title",
       type: PropTypes.String,
-      description: "Title of the form."
+      description: "Title of the form.",
     },
-  }
-}
+  },
+};

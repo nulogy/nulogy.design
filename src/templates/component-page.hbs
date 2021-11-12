@@ -1,22 +1,27 @@
-import { {{name}} } from "@nulogy/components";
-import { config } from "../../playgrounds/{{toSnakeCase name}}";
+import {
+{{name}}
+} from "@nulogy/components"; import { config } from "../../playgrounds/{{toSnakeCase
+  name
+}}"; #
+{{name}}
 
-# {{name}}
-
-{{ name }} is a component.
+{{name}}
+is a component.
 
 <Playground {...config} />
 
-## Variations
+## Variations ### A variant
 
-### A variant
-
-<Example componentName="{{toCamelCase name}}" scope=\{{ {{ name }} }} example="Example{{name}}" />
+<Example
+  componentName="{{toCamelCase name}}"
+  scope="\{{"
+  {{name}}
+  }}
+  example="Example{{name}}"
+/>
 
 ## Props
 
-<PropsTable propsConfig={config.props} />
+<PropsTable propsConfig="{config.props}" />
 
-## Related Components
-
-- [Box](/box)
+## Related Components - [Box](/box)

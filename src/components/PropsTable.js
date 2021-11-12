@@ -8,7 +8,7 @@ const InlineCode = styled.span(({ theme }) => ({
   display: "inline",
   fontFamily: theme.fonts.mono,
   background: theme.colors.lightBlue,
-  fontSize: theme.fontSizes.small
+  fontSize: theme.fontSizes.small,
 }));
 
 export const propName = ({ cellData }) => (
@@ -18,7 +18,7 @@ export const propName = ({ cellData }) => (
 );
 
 propName.propTypes = {
-  cellData: PropTypes.string.isRequired
+  cellData: PropTypes.string.isRequired,
 };
 
 export const smallTextRenderer = ({ cellData }) => (
@@ -28,7 +28,7 @@ export const smallTextRenderer = ({ cellData }) => (
 );
 
 smallTextRenderer.propTypes = {
-  cellData: PropTypes.string.isRequired
+  cellData: PropTypes.string.isRequired,
 };
 
 const columns = [
@@ -36,38 +36,50 @@ const columns = [
     label: "Name",
     dataKey: "name",
     width: "20%",
-    cellRenderer: propName
+    cellRenderer: propName,
   },
   {
     label: "Type",
     dataKey: "type",
     width: "10%",
-    cellRenderer: smallTextRenderer
+    cellRenderer: smallTextRenderer,
   },
   {
     label: "Default",
     dataKey: "defaultValue",
     width: "15%",
-    cellRenderer: smallTextRenderer
+    cellRenderer: smallTextRenderer,
   },
   {
     label: "Description",
     dataKey: "description",
     width: "50%",
-    cellRenderer: smallTextRenderer
-  }
+    cellRenderer: smallTextRenderer,
+  },
 ];
 
 const PropsTable = ({ propsConfig }) => {
-
-  const propsArr = Object.keys(propsConfig).reduce((acc, prop) => [
-    ...acc,
-    {
-      name: prop,
-      ...propsConfig[prop],
-    }
-  ], []);
-  return <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto" overflowX="auto"><Table rows={propsArr} columns={columns} keyField="name" rowHovers={false} mb="x2" /></Box>
+  const propsArr = Object.keys(propsConfig).reduce(
+    (acc, prop) => [
+      ...acc,
+      {
+        name: prop,
+        ...propsConfig[prop],
+      },
+    ],
+    []
+  );
+  return (
+    <Box maxWidth={CODE_WIDTH} margin="0 auto 16px auto" overflowX="auto">
+      <Table
+        rows={propsArr}
+        columns={columns}
+        keyField="name"
+        rowHovers={false}
+        mb="x2"
+      />
+    </Box>
+  );
 };
 
 export default PropsTable;
