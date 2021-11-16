@@ -44,6 +44,7 @@ const IndexPage = ({ location }) => {
         <Text fontSize="24px" mb="x4">These colours are generally used to build out the backgrounds and layers in our user interfaces.</Text>
         <Flex>
           <Palette name="darkGrey" colour={theme.colors.darkGrey} />
+          <Palette name="midGrey" colour={theme.colors.midGrey} />
           <Palette name="grey" colour={theme.colors.grey} />
           <Palette name="lightGrey" colour={theme.colors.lightGrey} />
           <Palette name="whiteGrey" colour={theme.colors.whiteGrey} />
