@@ -1,1 +1,1 @@
-<Table columns={columns} rows={rows} stickyHeader />
+<Table columns={columns} rows={rows} stickyHeader />;

@@ -1,10 +1,10 @@
 import { TimePicker } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "TimePicker",
   scope: {
-    TimePicker
+    TimePicker,
   },
   props: {
     labelText: {
@@ -16,7 +16,8 @@ export const config = {
       type: PropTypes.String,
       value: "hh:mm aa",
       defaultValue: "hh:mm aa",
-      description: "The default time format (see date-fns for available time formats)",
+      description:
+        "The default time format (see date-fns for available time formats)",
     },
     interval: {
       type: PropTypes.Number,
@@ -27,17 +28,20 @@ export const config = {
     minTime: {
       type: PropTypes.String,
       value: "09:00",
-      description: "The latest time that can be selected in 24 hour time string format e.g: 02: 30",
+      description:
+        "The latest time that can be selected in 24 hour time string format e.g: 02: 30",
     },
     maxTime: {
       type: PropTypes.String,
       value: "17:00",
-      description: "The latest time that can be selected in 24 hour time string e.g: 02: 30",
+      description:
+        "The latest time that can be selected in 24 hour time string e.g: 02: 30",
     },
     value: {
       type: PropTypes.String,
       value: "",
-      description: "Value of input, used when controlling the component in 24 hour time string e.g: 02: 30",
+      description:
+        "Value of input, used when controlling the component in 24 hour time string e.g: 02: 30",
     },
     defaultValue: {
       type: PropTypes.String,
@@ -47,12 +51,13 @@ export const config = {
     onInputChange: {
       type: PropTypes.Function,
       value: "(e) => console.log('onInputChange', e)",
-      description: "Event handler for when the value typed into the input changes",
+      description:
+        "Event handler for when the value typed into the input changes",
     },
     onChange: {
       type: PropTypes.Function,
       value: "(e) => console.log('onChange', e)",
       description: "Event handler for when the selected value changes",
     },
-  }
-}
+  },
+};

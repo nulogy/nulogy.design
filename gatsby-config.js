@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   siteMetadata: {
@@ -12,10 +12,10 @@ module.exports = {
           google: [
             {
               family: `IBM Plex Sans`,
-              variants: [`300`, `400`, `500`, `600`]
+              variants: [`300`, `400`, `500`, `600`],
             },
             {
-              family: `IBM Plex Mono`
+              family: `IBM Plex Mono`,
             },
           ],
         },
@@ -41,10 +41,10 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1024,
-            }
-          }
-        ]
-      }
+            },
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-manifest",
@@ -55,7 +55,7 @@ module.exports = {
         background_color: "#fff",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: `${__dirname}/src/images/favicon.svg` // This path is relative to the root of the site.
+        icon: `${__dirname}/src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     {

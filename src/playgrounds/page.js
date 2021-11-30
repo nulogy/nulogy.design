@@ -1,5 +1,5 @@
 import { Page, Button, Breadcrumbs, Link } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Page",
@@ -7,7 +7,7 @@ export const config = {
     Page,
     Button,
     Breadcrumbs,
-    Link
+    Link,
   },
   props: {
     breadcrumbs: {
@@ -31,7 +31,7 @@ export const config = {
     children: {
       value: "Some content.",
       type: PropTypes.ReactNode,
-      description: "Page content."
+      description: "Page content.",
     },
-  }
-}
+  },
+};

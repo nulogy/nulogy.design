@@ -1,5 +1,7 @@
 <DropdownMenu>
   <DropdownItem>
-    <a href="/" style={{ textDecoration: "none" }}>Custom Link Component</a>
+    <a href="/" style={{ textDecoration: "none" }}>
+      Custom Link Component
+    </a>
   </DropdownItem>
-</DropdownMenu>
+</DropdownMenu>;

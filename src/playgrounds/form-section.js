@@ -1,5 +1,5 @@
 import { FormSection, Input } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "FormSection",
@@ -14,12 +14,12 @@ export const config = {
 <Input id="birthdate" labelText="Date of birth"/>
 <Input id="birthplace" labelText="Place of birth" />`,
       type: PropTypes.ReactNode,
-      description: "Visible message."
+      description: "Visible message.",
     },
     title: {
       value: "Section Title",
       type: PropTypes.String,
-      description: "Title"
+      description: "Title",
     },
-  }
-}
+  },
+};

@@ -1,20 +1,20 @@
 export const primaryMenu = [
   {
-    name: 'Dashboard',
+    name: "Dashboard",
     items: [
-      { name: 'Customers', href: '/' },
-      { name: 'Invoices', href: '/' },
+      { name: "Customers", href: "/" },
+      { name: "Invoices", href: "/" },
     ],
   },
-  { name: 'Link', href: '/' },
+  { name: "Link", href: "/" },
 ];
 
 export const secondaryMenu = [
   {
-    name: 'Settings',
+    name: "Settings",
     items: [
-      { name: 'Permissions', href: '/' },
-      { name: 'Manage account', href: '/' },
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
     ],
   },
 ];

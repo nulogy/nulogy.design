@@ -1,10 +1,10 @@
 import { Select } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Select",
   scope: {
-    Select
+    Select,
   },
   props: {
     options: {
@@ -14,7 +14,8 @@ export const config = {
         { value: "assigned", label: "Assigned to a line" },
       ]`,
       defaultValue: "Required",
-      description: "The options available to be selected, containing a value and a label",
+      description:
+        "The options available to be selected, containing a value and a label",
     },
     autocomplete: {
       type: PropTypes.Boolean,
@@ -26,7 +27,8 @@ export const config = {
       type: PropTypes.String,
       value: "",
       defaultValue: "256px",
-      description: "Max height of the select dropdown menu, content is scrollable",
+      description:
+        "Max height of the select dropdown menu, content is scrollable",
     },
     multiselect: {
       type: PropTypes.Boolean,
@@ -36,7 +38,8 @@ export const config = {
     value: {
       type: PropTypes.String,
       value: "",
-      description: "Value of input, used when controlling the component, an array when using the multiselect",
+      description:
+        "Value of input, used when controlling the component, an array when using the multiselect",
     },
     defaultValue: {
       type: PropTypes.String,
@@ -46,7 +49,8 @@ export const config = {
     menuIsOpen: {
       type: PropTypes.Boolean,
       value: false,
-      description: "Controls whether the menu is open; If unset, then NDS controls this implicitly instead",
+      description:
+        "Controls whether the menu is open; If unset, then NDS controls this implicitly instead",
     },
     onMenuOpen: {
       type: PropTypes.Function,
@@ -61,13 +65,15 @@ export const config = {
     onInputChange: {
       type: PropTypes.Function,
       value: "(e) => console.log('onInputChange', e)",
-      description: "Event handler for when the value typed into the input changes",
+      description:
+        "Event handler for when the value typed into the input changes",
     },
     noOptionsMessage: {
       type: PropTypes.Function,
       value: "({ inputValue}) => `No options were found for: ${inputValue}`",
       defaultValue: "No options",
-      description: "A function that returns the string you you like to show up when no options are available",
+      description:
+        "A function that returns the string you you like to show up when no options are available",
     },
     menuPosition: {
       type: PropTypes.String,
@@ -78,13 +84,14 @@ export const config = {
     components: {
       type: PropTypes.Object,
       value: "",
-      description: "Pass in an object with the keys of the component you would like to replace",
+      description:
+        "Pass in an object with the keys of the component you would like to replace",
     },
     closeMenuOnSelect: {
       type: PropTypes.Boolean,
       value: true,
       defaultValue: true,
       description: "Close the select menu when the user selects an option",
-    }
-  }
-}
+    },
+  },
+};

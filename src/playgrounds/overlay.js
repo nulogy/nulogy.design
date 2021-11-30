@@ -1,12 +1,12 @@
 import { Overlay, Text, Box } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Overlay",
   scope: {
     Overlay,
     Text,
-    Box
+    Box,
   },
   props: {
     children: {
@@ -15,12 +15,12 @@ export const config = {
   <Text>Foreground sample content</Text>
 </Box>`,
       type: PropTypes.ReactNode,
-      description: "Controls the theming."
+      description: "Controls the theming.",
     },
     dark: {
       value: true,
       type: PropTypes.Boolean,
-      description: "Controls the theming."
+      description: "Controls the theming.",
     },
-  }
-}
+  },
+};

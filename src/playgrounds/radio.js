@@ -1,16 +1,17 @@
 import { Radio } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Radio",
   scope: {
-    Radio
+    Radio,
   },
   props: {
     checked: {
       type: PropTypes.Boolean,
       value: false,
-      description: "Whether or not this radio button is the currently selected item in the group",
+      description:
+        "Whether or not this radio button is the currently selected item in the group",
     },
     name: {
       type: PropTypes.String,
@@ -63,5 +64,5 @@ export const config = {
       value: "",
       description: "className passed to the wrapper",
     },
-  }
-}
+  },
+};

@@ -1,16 +1,16 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "env": {
-        "browser": true,
-        "es6": true,
-        "jest": true,
-        "node": true
-    },
-    "parserOptions": {
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true,
-            "modules": true
-        }
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
     }
+  }
 }

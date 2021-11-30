@@ -1,17 +1,17 @@
 import { Tooltip, Button } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Tooltip",
   scope: {
     Tooltip,
-    Button
+    Button,
   },
   props: {
     children: {
       value: `<Button>Hover me</Button>`,
       type: PropTypes.ReactNode,
-      description: "Trigger, must be a single child able to accept a ref."
+      description: "Trigger, must be a single child able to accept a ref.",
     },
     tooltip: {
       type: PropTypes.String,
@@ -27,7 +27,19 @@ export const config = {
     placement: {
       type: PropTypes.Enum,
       value: "bottom",
-      options: ["top", "top-start", "top-end", "bottom", "bottom-end", "left", "left-start", "left-end", "right", "right-start", "right-end"],
+      options: [
+        "top",
+        "top-start",
+        "top-end",
+        "bottom",
+        "bottom-end",
+        "left",
+        "left-start",
+        "left-end",
+        "right",
+        "right-start",
+        "right-end",
+      ],
       defaultValue: "bottom",
       description: "The position of the tooltip relative to its trigger.",
     },
@@ -53,5 +65,5 @@ export const config = {
       value: "",
       description: "className passed to the tooltip container element.",
     },
-  }
-}
+  },
+};

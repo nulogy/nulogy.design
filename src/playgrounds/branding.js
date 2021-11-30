@@ -1,10 +1,10 @@
 import { Branding } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Branding",
   scope: {
-    Branding
+    Branding,
   },
   props: {
     size: {
@@ -26,26 +26,30 @@ export const config = {
       defaultValue: "wordmark",
       type: PropTypes.Enum,
       options: ["wordmark", "lettermark"],
-      description: "Whether to display the wordmark or lettermark version of our logos",
+      description:
+        "Whether to display the wordmark or lettermark version of our logos",
     },
     alignment: {
       value: "left",
       defaultValue: "left",
       type: PropTypes.Enum,
       options: ["left", "right", "center"],
-      description: "Whether to align the logo to the left, the right, or in the center",
+      description:
+        "Whether to align the logo to the left, the right, or in the center",
     },
     subtext: {
       value: "",
       defaultValue: "",
       type: PropTypes.String,
-      description: "Subtext that is placed under the logo to specify the specific software product a user is interacting with.",
+      description:
+        "Subtext that is placed under the logo to specify the specific software product a user is interacting with.",
     },
     withLine: {
       value: false,
       defaultValue: false,
       type: PropTypes.Boolean,
-      description: "Whether to display a horizontal line next to the subtext or not",
+      description:
+        "Whether to display a horizontal line next to the subtext or not",
     },
-  }
-}
+  },
+};

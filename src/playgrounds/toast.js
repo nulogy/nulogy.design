@@ -1,16 +1,16 @@
 import { Toast } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Toast",
   scope: {
-    Toast
+    Toast,
   },
   props: {
     children: {
       value: "A toast!",
       type: PropTypes.ReactNode,
-      description: "Inner content."
+      description: "Inner content.",
     },
     triggered: {
       type: PropTypes.Boolean,
@@ -26,12 +26,14 @@ export const config = {
     onHide: {
       type: PropTypes.Function,
       value: "(e) => console.log('onHide', e)",
-      description: "callback that is called when the tooltip is dismissed or begins to fade out",
+      description:
+        "callback that is called when the tooltip is dismissed or begins to fade out",
     },
     onHidden: {
       type: PropTypes.Function,
       value: "(e) => console.log('onHidden', e)",
-      description: "callback that is called when the tooltip has been completely hidden after the fade out animation is complete",
+      description:
+        "callback that is called when the tooltip has been completely hidden after the fade out animation is complete",
     },
     showDuration: {
       type: PropTypes.Number,
@@ -41,14 +43,16 @@ export const config = {
     isCloseable: {
       type: PropTypes.Boolean,
       value: false,
-      description: "displays a close button in the Toast when true, and the Toast must then by manually dismissed by clicking the close button",
+      description:
+        "displays a close button in the Toast when true, and the Toast must then by manually dismissed by clicking the close button",
     },
     type: {
       value: "informative",
       defaultValue: "informative",
       type: PropTypes.Enum,
       options: ["informative", "success", "warning", "danger"],
-      description: "The type of alert. Accepts informative, danger, warning and success."
+      description:
+        "The type of alert. Accepts informative, danger, warning and success.",
     },
-  }
-}
+  },
+};

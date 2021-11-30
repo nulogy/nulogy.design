@@ -1,3 +1,1 @@
-<Branding>
-    An example
-</Branding>
+<Branding>An example</Branding>;

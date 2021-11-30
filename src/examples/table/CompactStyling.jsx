@@ -1,1 +1,1 @@
-<Table columns={columns} rows={rows} compact />
+<Table columns={columns} rows={rows} compact />;

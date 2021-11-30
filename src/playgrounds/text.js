@@ -1,16 +1,17 @@
 import { Text, theme } from "@nulogy/components";
-import { PropTypes } from 'react-view';
+import { PropTypes } from "react-view";
 
 export const config = {
   componentName: "Text",
   scope: {
-    Text
+    Text,
   },
   props: {
     children: {
-      value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu molestie est, eget euismod risus. Fusce arcu sapien, mollis a pulvinar id, egestas sed dolor. Sed sit amet massa lorem.",
+      value:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu molestie est, eget euismod risus. Fusce arcu sapien, mollis a pulvinar id, egestas sed dolor. Sed sit amet massa lorem.",
       type: PropTypes.ReactNode,
-      description: "Content"
+      description: "Content",
     },
     color: {
       type: PropTypes.Enum,
@@ -68,5 +69,5 @@ export const config = {
       value: "",
       description: "className passed to the text component.",
     },
-  }
-}
+  },
+};
