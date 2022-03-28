@@ -38,8 +38,8 @@ const IndexPage = ({ location }) => {
           maxWidth="400px"
         >
           <Alert title="We're hiring!">
-            Are you an experienced front-end developer? Do you like building
-            cool stuff? If so, <Link href="/developer">check this out</Link>.
+            Are you an experienced developer? Do you like building
+            cool stuff? If so, <Link href="https://nulogy.com/careers/">check this out</Link>.
           </Alert>
         </Box>
         <AnimatedBox
