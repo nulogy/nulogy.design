@@ -153,6 +153,10 @@ export const navigationLinks = [
         href: "/components/select",
       },
       {
+        name: "Switcher",
+        href: "/components/switcher",
+      },
+      {
         name: "RadioGroup",
         href: "/components/radio-group",
       },
