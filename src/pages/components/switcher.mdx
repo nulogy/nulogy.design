@@ -1,0 +1,34 @@
+import { Switcher, Switch } from "@nulogy/components";
+import { config } from "../../playgrounds/switcher";
+
+# Switcher
+
+A switcher allows the user to toggle between 2 or more options.
+
+<Playground {...config} />
+
+## Use when
+
+- Organizing, grouping, or filtering data and content.
+- Needing to toggle between different ways to organize data. Such as visualizing data in a grid vs table format, group data by different facets, or to immediately filter content displayed in a section of a page.
+- Giving the user a way to immediately manipulate the UI without the need of a submit button.
+
+## Don't use when
+
+- Navigating between different sets of data or distinct sets of content that live separately. Tabs should be used instead.
+- The use case calls for more than one option being selected at a time. Checkboxes should be used instead.
+- Used as a form input. Radio buttons should be used instead.
+- Used as an on/off selection component. Toggles should be used instead.
+- The use case calls for more than 4 options, a dropdown should be used instead.
+
+## Interaction guidelines
+
+When a user uses a switcher, ideally, only the content being switched should be reloaded or reorganized. To prevent loss of context, the switcher and any navigation components should remain visible.
+
+## Accessibility
+
+Considering the intended use of the switcher — a low-risk control component for organizing content in different ways — it can be used without a label when the set of options are descriptive enough by themselves. In this case, a hidden label should be used.
+
+## Props
+
+<PropsTable propsConfig={config.props} />
