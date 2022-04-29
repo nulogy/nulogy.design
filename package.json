@@ -21,7 +21,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@nulogy/components": "latest",
+    "@nulogy/components": "^6.6.4",
     "@nulogy/icons": "^4.17.0",
     "assert": "^2.0.0",
     "babel-plugin-styled-components": "^1.12.0",
