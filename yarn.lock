@@ -2031,12 +2031,12 @@
     rimraf "^3.0.2"
 
 "@nulogy/components@latest":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-6.3.0.tgz#a4be410e6dbf6a69d585bff1515e47b3ce3fbefd"
-  integrity sha512-t1J6UzcGxhF8xAFQS3YxNOLGvgpcQGhfj3j7Unwk3jGy2p3Pq/KQdTduzfl44tmlsvHj/YF0kOcqVZQdmW6+Sg==
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-6.6.4.tgz#7b83749ccd46d95f1e8a5ea58128baed30e9a1cd"
+  integrity sha512-6tl4oUeRp0a5cpkqaPqvCTOOrttaUcyDf4DVp8kGkShzY7conGj4UMeYfnSQ3w/BsV2/G6RwIToLYb7Ww9RcfA==
   dependencies:
     "@babel/runtime" "^7.9.6"
-    "@nulogy/tokens" "^5.1.0"
+    "@nulogy/tokens" "^5.2.0"
     "@styled-system/prop-types" "^5.1.4"
     "@styled-system/theme-get" "^5.1.2"
     body-scroll-lock "^3.1.5"
@@ -2050,7 +2050,7 @@
     polished "3.4.4"
     react-datepicker "^4.1.0"
     react-fast-compare "^3.2.0"
-    react-i18next "^11.3.3"
+    react-i18next "^11.14.2"
     react-input-autosize "^2.2.2"
     react-modal "^3.10.1"
     react-popper "1.3.7"
@@ -2068,10 +2068,10 @@
     fs "^0.0.1-security"
     svgi "^1.1.0"
 
-"@nulogy/tokens@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-5.1.0.tgz#283a99eb8eff5723358e69dce106f9377a56b01d"
-  integrity sha512-99At2AWRe7DXHZTieFY2wNSmq7wrwWjdHJ8Gn5pipXTFptHU5UBSSYjcqcNEr8B3lP9bllB055E9QxumopS9dA==
+"@nulogy/tokens@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-5.2.0.tgz#fd43dc64d05038234591a93d853896c599443f90"
+  integrity sha512-HrlSDNBGlYRG3jZVKyRvjHvLHTnX5gBLFXO8Ioisw8i5NlEfbWwLqTi3OvGjpUvVyvo5Auk534OaYH2b0fUblg==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.3":
   version "0.4.3"
@@ -8345,6 +8345,11 @@ html-entities@^2.1.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.2.tgz#760b404685cb1d794e4f4b744332e3b00dcfe488"
   integrity sha512-c3Ab/url5ksaT0WyleslpBEthOzWhrjQbg75y7XUsfSzi3Dgzt0l8w5e7DylRn15MTlMMD58dTfzddNS2kcAjQ==
 
+html-escaper@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
+  integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
+
 html-parse-stringify@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/html-parse-stringify/-/html-parse-stringify-3.0.1.tgz#dfc1017347ce9f77c8141a507f233040c59c55d2"
@@ -12571,12 +12576,13 @@ react-helmet@^6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
-react-i18next@^11.3.3:
-  version "11.14.2"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.14.2.tgz#2ff28f6a0ddf06eaf79435ed6c70c441d709cf34"
-  integrity sha512-fmDhwNA0zDmSEL3BBT5qwNMvxrKu25oXDDAZyHprfB0AHZmWXfBmRLf8MX8i1iBd2I2C2vsA2D9wxYBIwzooEQ==
+react-i18next@^11.14.2:
+  version "11.16.7"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.16.7.tgz#8d0680b7f4c8e43f59996336b7183ad576a28df7"
+  integrity sha512-7yotILJLnKfvUfrl/nt9eK9vFpVFjZPLWAwBzWL6XppSZZEvlmlKk0GBGDCAPfLfs8oND7WAbry8wGzdoiW5Nw==
   dependencies:
     "@babel/runtime" "^7.14.5"
+    html-escaper "^2.0.2"
     html-parse-stringify "^3.0.1"
 
 react-input-autosize@^2.2.2:
