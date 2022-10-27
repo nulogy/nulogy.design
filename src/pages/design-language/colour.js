@@ -124,7 +124,7 @@ const IndexPage = ({ location }) => {
             context="For dangerous and destructive actions"
           />
           <Palette
-            name="red"
+            name="lightRed"
             colour={theme.colors.lightRed}
             context="Danger accent colour"
           />
