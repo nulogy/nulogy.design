@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[5318],{55318:function(e,l,n){"use strict";n.r(l),l.default='<Flex bg="lightBlue" flexDirection={{ extraSmall: "column", medium: "row" }}>\n  <Box width={1 / 2} p="x3" m="x3" bg="blackBlue"></Box>\n  <Box width={1 / 2} p="x3" m="x3" bg="darkBlue"></Box>\n</Flex>;\n'}}]);
+//# sourceMappingURL=5318-07956197008a40d131c1.js.map

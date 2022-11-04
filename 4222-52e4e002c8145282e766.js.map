@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/table/CompactStyling.jsx"],"names":[],"mappings":"4HAAA","file":"4222-52e4e002c8145282e766.js","sourcesContent":["export default \"<Table columns={columns} rows={rows} compact />;\\n\";"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/table/StickyHeader.jsx"],"names":[],"mappings":"4HAAA","file":"3770-29fb1f1a67abc35cfc38.js","sourcesContent":["export default \"<Table columns={columns} rows={rows} stickyHeader />;\\n\";"],"sourceRoot":""}

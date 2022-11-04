@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[3770],{73770:function(s,e,n){"use strict";n.r(e),e.default="<Table columns={columns} rows={rows} stickyHeader />;\n"}}]);
+//# sourceMappingURL=3770-29fb1f1a67abc35cfc38.js.map

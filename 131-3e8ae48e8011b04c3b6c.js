@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[131],{10131:function(e,n,l){"use strict";l.r(n),n.default='<Select\n  options={[\n    { value: "accepted", label: "Accepted" },\n    { value: "assigned", label: "Assigned to a line" },\n  ]}\n  multiselect\n/>;\n'}}]);
+//# sourceMappingURL=131-3e8ae48e8011b04c3b6c.js.map

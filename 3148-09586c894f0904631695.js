@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[3148],{53148:function(e,l,n){"use strict";n.r(l),l.default='<Input\n  id="all-labels"\n  labelText="Label"\n  placeholder="I\'m an input"\n  prefix="I\'m prefix label"\n  suffix="I\'m sufix label"\n/>;\n'}}]);
+//# sourceMappingURL=3148-09586c894f0904631695.js.map

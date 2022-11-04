@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/alert/DangerAlert.jsx"],"names":[],"mappings":"4HAAA","file":"5653-ce32c6997f0fd9116bb1.js","sourcesContent":["export default \"<Alert type=\\\"danger\\\" title=\\\"Important information\\\" isCloseable>\\n  Details about important information\\n</Alert>;\\n\";"],"sourceRoot":""}

@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[8617],{58617:function(n,e,o){"use strict";o.r(e),e.default='<Table\n  columns={columns}\n  rows={rows}\n  rowsPerPage={3}\n  onPageChange={(page) => console.log("onPageChange", page)}\n/>;\n'}}]);
+//# sourceMappingURL=8617-b2f1e0f2657afc8e7faa.js.map

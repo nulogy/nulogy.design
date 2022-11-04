@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[5824],{35824:function(n,o,t){"use strict";t.r(o),o.default='<DropdownMenu trigger={() => <Button>Custom Trigger</Button>}>\n  <DropdownLink href="/">Dropdown Link</DropdownLink>\n  <DropdownButton>Dropdown Button</DropdownButton>\n</DropdownMenu>;\n'}}]);
+//# sourceMappingURL=5824-d205eb95cf7b40ad39d7.js.map

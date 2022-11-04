@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[6197],{96197:function(n,e,u){"use strict";u.r(e),e.default="<Branding>An example</Branding>;\n"}}]);
+//# sourceMappingURL=6197-45edc65099acb8fa5870.js.map

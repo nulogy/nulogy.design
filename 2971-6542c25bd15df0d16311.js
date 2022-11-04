@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[2971],{12971:function(e,n,o){"use strict";o.r(n),n.default='<Table\n  hasSelectableRows\n  columns={columns}\n  rows={rows}\n  keyField="date"\n  onRowSelectionChange={(selectedRows) =>\n    console.log("onRowSelectionChange", selectedRows)\n  }\n/>;\n'}}]);
+//# sourceMappingURL=2971-6542c25bd15df0d16311.js.map

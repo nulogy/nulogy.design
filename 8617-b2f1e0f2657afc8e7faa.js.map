@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://nulogy.design/./src/examples/table/Pagination.jsx"],"names":[],"mappings":"4HAAA","file":"8617-b2f1e0f2657afc8e7faa.js","sourcesContent":["export default \"<Table\\n  columns={columns}\\n  rows={rows}\\n  rowsPerPage={3}\\n  onPageChange={(page) => console.log(\\\"onPageChange\\\", page)}\\n/>;\\n\";"],"sourceRoot":""}

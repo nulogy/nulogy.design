@@ -1,0 +1,2 @@
+(self.webpackChunknulogy_design=self.webpackChunknulogy_design||[]).push([[2558],{2558:function(a,e,t){"use strict";t.r(e),e.default='<Table\n  columns={[\n    { label: "Date", dataKey: "date", width: "40%" },\n    { label: "Expected Quantity", dataKey: "expectedQuantity" },\n    { label: "Actual Quantity", dataKey: "actualQuantity" },\n  ]}\n  rows={rows}\n/>;\n'}}]);
+//# sourceMappingURL=2558-28b7b31011134e22ae83.js.map
