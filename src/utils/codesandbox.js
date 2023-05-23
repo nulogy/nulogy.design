@@ -42,11 +42,11 @@ export const setupSandbox = async (title, source) => {
         },
         deps: {
           "@nulogy/components": "latest",
-          react: "latest",
-          "react-dom": "latest",
-          "react-scripts": "latest",
+          react: "17.0.2",
+          "react-dom": "17.0.2",
+          "react-scripts": "5.0.1",
           "@nulogy/icons": "latest",
-          "styled-components": "latest",
+          "styled-components": "5.3.7",
         },
       },
       {
